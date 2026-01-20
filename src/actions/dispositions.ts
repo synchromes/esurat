@@ -583,11 +583,11 @@ export async function getEligibleRecipients() {
         })
 
         // Format with role info
-        const formattedUsers = users.map(user => ({
+        const formattedUsers = users.map((user: any) => ({
             id: user.id,
             name: user.name,
             email: user.email,
-            roles: user.roles.map(r => r.role.name)
+            roles: user.roles.map((r: any) => r.role.name)
         }))
 
         return { success: true, data: formattedUsers }
