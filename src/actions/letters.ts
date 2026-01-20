@@ -776,7 +776,7 @@ async function getTeamMemberIds(userId: string) {
 
     if (leaderships.length === 0) return []
 
-    const teamIds = leaderships.map(l => l.teamId)
+    const teamIds = leaderships.map((l: any) => l.teamId)
 
     const members = await prisma.teamMember.findMany({
         where: {
@@ -785,7 +785,7 @@ async function getTeamMemberIds(userId: string) {
         select: { userId: true }
     })
 
-    return members.map(m => m.userId)
+    return members.map((m: any) => m.userId)
 }
 
 // ==================== GET LETTERS ====================
