@@ -278,7 +278,7 @@ export async function approveLetter(letterId: string, signatureImage?: string) {
 
             // Check Sequential Order
             // Find if there is any *lower order* that is NOT APPROVED
-            const pendingPrev = letter.letterApprovers.find(la => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
+            const pendingPrev = letter.letterApprovers.find((la: any) => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
             if (pendingPrev) {
                 return { success: false, error: 'Menunggu persetujuan dari pejabat sebelumnya' }
             }
