@@ -266,7 +266,7 @@ export async function approveLetter(letterId: string, signatureImage?: string) {
 
         if (letter.letterApprovers && letter.letterApprovers.length > 0) {
             // Check if user is in the list
-            currentApproverRecord = letter.letterApprovers.find(la => la.userId === session.user.id)
+            currentApproverRecord = letter.letterApprovers.find((la: any) => la.userId === session.user.id)
 
             if (!currentApproverRecord) {
                 return { success: false, error: 'Anda tidak terdaftar sebagai penyetuju surat ini' }
