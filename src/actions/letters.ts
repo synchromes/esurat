@@ -539,11 +539,11 @@ export async function rejectLetter(letterId: string, reason: string) {
             let currentApproverRecord: any = null
 
             if (letter.letterApprovers && letter.letterApprovers.length > 0) {
-                currentApproverRecord = letter.letterApprovers.find(la => la.userId === session.user.id)
+                currentApproverRecord = letter.letterApprovers.find((la: any) => la.userId === session.user.id)
                 if (currentApproverRecord) {
                     // Check if it's their turn? Or can any approver reject?
                     // Typically only the *active* approver can reject/approve.
-                    const pendingPrev = letter.letterApprovers.find(la => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
+                    const pendingPrev = letter.letterApprovers.find((la: any) => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
                     if (!pendingPrev && currentApproverRecord.status === 'PENDING') {
                         isAuthorized = true
                     }
@@ -934,7 +934,7 @@ export async function getLetterById(letterId: string) {
         const teamMemberIds = await getTeamMemberIds(session.user.id)
 
         const isCreator = letter.creatorId === session.user.id
-        const isAssignedApprover = letter.assignedApproverId === session.user.id || letter.letterApprovers.some(la => la.userId === session.user.id)
+        const isAssignedApprover = letter.assignedApproverId === session.user.id || letter.letterApprovers.some((la: any) => la.userId === session.user.id)
         const isAssignedSigner = letter.assignedSignerId === session.user.id
         const isTeamLeaderOfCreator = teamMemberIds.includes(letter.creatorId)
 
