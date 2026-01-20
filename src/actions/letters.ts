@@ -458,7 +458,7 @@ export async function approveLetter(letterId: string, signatureImage?: string) {
                 })
 
                 // Notify Next Approver
-                const nextApprover = letter.letterApprovers.find(la => la.order === currentApproverRecord!.order + 1)
+                const nextApprover = letter.letterApprovers.find((la: any) => la.order === currentApproverRecord!.order + 1)
                 if (nextApprover) {
                     generateAndSendMagicLink(nextApprover.userId, letterId, 'APPROVE').catch(console.error)
                 }
