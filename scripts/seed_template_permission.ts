@@ -69,7 +69,7 @@ async function main() {
 
     // Get all roles from DB to be safe
     const dbRoles = await prisma.role.findMany()
-    const roleMap = new Map(dbRoles.map(r => [r.name, r.id]))
+    const roleMap = new Map(dbRoles.map((r: any) => [r.name, r.id]))
 
     for (const [roleName, perms] of Object.entries(roles)) {
         if (!roleMap.has(roleName)) {
