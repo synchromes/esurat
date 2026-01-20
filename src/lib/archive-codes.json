@@ -1,0 +1,3686 @@
+[
+  {
+    "code": "PR.00",
+    "description": "Pokok-Pokok Kebijakan dan Strategi",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.00.01",
+    "description": "Rencana Masterpian Strategis Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan Pokok-Pokok Kebijakan dan Strategi Rencana Master Plan Strategis Lembaga Penyiaran\nPublik Televisi Republik Indonesia.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.00.02",
+    "description": "Rencana Strategis Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan Pokok-Pokok Kebijakan dan Strategi Rencana Strategis Lembaga Penyiaran Publik Televisi\nRepublik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.01",
+    "description": "Program Kerja Tahunan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.01.01",
+    "description": "Usulan Unit Kerja Beserta Data Pendukung",
+    "retention": "Naskah yang berkaitan dengan usulan unit kerja beserta data pendukung",
+    "security": "-"
+  },
+  {
+    "code": "PR.01.02",
+    "description": "Usulan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan usulan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.01.03",
+    "description": "Program Kerja Tahunan Unit Kerja",
+    "retention": "Naskah yang berkaitan dengan Program Kerja Tahunan Unit Kerja di Lingkungan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.01.04",
+    "description": "Program Kerja Tahunan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan Program Kerja Tahunan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.02",
+    "description": "Penetapan/ Kontrak Kinerja",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.02.01",
+    "description": "Keputusan Direktur Utama Lembaga Penyiaran Publik Televisi Republik Indonesia Terkait Penetapan/Kontrak Kinerja Dengan Atasan Langsung",
+    "retention": "Naskah yang berkaitan dengan Keputusan Direktur Utama Lembaga Penyiaran Publik Televisi Republik Indonesia Terkait Penetapan/Kontrak Kinerja Dengan Atasan Langsung",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.02.02",
+    "description": "Penetapan/Kontrak Kinerja Pimpinan Unit Kerja",
+    "retention": "Naskah yang berkaitan dengan Penetapan/Kontrak Kinerja Pimpinan Unit Kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.03",
+    "description": "Laporan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.03.01",
+    "description": "Laporan Insidental",
+    "retention": "Naskah yang berkaitan dengan laporan insidental",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "PR.03.02",
+    "description": "Laporan Berkala",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.03.02.a",
+    "description": "No Description",
+    "retention": "Laporan Bulanan Unit Kerja",
+    "security": "-"
+  },
+  {
+    "code": "PR.03.02.b",
+    "description": "No Description",
+    "retention": "Laporan Triwulanan Unit Kerja",
+    "security": "-"
+  },
+  {
+    "code": "PR.03.02.c",
+    "description": "No Description",
+    "retention": "Laporan Semesteran Unit Kerja",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PR.03.02.d",
+    "description": "No Description",
+    "retention": "Laporan Tahunan Unit Kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.03.02.e",
+    "description": "No Description",
+    "retention": "Laporan Tahunan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PR.03.03",
+    "description": "Laporan Akuntabilitis Kinerja instansi Pemerintah",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.03.03.a",
+    "description": "No Description",
+    "retention": "a. Laporan Akuntabilitas Kinerja Instansi Pemerintah Unit Kerja",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PR.03.03.b",
+    "description": "No Description",
+    "retention": "b. Laporan Akuntabilitas Kinerja Instansi Pemerintah Lembaga",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PR.04",
+    "description": "Evaluasi Program",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.04.01",
+    "description": "Evaluasi Program Unit Kerja",
+    "retention": "Naskah yang berkaitan dengan evaluasi program unit kerja",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "PR.04.02",
+    "description": "Evaluasi Program Lembaga Penyiaran Publik Teievisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan Evaluasi Program Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "PR.05.01",
+    "description": "Nota Kesepahaman/ Memorandum of Understanding (MoU)/ Kontrak/ Perjanjian Kerja Sama Dalam Negeri dan Luar Negeri",
+    "retention": "Naskah yang berkaitan dengan nota kesepahaman / Memorandum of Understanding / kontrak / perjanjian kerjasama daiam negeri dan luar negeri",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.06",
+    "description": "Monitoring dan Evaluasi Program",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PR.06.01",
+    "description": "Anggaran Unit Kerja",
+    "retention": "Naskah yang berkaitan dengan monitoring dan evaluasi program anggaran unit kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.06.02",
+    "description": "Anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkailan dengan monitoring dan evaiuasi program Anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PR.06.03",
+    "description": "Kerjasama",
+    "retention": "Naskah yang berkaitan dengan monitoring dan evaluasi program kerjasama",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.00.01",
+    "description": "Dukungan Administrasi Pimpinan",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan Administrasi penggunaan /langganan peralatan telekomunikasi meliputi: telepon, faksimile, radio, teleks, TV kabel, dan internet administrasi penggunaan/ langganan peralatan telekomunikasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.01.01",
+    "description": "Perjalanan Dinas",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan perjalanan dinas dalam negeri dan luar negeri",
+    "security": ""
+  },
+  {
+    "code": "TU.01.01.a",
+    "description": "No Description",
+    "retention": "1. Dalam Negeri",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.01.01.b",
+    "description": "No Description",
+    "retention": "2. Luar Negeri",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.02.01",
+    "description": "Administrasi Penggunaan Fasilitas Kantor",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan penggunaan fasilitas kantor meliputi permintaan dan penggunaan ruang, gedung kendaraan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.03.01",
+    "description": "Risalah / Notulen Rapat",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan risalah / notulen rapat yang terdiri rapat pimpinan dan rapat staff",
+    "security": ""
+  },
+  {
+    "code": "TU.03.01.a",
+    "description": "No Description",
+    "retention": "1. Rapat Pimpinan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.03.01.b",
+    "description": "No Description",
+    "retention": "2. Rapat Staf",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.04.01",
+    "description": "Administrasi Penyediaan Konsumsi dan Akomodasi",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan Administrasi penyediaan konsumsi dan akomodasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TU.05.01",
+    "description": "Pengurusan Kendaraan Dinas",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan Pengurusan kendaraan dinas",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.00",
+    "description": "Pengadaan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.00.01",
+    "description": "Pengadaan Bararig (diluar tender/lelang)",
+    "retention": "Naskah-naskah yang berkailan dengan pengadaan barang (diluar tender/lelang)",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.00.02",
+    "description": "Telaahan Pelaksanaan Lelang/Pemilihan/Penunjukan Langsung",
+    "retention": "Naskah yang berkaitan dengan telaahan pelaksanaan lelang/pemilikan/penunjukkan langsung",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.00.03",
+    "description": "Dokumen Tender Barang/Jasa",
+    "retention": "Naskah yang berkaitan dengan dokumen tender barang/jasa",
+    "security": ""
+  },
+  {
+    "code": "UM.00.03.a",
+    "description": "No Description",
+    "retention": "1. Pengadaan Barang",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.00.03.b",
+    "description": "No Description",
+    "retention": "2. Pengadaan Jasa",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.01",
+    "description": "Penyimpanan Barang dan Distribusi",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.01.01",
+    "description": "Penyimpanan Inventaris Kekayaan Negara",
+    "retention": "Naskah yang berkaitan dengan penyimpanan barang dan distribusi seperti penyimpanan inventaris kekayaan Negara",
+    "security": ""
+  },
+  {
+    "code": "UM.01.01.a",
+    "description": "No Description",
+    "retention": "Surat bukti barang masuk",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.01.01.b",
+    "description": "No Description",
+    "retention": "Surat bukti pengeluaran barang",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.01.01.c",
+    "description": "No Description",
+    "retention": "Daftar Inventaris Barang",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.01.02",
+    "description": "Pendistribusian Surat Jalan",
+    "retention": "Naskah yang berkaitan dengan pendistribusian surat jalan",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "UM.02",
+    "description": "Pengelolaan Barang Milik Negara (BMN)",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.02.01",
+    "description": "Sistem Informasi Manajemen dan Akuntansi Barang Milik Negara (SIMAK BMN)",
+    "retention": "Naskah yang berkaitan dengan Sistem Informasi Manajemen dan Akuntansi Barang Milik Negara (SIMAK BMN)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.02.02",
+    "description": "Pembukuan Barang Milik Negara",
+    "retention": "Naskah-naskah yang berkaitan dengan pembukuan Barang Milik Negara, yang meliputi daftar inventaris/buku barang/daftar barang lainnya dan laporan hasil inventarisasi",
+    "security": ""
+  },
+  {
+    "code": "UM.02.02.a",
+    "description": "No Description",
+    "retention": "1. Daftar inventaris/buku barang/daftar barang lainnya",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.02.b",
+    "description": "No Description",
+    "retention": "2. Laporan hasil inventarisasi",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.03",
+    "description": "Laporan Barang Milik Negara",
+    "retention": "Naskah yang berkaitan dengan laporan Barang Milik Negara yang terdiri laporan kondisi barang, laporan barang kuasa pengguna, berita acara rekonsiliasi eksternal dan internal, laporan persediaan habis pakai, laporan persediaan tidak habis pakai, dan laporan pengeiolaan Barang Milik Negara",
+    "security": ""
+  },
+  {
+    "code": "UM.02.03.a",
+    "description": "No Description",
+    "retention": "1. Laporan kondisi barang",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.02.03.b",
+    "description": "No Description",
+    "retention": "2. Laporan barang kuasa pengguna",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.02.03.c",
+    "description": "No Description",
+    "retention": "3. Berita acara rekonsiliasi eksternal dan internal",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.02.03.d",
+    "description": "No Description",
+    "retention": "4. Laporan persediaan barang habis pakai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.02.03.e",
+    "description": "No Description",
+    "retention": "5. Laporan persediaan barang tidak habis pakai",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "UM.02.03.f",
+    "description": "No Description",
+    "retention": "6. Laporan Pengelolaan Barang Milik Negara",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.04",
+    "description": "Dokumen kepemilikan Aset/Kekayaan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan kepemilikan aset/kekayaan Lembaga Penyiaran Publik Televisi Republik Indonesia, seperti sertifikat tanah, bukti kepemilikan kendaraan bermotor dan surat tanda nomor kendaraan, serta izin mendirikan bangunan dan Blue Print gedung",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.05",
+    "description": "Hibah",
+    "retention": "Naskah yang berkaitan dengan hibah tanah dan barang",
+    "security": ""
+  },
+  {
+    "code": "UM.02.05.a",
+    "description": "No Description",
+    "retention": "1. Tanah",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.05.b",
+    "description": "No Description",
+    "retention": "2. Barang",
+    "security": "-"
+  },
+  {
+    "code": "UM.02.06",
+    "description": "Penghapusan Barang Milik Negara dan Pelaksanaan Penghapusan Barang Milik Negara",
+    "retention": "Naskah yang berkaitan dengan penghapusan Barang Milik Negara yaitu\n1. Keputusan pembentukan tim.\n2. Berita Acara Penghapusan Barang Milik Negara\n3. Daftar barang yang dihapus.\n4. Laporan hasil pelaksanaan penghapusan Barang Milik Negara termasuk didalamnya proses lelang penghapusan",
+    "security": "-"
+  },
+  {
+    "code": "UM.03",
+    "description": "Pemeliharaan Gedung dan Taman",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.03.01",
+    "description": "Pemeliharaan Taman",
+    "retention": "Naskah yang berkaitan dengan pemeliharaan taman, yaitu:\na. Pertamanan/landscap/ng\nb. Kebersihan taman",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.03.02",
+    "description": "Pemeliharaan Gedung",
+    "retention": "Naskah yang berkaitan dengan pemeliharaan gedung, yaitu:\na. Perbaikan gedung\nb. Kebersihan gedung",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.04",
+    "description": "Pengelolaan Jaringan Listrik, Air, Telepon dan Komputer",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.04.01",
+    "description": "Perbaikan/pemeliharaan",
+    "retention": "Naskah yang berkaitan dengan perbaikan/pemeliharaan jaringan listrik, air, telepon dan komputer",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.04.02",
+    "description": "Pemasangan",
+    "retention": "Naskah yang berkaitan dengan pemasangan jaringan listrik, air, telepon dan komputer",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.05",
+    "description": "Ketertiban dan Keamanan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.05.01",
+    "description": "Pengamanan, Penjagaan dan Pengawal Terhadap Pejabat, Kantor, dan Rumah Dinas",
+    "retention": "Naskah yang berkaitan dengan pengamanan, penjagaan dan pengawal terhadap pejabat kantor,\ndan rumah dinas, yaitu:\na. Daftar nama satuan pengamanan\nb. Daftar jaga/ daftar piket.\nc. Catatan gangguan/peianggaran/kejadian.\nd. Surat izin keluar masuk orang atau barang.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.05.02",
+    "description": "Laporan Ketertiban dan Keamanan",
+    "retention": "Naskah yang berkaitan dengan laporan ketertiban keamanan, yaitu:\na. Kehilangan\nb. Kerusakan\nc. Kecelakaan\nd. Gangguan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.06.01",
+    "description": "Berkas Pengadaan Kendaraan Dinas",
+    "retention": "Naskah yang berkaitan dengan pengadaan kendaraan dinas berupa surat permintaan kendaraan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya), Harga Perkiraan Sendiri (HPS), surat penetapan dan kontrak",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.07.01",
+    "description": "Daftar Kendaraan Dinas",
+    "retention": "Naskah yang berkaitan dengan daftar kendaraan dinas",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.08.01",
+    "description": "Berkas Pengadaan Tanah dan Bangunan",
+    "retention": "Naskah yang berkaitan dengan pengadaan barang program yang terdiri surat permohonan pengadaan (Kerangka Acuan Kerja dan Rincian Anggaran), Harga Perkiraan Sendiri (HPS), berita acara negosiasi harga, dan kontrak.",
+    "security": "-"
+  },
+  {
+    "code": "UM.09.01",
+    "description": "Daftar Tanah dan Bangunan",
+    "retention": "Naskah yang berkaitan dengan daftar tanah dan bangunan",
+    "security": "-"
+  },
+  {
+    "code": "UM.10.01",
+    "description": "Berkas Pengadaan Barang Teknik Non Umum",
+    "retention": "Naskah yang berkaitan dengan pengadaan barang teknik non umum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.11.01",
+    "description": "Dokumen Pengadaan Barang Program",
+    "retention": "Naskah yang berkaitan dengan pengadaan barang program yang terdiri surat permohonan pengadaan (Kerangka Acuan Kerja dan Rincian Anggaran), Harga Perkiraan Sendiri (HPS), berita acara negosiasi harga, dan kontrak.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12",
+    "description": "Perlengkapan/Sarana dan Prasarana",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "UM.12.01",
+    "description": "Rencana Kebutuhan Barang",
+    "retention": "Naskah yang berkaitan dengan rencana kebutuhan barang Unit Kerja dan Lembaga.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.02",
+    "description": "Pengelolaan Gedung",
+    "retention": "Naskah yang berkaitan dengan pengelolaan gedung seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.03",
+    "description": "BerKas Pengelolaan Kantor",
+    "retention": "Naskah yang berkaitan dengan berkas pengelolaan kantor seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.04",
+    "description": "Berkas Pengelolaan Lingkungan",
+    "retention": "Naskah yang berkaitan dengan berkas pengelolaan lingkungan seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.05",
+    "description": "Berkas Pengelolaan Mekanikal aan Elektronikal",
+    "retention": "Naskah yang berkaitan dengan Derkas pengelolaan mekanikal dan elektronikal seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.06",
+    "description": "Berkas Pengelolaan Studio Alam",
+    "retention": "Naskah yang berkaitan dengan berkas pengelolaan Studio Alam seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.07",
+    "description": "Berkas Rumah Tangga",
+    "retention": "Naskah yang berkaitan dengan berkas rumah tangga seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.08",
+    "description": "Berkas Kendaraan Dinas",
+    "retention": "Naskah yang berkaitan dengan berkas kendaraan dinas seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "UM.12.09",
+    "description": "Berkas Keamanan",
+    "retention": "Naskah yang berkaitan dengan berkas keamanan seperti Surat Permintaan Pemeliharaan (Kerangka Acuan Kerja dan Rincian Anggaran Biaya) dan Berita Acara Penyelesaian Pekerjaan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.00.01",
+    "description": "Kebijakan di Bidang Manajemen Kepegawaian / Sumber Daya Manusia",
+    "retention": "Naskah yang berkaitan dengan kebijakan di bidang manajemen kepegawaian / Sumber Daya Manusia, yaitu:\n1. Pengkajian, Pengusulan Kebijakan, dan Naskah Akademik\n2. Penyusunan kebijakan.\n3. Perumusan kebijakan.\n4. Pemberian masukan dan dukungan.\n5. Penetapan kebijakan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01",
+    "description": "Penyusunan dan Penetapan Kebutuhan Aparatur Sipil Negara.",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.01.01",
+    "description": "Perencanaan Kebutuhan Aparatur Sipil Negara",
+    "retention": "Naskah yang berkaitan dengan perencanaan kebutuhan pegawai, yaitu:\n1. Bahan penyusunan rencana kebutuhan.\n2. Analisis Kebutuhan.\n    a. Aparatur Sipil Negara\n    b. Pegawai Pemerintah dengan Perjanjian.\n    c. Pengolahan data kebutuhan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.02",
+    "description": "Perencanaan Pertimbangan Formasi",
+    "retention": "Naskah yang berkaitan dengan perencanaan pertimbangan formasi, yaitu:\n1. Pertimbangan teknis penetapan formasi Aparatur Sipil Negara.\n2. Pertimbangan teknis penetapan formasi ikatan dinas.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.03",
+    "description": "Penetapan Kebutuhan Aparatur Sipil Negara",
+    "retention": "Naskah yang berkaitan dengan penetapan kebutuhan Aparatur Sipil Negara.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.04",
+    "description": "Standarisasi Jabatan",
+    "retention": "Naskah yang berkaitan dengan standarisasi jabatan, yaitu:\n1. Informasi Jabatan.\n2. Kompetensi Jabatan.\n3. Klasifikasi Jabatan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.05",
+    "description": "Bezzetingl Persediaan Pegawai",
+    "retention": "Naskah yang berkaitan dengan bezzeting / persediaan pegawai, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.01.05.a",
+    "description": "No Description",
+    "retention": "1. Data Pegawai hasil pengklasifikasian.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.05.b",
+    "description": "No Description",
+    "retention": "2 Kajian data pegawai.\n3. Konsep data bezzeting\n4. Evaluasi proses penyusunan data bezzeting.\n5. Peta Jabatan.\n6. Hasil dan laporan data bezzeting.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.06",
+    "description": "Formasi Pegawai",
+    "retention": "Naskah yang berkaitan dengan formasi pegawai, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.01.06.a",
+    "description": "No Description",
+    "retention": "1. Usulan dari Unit Kerja.\n    a. Analisis Jabatan\n    b. Beban Kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.06.b",
+    "description": "No Description",
+    "retention": "2. Usulan Permintaan Formasi kepada Menteri Pendayagunaan Aparatur Negera dan Reformasi Birokrasi dan Kepala Badan Kepegawaian Negara.\n3. Persetujuan Formasi dari Menteri Pendayagunaan Aparatur Negera dan Reformasi Birokrasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07",
+    "description": "Pengadaan Pegawai",
+    "retention": "Naskah yang berkaitan dengan pengadaan pegawai, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.01.07.a",
+    "description": "No Description",
+    "retention": "1. Proses Penerimaan Pegawai meliputi:\n    a. Pengumuman.\n    b. Seleksi administrasi.\n    c. Pemanggilan peserta tes.\n    d. Pelaksanaan ujian tertulis.\n    e. Keputusan hasil ujian tertulis.\n    f. Pelaksanaan ujian kesehatan.\n    g. Pelaksanaan tes kemampuan bidang.\n    h. Wawancara.\n    i. Keputusan kelulusan.\n    j. Pengumuman Kelulusan,\n    k. Penetapan Pengumuman Kelulusan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07.b",
+    "description": "No Description",
+    "retention": "2. Berkas Lamaran yang Tidak Diterima",
+    "security": "-"
+  },
+  {
+    "code": "KP.01.07.c",
+    "description": "No Description",
+    "retention": "3. Nota Usul dan Kelengkapan Penetapan Nomor Induk Pegawai.\n    a. Surat lamaran.\n    b. Ijazah.\n    c. Surat Keterangan Catatan Kepolisian.\n    d. Kartu Kuning",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07.d",
+    "description": "No Description",
+    "retention": "4. Nota Usul Pengangkatan Calon Aparatur Sipil Negara/Calon Pegawai Negeri Sipil menjadi Aparatur Sipil Negara/Pegawai Negeri Sipil Lebih 2 Tahun.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07.e",
+    "description": "No Description",
+    "retention": "5. Surat Keputusan Aparatur Sipil Negara / Pegawai Negeri Sipil Kolektif.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07.f",
+    "description": "No Description",
+    "retention": "6. Penempatan pegawai/mutasi pegawai",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.01.07.g",
+    "description": "No Description",
+    "retention": "7. Pengunduran diri Calon Aparatur Sipil Negara/Calon Pegawai Negeri Sipil",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.01.07.h",
+    "description": "No Description",
+    "retention": "8. Pegawai Pemerintah dengan Peijanjian Kerja/PPPK",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.01.07.i",
+    "description": "No Description",
+    "retention": "9. Non Aparatur Sipil Negara Pegawai Pemerintah Non Pegawai Negeri/PPNPN",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.02",
+    "description": "Pembinaan Karir Pegawai",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.02.01",
+    "description": "Pendidikan dan Pelatihan / Kursus / Magang / Ujian Dinas / Izin Belajar Pegawai / Ujian Penyesuaian Ijazah",
+    "retention": "Naskah yang berkaitan dengan Pendidikan dan pelatihan / kursus / magang / ujian dinas / izin belajar pegawai / ujian penyesuaian ijazah, yaitu:\n1. Surat Perintah/ Surat Tugas / Surat Keputusan / Surat Izin.\n2. Laporan Kegiatan Pengembangan Diri.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.02.02",
+    "description": "Surat Tanda Tamat Pendidikan dan Latihan (STTPL)/Sertifikat",
+    "retention": "Naskah yang berkaitan dengan Surat T anda T amat Pendidikan dan Latihan / sertifikat.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.02.03",
+    "description": "Ujian dan Penilaian Kompetensi",
+    "retention": "Naskah yang berkaitan dengan ujian dan penilaian kompetensi, yaitu:\n1. Pemetaan/ Mapping Talent Pegawai\n2. Assesmenl Test Pegawai\n3. Berkas Penilaian Kompetensi.\n4. Hasil penilaian Kompetensi.",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "KP.02.04",
+    "description": "Sasaran Kinerja Pegawai (SKP)",
+    "retention": "Naskah yang berkaitan dengan sasaran kinerja pegawai",
+    "security": "-"
+  },
+  {
+    "code": "KP.02.05",
+    "description": "Pakta Integritas Pegawai",
+    "retention": "Naskah yang berkaitan dengan pakta integritas pegawai.",
+    "security": "-"
+  },
+  {
+    "code": "KP.02.06",
+    "description": "Laporan Hasil Kekayaan Penyelenggaraan Negara (LHKPN) Direktur Utama",
+    "retention": "Naskah yang berkaitan dengan laporan hasil kekayaan penyelenggaraan negara",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.02.07",
+    "description": "Laporan Hasil Kekayaan Aparatur Sipil Negara (LHKASN)",
+    "retention": "Naskah yang berkaitan dengan laporan hasil kekayaan Aparatur Sipil Negara",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.02.08",
+    "description": "Daftar Usul Penetapan Angka Kredit (DUPAK)",
+    "retention": "Naskah yang yang berkaitan dengan usul daftar penetapan angka kredit.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.03.01",
+    "description": "Penyelesaian Pengelolaan Keberatan\nPegawai",
+    "retention": "Naskah yang berkaitan dengan penyelesaian pengelolaan keberatan pegawai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04",
+    "description": "Mutasi Pegawai",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.04.01",
+    "description": "Alih Status, Pindah Instansi, Pindah Wilayah Kerja, Diperbantukan, dipekerjakan, Mutasi Antar Unit Kerja, dan Mutasi",
+    "retention": "Naskah yang berkaitan dengan alih stastus, pindah instansi, piridah wilayah kerja, diperbantukan, dipekerjakan, mutasi antar unit kerja dan mutasi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.02",
+    "description": "Nota Persetujuan/Pertimbangan Kepala Badan Kepegawaian Negara dan Direktur Utama Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan nota persetujuan/ pertimbangan Kepala Badan Kepegawaian Negara dan Direktur Utama Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.03",
+    "description": "Berita Acara Pelantikan dan Serah Terima Jabatan",
+    "retention": "Naskah yang berkaitan dengan berita acara pelantikkan dan serah terima jabatan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.04",
+    "description": "Mutasi Keluarga",
+    "retention": "Naskah yang berkaitan dengan mutasi keluarga, yaitu:\n1. Surat Izin Pernikahan/Perceraian.\n2. Surat Penolakan Izin Pernikahan/ Perceraian.\n3. Akta Nikah /Cerai.\n4. Akta Kelahiran Anak.\n5. Surat Keterangan Meninggal Dunia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.05",
+    "description": "Usul Kenaikan Pangkat / Golongan / Jabatan Struktural dan Fungsional",
+    "retention": "Naskah yang berkaitan dengan usul kenaikan pangkat / golongan / jabatan struktural dan fungsional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.06",
+    "description": "Usul Pengangkatan dan Pemberhentian dalam Jabatan Struktural / Fungsional",
+    "retention": "Naskah yang berkaitan dengan usul pengangkatan dan pemberhentian dalam jabatan struktural / funqsional.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.07",
+    "description": "Usul Penetapan Perubahan Data Dasar / Status / Kedudukan Hukum Pegawai",
+    "retention": "Naskah yang berkaitan dengan usul penetapan perubahan data dasar / status / kedudukan hukum pegawai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.08",
+    "description": "Peninjauan Masa Kerja",
+    "retention": "Naskah yang berkaitan dengan peninjauan masa kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.04.09",
+    "description": "Berkas Baperjakat",
+    "retention": "Naskah yang berkaitan dengan berkas baperjakat",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05",
+    "description": "Pengembangan karir",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.05.01",
+    "description": "Usulan Tugas Belajar / Ijin Belajar / Pendidikan dan Pelatihan / Kursus / Magang / Ujian Dinas / Praktek Kerja di Instansi Lain / Pertukaran Antar Aparatur Sipil Negara dengan Pegawai Swasta",
+    "retention": "Naskah yang berkaitan dengan usulan tugas belajar / ijin belajar / Pendidikan dan pelatihan / kursus / magang / ujian dinas / praktek kerja, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.05.01.a",
+    "description": "No Description",
+    "retention": "1. Perencanaan dan penyusunan analisis kebutuhan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.01.b",
+    "description": "No Description",
+    "retention": "2. Pelaksanaan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.01.c",
+    "description": "No Description",
+    "retention": "3. Pelaporan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.01.d",
+    "description": "No Description",
+    "retention": "4. Ijazah / Surat Tanda Tamat Pendidikan dan Pelatihan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.02",
+    "description": "Usulan Penyesuaian Ijazah",
+    "retention": "Naskah yang berkaitan dengan usulan penyesuaian ijazah.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.03",
+    "description": "Penyusunan Sistem Karier",
+    "retention": "Naskah yang berkaitan dengan peyusunan sistem karier.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.04",
+    "description": "Sasaran Kinerja Pegawai (SKP) aan Penilaian Prestasi Kerja",
+    "retention": "Naskah yang berkaitan dengan standar kinerja pegawai (SKP) dan penilaian prestasi kerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.05.05",
+    "description": "Angka Kredit",
+    "retention": "Naskah yang berkaitan dengan angka kredit, yaitu:\n1. Pengajuan Daftar Usul Penetapan Angka Kredit.\n2. Penilaian Daftar Usul Penetapan Angka Kredit.\n3. Penetapan angka kredit",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.06",
+    "description": "Kinerja Pegawai",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.06.01",
+    "description": "Hasil Penilaian Kinerja dan Standar Kerja",
+    "retention": "Naskah yang berkaitan dengan hasil penilaian kinerja dan standar kerja, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.06.01.a",
+    "description": "No Description",
+    "retention": "1. Sistem penilaian kinerja Aparatur Sipil Negara.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.06.01.b",
+    "description": "No Description",
+    "retention": "2. Standar kinerja jabatan pegawai Aparatur Sipil Negara.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.06.02",
+    "description": "Penilaian Kinerja Pegawai Aparatur Sipil Negara",
+    "retention": "Naskah yang berkaitan dengan penilaian kinerja pegawai Aparatur Sipil Negara, yaitu:\n1 Pengelolaan database dan analisis sistem informasi kinerja Pegawai.\n2. Pengelolaan database penilaian kinerja pegawai Aparatur Sipil Negara\n3. Analisis sistem informasi kinerja pegawai Aparatur Sipil Negara\n4. Teknik Penilaian Kinerja Pegawai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.06.03",
+    "description": "Hasil Evaluasi dan Pemantauan Penilaian Kinerja dan Standar Kinerja Jabatan Pegawai",
+    "retention": "Naskah yang berkaitan dengan hasil evaluasi dan pemantauan penilaian kinerja dan standar kinerja jabatan pegawai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07",
+    "description": "Kode Etik, Disiplin, Pemberhentian dan Pensiun Aparatur Sipil Negara",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.07.01",
+    "description": "Kode Etik Pegawai",
+    "retention": "Naskah yang berkaitan dengan kode etik pegawai seperti disiplin, yaitu:\na. Penegakan disiplin.\nb. Peninakatan disiplin",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.02",
+    "description": "Pemberhentian",
+    "retention": "Naskah yang berkaitang dengan pemberhentian, yaitu:\na. Pemberhentian dengan hormat\nb. Pemberhentian tidak dengan hormat\nc. Pemberhentian sementara",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03",
+    "description": "Pensiun",
+    "retention": "Naskah yang berkaitang dengan pensiun, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.07.03.a",
+    "description": "No Description",
+    "retention": "a. Administrasi pensiun",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.b",
+    "description": "No Description",
+    "retention": "b. Perekaman pemeliharaan data pensiun.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.c",
+    "description": "No Description",
+    "retention": "c. Penetapan pensiun",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.d",
+    "description": "No Description",
+    "retention": "d. Penetapan pertimbangan teknik pensiun.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.e",
+    "description": "No Description",
+    "retention": "e. Berkas usulan pensiun",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.f",
+    "description": "No Description",
+    "retention": "f. Berkas Proses Surat Keterangan Pensiun",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.07.03.g",
+    "description": "No Description",
+    "retention": "g. Surat Keterangan pensiun",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.08.01",
+    "description": "Bantuan Hukum",
+    "retention": "Naskah yang berkaitan dengan bantuan hukum, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.08.01.a",
+    "description": "No Description",
+    "retention": "1 Pemberian bantuan Hukum.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.08.01.b",
+    "description": "No Description",
+    "retention": "2. Bantuan Hukum Pegawai.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.08.01.c",
+    "description": "No Description",
+    "retention": "3. Penyelesaian perselisihanfeengketa kepegawaian:\n    a. Pengaduan\n    b. Notula\n    c. Berita acara pemeriksaan\n    d. Surat Keputusan (SK)",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.09",
+    "description": "Administrasi Pegawai",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.09.01",
+    "description": "Surat Perintah Dinas / Surat Tugas",
+    "retention": "Naskah yang berkaitan dengan Surat perintah dinas / Surat Tugas",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.09.02",
+    "description": "Cuti Pegawai",
+    "retention": "Naskah yang berkaitan dengan cuti pegawai yaitu:\na Cuti Besar\nb. Cuti Sakit, Cuti Tahunan, Cuti Bersalin\nc. Cuti Alasan Penting\nd. Cuti diluar tanggungan Negara (CTLN)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.09.03",
+    "description": "Dokumentasi Identitas Pegawai",
+    "retention": "Naskah yang berkaitan dengan dokumentasi identitas pegawai, yaitu:\na. Usul penetapan kartu pegawai / kartu pegawai elektronik / kartu istri / kartus suami.\nb. Keanggotaan organisasi profesi / kedinasan\nc. Laporan pajak penghasilan pribadi / surat pemberitahuan tahunan / nomor pokok wajib pajak\nd. Keterangan penerimaan pembayaran penghasilan pegawai.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.09.04",
+    "description": "Berkas Kepegawaian dan Daftar Urut Kepangkatan",
+    "retention": "Naskah yang berkaitan dengan berkas kepegawaian dan Daftar Urut Kepangkatan (DUK)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.09.05",
+    "description": "Berkas Pengurusan Gaji Berkala",
+    "retention": "Naskah yang berkaitan dengan berkas pengurusan gaji berkala",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.09.06",
+    "description": "Berkas Tunjangan Kinerja dan Uang Makan",
+    "retention": "Naskah yang berkaitan dengan berkas tunjangan kinerja dan uang makan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.10",
+    "description": "Kesejahteraan Pegawai",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KP.10.01",
+    "description": "Layanan Pemeliharaan Kesehatan Pegawai",
+    "retention": "Naskah yang berkaitan dengan layanan pemeliharaan kesehatan pegawai",
+    "security": "-"
+  },
+  {
+    "code": "KP.10.02",
+    "description": "Layanan Asuransi Pegawai",
+    "retention": "Naskah yang berkaitan dengan layanan asuransi pegawai",
+    "security": "2 Tahun "
+  },
+  {
+    "code": "KP.10.03",
+    "description": "Layanan Tabungan Perumahan",
+    "retention": "Naskah yang berkaitan dengan layanan tabungan perumahan",
+    "security": "2 Tahun "
+  },
+  {
+    "code": "KP.10.04",
+    "description": "Layanan Tabungan Pensiun",
+    "retention": "Naskah yang berkaitan dengan layanan tabungan pensiun",
+    "security": "2 Tahun "
+  },
+  {
+    "code": "KP.10.05",
+    "description": "Layanan Bantuan Sosial",
+    "retention": "Naskah yang berkaitan dengan layanan bantuan sosial layanan bantuan sosial",
+    "security": "2 Tahun "
+  },
+  {
+    "code": "KP.10.06",
+    "description": "Layanan Pakaian Dinas",
+    "retention": "Naskah yang berkaitan dengan layanan pakaian dinas",
+    "security": "-"
+  },
+  {
+    "code": "KP.10.07",
+    "description": "Layanan Pemberian Taii Kasih",
+    "retention": "Naskah yang berkaitan dengan layanan pemberian tali kasih",
+    "security": "-"
+  },
+  {
+    "code": "KP.10.08",
+    "description": "Layanan Pemberian Piagam Penghargaan dan Tanda Jasa",
+    "retention": "Naskah yang berkaitan dengan layanan pemberian piagam penghargaan dan tanda jasa",
+    "security": "-"
+  },
+  {
+    "code": "KP.10.09",
+    "description": "Layanan Olahraga / Rekreasi",
+    "retention": "Naskah yang berkaitan dengan layanan olahraga / rekreasi",
+    "security": "-"
+  },
+  {
+    "code": "KP.10.10",
+    "description": "Layanan Medical Record",
+    "retention": "Naskah yang berkaitan dengan layanan medical record",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.11.01",
+    "description": "Pemberhentian Pegawai Tanpa Hak Pensiun",
+    "retention": "Naskah yang berkaitan dengan pemberhentian pegawai tanpa hak pensiun.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.12.01",
+    "description": "Perselisihan / Sengketa Kepegawaian",
+    "retention": "Naskah yang berkaitan dengan perselisihan/sengketa kepegawaian",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.13.01",
+    "description": "Organisasi Non Kedinasan",
+    "retention": "Naskah yang berkaitan dengan organisasi non kedinasan meliputi Korps Pegawai Republik Indonesia, Dharma Wanita, dan Koperasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.14.01",
+    "description": "Usul Pemberhentian dan Penetapan Pensiun Pegawai / Janda / Duda dan Pegawai Negeri Sipil yang Meninggal.",
+    "retention": "Naskah yang berkaitan dengan usul pemberhentian dan penetapan pensiun pegawai / janda/ duda dan Pegawai Negeri Sipil yang meninggal.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.15.01",
+    "description": "Administrasi Perorangan / Berkas Perseorangan Pegawai Negeri Sipil",
+    "retention": "Naskah yang berkaitan dengan administrasi perorangan / berkas perseorangan Pegawai Negeri Sipil, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.05.01.a",
+    "description": "No Description",
+    "retention": "1. Lamaran yang diterima.\n2. Nota Penetapan Nomor Induk Pegawai dan Kelengkapannya.\n3. Nota Persetujuan/Pertimbangan Kepala Badan Kepegawaian Negara.\n4. Surat Keputusan Pengangkatan Calon Pegawai Negeri Sipil.\n5. Hasil Pengujian Kesehatan\n6. Surat Keputusan Pengangkatan Pegawai Negeri Sipil.\n7. Surat Keputusan Peninjauan Masa Kerja.\n8. Surat Keputusan Kenaikan Pangkat.\n9. Surat Pernyataan Melaksanakan Tugas / Menduduki Jabatan dan Surat Pernyataan Pelantikan\n10. Surat Keputusan Pengangkatan dalam atau Pemberhentian dari Jabatan Struktural / Fungsional.\n11. Berita Acara Pelantikan dan Serah Terima Jabatan\n12. Surat Keputusan Perpindahan antar satuan kerja\n13. Surat Keputusan Perpindahan Antar Instansi.\n14. Surat Keputusan Cuti di Luar Tanggungan Negara (CLTN).\n15. Berita Acara Pemeriksaan.\n16. Surat Keputusan Hukuman Jabatan/Hukuman Disiplin Pegawai Negeri Sipil.\n17. Surat Keputusan Perbantuan / Dipekerjakan / Penugasan di luar Instansi Induk.\n18. Surat Keputusan Penarikan Kembali dari Perbantuan / Dipekerjakan / Penugasan.\n19. Surat Keputusan Pemberian Uang Tunggu.\n20. Surat keputusan pemberhentian sebagai Pegawai Negeri Sipil.\n21. Surat keputusan pemberhentian / Pembebasan Sementara.\n22. Surat keputusan pengangkatan / Pemberhentian sebagai Pejabat Negara.\n23. Surat Keputusan Pembebasan dari Jabatan Organik karena Diangkat Sebagai Pejabat Negara.\n24. Surat Keputusan Pengalihan Pegawai Negeri Sipil.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.05.01.b",
+    "description": "No Description",
+    "retention": "25. Surat Keterangan Pernyataan Hilang.\n26. Surat Keterangan Kembalinya Pegawai Negeri Sipil yang dinyatakan hilang.\n27. Surat Keputusan Penggantian Nama.\n28. Surat perbaikan Tanggal Tahun Kelahiran.\n29. Akta Nikah/Cerai.\n30. Akta Kelahiran\n31. Isian Formulir Pendataan Ulang Pegawai Negeri Sipil.\n32. Berita Acara Pengambilan Sumpah /Janji Pegawai Negeri Sipil dan Jabatan.\n33. Surat Permohonan Menjadi Anggota Parpol.\n34. Surat Keterangan Meninggal Dunia/hilang.\n35. Surat Keterangan Mutasi Keluarga.\n36. Surat Keterangan Peningkatan Pendidikan",
+    "security": "2 Tahun\nsetelah hak\ndan\nkewajibannya\nhabis"
+  },
+  {
+    "code": "KP.16",
+    "description": "Pembinaan Pejabat Fungsional",
+    "retention": "Naskah yang berkaitan dengan pembinaan pejabat fungsional",
+    "security": ""
+  },
+  {
+    "code": "KP.16.01",
+    "description": "Sertifikasi",
+    "retention": "Naskah yang berkaitan dengan sertifikasi, yaitu:\n1. Penjenjangan.\n    a. Surat pemanggilan\n    b. Surat tugas\n    c. Daftar peserta\n    d. Laporan\n    e. Sertifikat\n2. Teknis Tertentu.\n    a. Surat pemanggilan\n    b. Surat tugas\n    c. Daftar peserta\n    d. Laporan\n    e. Sertifikat",
+    "security": "3 tahun"
+  },
+  {
+    "code": "KP.16.02",
+    "description": "Pembinaan Pejabat Fungsional",
+    "retention": "Naskah yang berkaitan dengan pembinaan pejabat fungsional, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.16.02.a",
+    "description": "No Description",
+    "retention": "1. Bimbingan dan konsultasi Sumber Daya Manusia jabatan Fungsional.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.16.02.b",
+    "description": "No Description",
+    "retention": "2. Pengembangan profesi jabatan fungsional:\n    a. Formasi Jabatan Fungsional\n    b. Standar kompetensi Jabatan Fungsional\n    c. Pemutakhiran data Jabatan Fungsional Lembaga Penyiaran Publik Televisi Republik Indonesia\n    d. Rincian bukti kerja Jabatan Fungsional",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.16.02.c",
+    "description": "No Description",
+    "retention": "3. Bimbingan dan konsultasi Tim Penilai Pusat",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.16.02.d",
+    "description": "No Description",
+    "retention": "4. Penilaian Jabatan Fungsional Muda, Madya, dan Utama",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.16.02.e",
+    "description": "No Description",
+    "retention": "5. Penetapan Angka Kredit Muda, Madya, dan Utama",
+    "security": "-"
+  },
+  {
+    "code": "KP.16.02.f",
+    "description": "No Description",
+    "retention": "6. Database Lembaga Penyiaran Publik Televisi Republik Indonesia dan Stasiun Penyiaran",
+    "security": "-"
+  },
+  {
+    "code": "KP.16.03",
+    "description": "Pembinaan Organisasi Profesi Jabatan Fungsional",
+    "retention": "Naskah yang berkaitan dengan pembinaan organisasi profesi jabatan fungsional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.16.04",
+    "description": "Bimbingan Konsultasi dan Supervisi Jabatan Fungsional",
+    "retention": "Naskah yang berkaitan dengan bimbingan konsultasi dan supervisi jabatan fungsional, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KP.16.04.a",
+    "description": "No Description",
+    "retention": "1. Supervisi Jabatan Fungsional\n    a. Surat-menyurat supervisi ke Satuan kerja\n    b. Surat perintah,\n    c. Formulir supervisi dan\n    d. Data Satuan kerja\n2. Notulen rapat bimbingan Laporan dan evaluasi hasil supervisi",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KP.16.04.b",
+    "description": "No Description",
+    "retention": "3. Bimbingan dan Konsultasi Kearsipan.\n    a. Surat-menyurat bimbingan dan konsultasi ke instansi.\n    b. Surat perintah, materi bimbingan dan konsultasi data hasil bimbingan dan konsultasi.\n    c. Notulen rapat bimbingan dan konsultasi.\n    d. Laporan hasil bimbingan dan konsultasi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KP.16.04.c",
+    "description": "No Description",
+    "retention": "4. Bimbingan Teknis jabatan Fungsional.\n    a. Surat menyurat bimbingan teknis ke instansi.\n    b. Surat perintah, materi bimbingan teknis dan data hasil bimbingan teknis.\n    c. Notulen rapat bimbingan teknis.\n    d. Laporan hasil bimbingan teknis.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "OT.00",
+    "description": "Penataan kelembagaan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "OT.00.01",
+    "description": "Struktur Organisasi di Lingkungan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah berkaitan dengari struktur organisasi di lingkungan Lembaga Penyiaran Publik Televisi Republik Indonesia, yaitu:\n1. Pembentukan\n2. Pengubahan\n3. Pembubaran",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "OT.00.02",
+    "description": "Uraian Jabatan dan Tata Kerja",
+    "retention": "Naskah yang berkaitan dengan uraian jabatan dan tata kerja",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "OT.00.03",
+    "description": "Evaluasi Keiembagaan (naskah akademis)",
+    "retention": "Naskah yang berkaitan dengan evaluasi kelembagaan (naskah akademis)",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "OT.00.04",
+    "description": "Standar Kompetensi Jabatan Struktural dan Fungsional",
+    "retention": "Naskah yang berkaitan dengan standar kompetensi jabatan struktural dan fungsional",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "OT.00.05",
+    "description": "Analisa Jabatan dan Beban Kerja Struktural / Fungsional Tertentu / Fungsional Umum",
+    "retention": "Naskah yang berkaitan dengan analisa jabatan dan beban kerja struktural / fungsional tertentu / fungsional umum.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "OT.00.06",
+    "description": "Ketatalaksanaan",
+    "retention": "Naskah yang berkaitan dengan ketatalaksanaan, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "OT.00.06.a",
+    "description": "No Description",
+    "retention": "1. Standar Operasional Prosedur / Prosedur Tetap.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "OT.00.06.b",
+    "description": "No Description",
+    "retention": "2. Mekanisme kerja / hubungan kerja",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "OT.01",
+    "description": "Tatalaksana",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "OT.01.01",
+    "description": "Penyederhanaan Organisasi dan Tata Kerja",
+    "retention": "Naskah yang berkaitan dengari tata laksana penyederhanaan organisasi dan tata kerja",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "OT.01.02",
+    "description": "Tim Reformasi Birokrasi",
+    "retention": "Naskah yang berkaitan dengan tim reformasi birokrasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "OT.01.03",
+    "description": "Implementasi 8 (delapan) Area Perubahan",
+    "retention": "Naskah yang berkaitan dengan tim Implementasi 8 (delapan) Area Perubahan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "OT.01.04",
+    "description": "Internalisasi Reformasi Birokrasi",
+    "retention": "Naskah yang berkaitan dengan tim Internalisasi Reformasi Birokrasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.00.01",
+    "description": "Pembentukan Unit Kearsipan",
+    "retention": "Naskah yang berkaitan dengan pembentukan unit kearsipan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.01.01",
+    "description": "Pembentukan Unit Pengelolaan kearsipan",
+    "retention": "Naskah yang berkaitan dengan pembentukan unit pengelolaan kearsipan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.02.01",
+    "description": "Penyusunan Klasifikasi Arsip",
+    "retention": "Naskah yang berkaitan dengan penyusunan klasifikasi arsip",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.03.01",
+    "description": "Penyusunan Jadwal Retensi Arsip",
+    "retention": "Naskah yang berkaitan dengan penyusunan jadwal retensi arsip, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.03.01.a",
+    "description": "No Description",
+    "retention": "1. Konsultasi Penyusunan Sistem Kearsipan.\n    a. Surat-menyurat penyusunan sistem kearsipan ke instansi.\n    b. Surat perintah dan daftar hadir konsultasi.\n    c. Notulen rapat bimbingan.\n    d. Draf manual sistem kearsipan, telaah / masukan.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.03.01.b",
+    "description": "No Description",
+    "retention": "2. Persetujuan Jadwal Retensi Arsip.\n    a. Surat permohonan dari instansi beserta lampiran.\n    b. Nota dinas.\n    c. Telaah Jadwal Retensi Arsip.\n    d. Rancangan Jadwal Retensi Arsip yang sudah dibahas dan ditelaah.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.03.01.c",
+    "description": "No Description",
+    "retention": "    e. Surat persetujuan Jadwal Retensi Arsip dan lampirannya (rancangan Jadwal Retensi Arsip yang disetujui oleh Kepala Arsip Nasional RI)\n    f. Laporan bimbingan dan konsultasi pertimbangan dan persetujuan Jadwal Retensi Arsip\n    g. Rekomendasi Tim Penyusun Jadwal Retensi Arsip",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.04.01",
+    "description": "Hasil notulen rapat penilaian",
+    "retention": "Naskah yang berkaitan dengan hasil notulen rapat penilaian, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.04.01.a",
+    "description": "No Description",
+    "retention": "1. Pelaporan Arsip Terjaga.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.04.01.b",
+    "description": "No Description",
+    "retention": "2. Berkas pelaporan arsip terjaga mulai dari surat menyurat hingga database arsip terjaga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.05.01",
+    "description": "Sosialisasi, Workshop , Rapat Koordinasi Kearsipan",
+    "retention": "Naskah yang berkaitan dengan sosialisasi, workshop, rapat koordinasi kearsipan dan laporan,\nyaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.05.01.a",
+    "description": "No Description",
+    "retention": "1. Surat perintah, surat undangan, materi, jadwal.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.05.01.b",
+    "description": "No Description",
+    "retention": "2. Laporan, proceeding.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.06.01",
+    "description": "Monitoring Pelaksanaan Persetujuan Jadwal Retensi Arsip",
+    "retention": "Naskah yang berkaitan dengan monitoring pelaksanaan Jadwal Retensi Arsip",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.07.01",
+    "description": "Implementasi Aplikasi Sistem Kearsipan",
+    "retention": "Naskah yang berkaitan dengan Implementasi aplikasi sistem kearsipan, yaitu:\na. Surat permintaan.\nb. Notulen rapat persiapan implementasi.\nc. Berita Acara Serah Terima Aplikasi\nd. Aplikasi (software) sistem kearsipan.\ne. Instrumen pendukung implementasi aplikasi,\nf. Laporan implementasi aplikasi sistem kearsipan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.08.01",
+    "description": "Rekapitulasi Data Hasil Bimbingan dan Konsultasi Serta Supervisi",
+    "retention": "Naskah yang berkaitan dengan rekapitulasi data hasil bimbingan dan konsultasi serta supervisi, yaitu.",
+    "security": ""
+  },
+  {
+    "code": "AR.08.01.a",
+    "description": "No Description",
+    "retention": "1. Data Unit Kearsipan",
+    "security": "-"
+  },
+  {
+    "code": "AR.08.01.b",
+    "description": "No Description",
+    "retention": "2. Data Unit Pengolah",
+    "security": "-"
+  },
+  {
+    "code": "AR.09.01",
+    "description": "Penyelamatan Arsip",
+    "retention": "Naskah yang berkaitan dengan penyelamatan / akuisisi arsip statis, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.09.01.a",
+    "description": "No Description",
+    "retention": "1. Penyelamatan arsip statis\n    a. Pendataan arsip statis\n    b. Bimbingan pelaksanaan penyelamatan arsip statis",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.09.01.b",
+    "description": "No Description",
+    "retention": "2. Penyerahan arsip statis meliputi:\n    a. Surat permohonan penyerahan arsip statis kepada ANRI\n    b. Rekomendasi hasil penilaian/verifikasi arsip\n    c. Surat persetujuan penyerahan arsip statis beserta daftar arsip yang akan diserahkan\n    d. Berita Acara serah terima arsip statis beserta daftar arsip yang diserahkan\n    e. Dokumentasi serah terima arsip statis Lembaga Penyiaran Publik Televisi Republik Indonesia\n3. Konsultasi Pemusnahan dan Penyerahan Arsip",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.09.01.c",
+    "description": "No Description",
+    "retention": "3. Konsultasi Pemusnahan dan Penyerahan Arsip",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.10.01",
+    "description": "Pengendalian Arsip Terjaga",
+    "retention": "Naskah yang berkaitan dengan pengendalian arsip terjaga, yaitu",
+    "security": ""
+  },
+  {
+    "code": "AR.10.01.a",
+    "description": "No Description",
+    "retention": "1. Pendataan arsip terjaga.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.10.01.b",
+    "description": "No Description",
+    "retention": "2. Laporan penciptaan dan pemberkasan, arsip terjaga",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.10.01.c",
+    "description": "No Description",
+    "retention": "3. Evaluasi pengelolaan arsip terjaga\n",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.10.01.d",
+    "description": "No Description",
+    "retention": "4. Daftar arsip terjaga",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "AR.11.01",
+    "description": "Persetujuan Pemusnahan Arsip",
+    "retention": "Naskah yang berkaitan dengan persetujuan pemusnahan arsip, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.11.01.a",
+    "description": "No Description",
+    "retention": "1. Persetujuan pemusnahan arsip meliputi:\n    a. Surat permintaan persetujuan kepada Kepala ANRI\n    b. Rekomendasi hasil penilaian\n    c. Laporan hasil penilaian.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.11.01.b",
+    "description": "No Description",
+    "retention": "    d. Surat persetujuan pemusnahan arsip dari Kepale ANRI beserta daftar arsip.\n    e. Berita acara pemusnahan arsip beserta daftar arsip yang dimusnahkan dari pencipta arsip\n    f. Dokumentasi pelaksanaan pemusnahan arsip Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.11.01.c",
+    "description": "No Description",
+    "retention": "2. Daftar rekapitulasi persetujuan pemusnahan arsip.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01",
+    "description": "Preservasi",
+    "retention": "Naskah yang berkaitan dengan preservasi, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.12.01.a",
+    "description": "No Description",
+    "retention": "1. Penyimpanan Arsip.\n    a. Peta lokasi penyimpanan arsip.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "AR.12.01.b",
+    "description": "No Description",
+    "retention": "    b. Daftar rekapitulasi khazanah arsip yang disimpan.\n    c. Slip/formulir hasil pemeriksaan rutin harian, mingguan dan bulanan.\n    d. Slip/formulir penggunaan arsip.\n    e. Daftar piket layanan depot\n    f. Izin memasuki depot",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "AR.12.01.c",
+    "description": "No Description",
+    "retention": "2. Restorasi.\n    a. Administrasi pelaksanaan restorasi.\n    b. Data kerusakan arsip",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01.d",
+    "description": "No Description",
+    "retention": "3. Daftar rekapitulasi arsip yang direstorasi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01.e",
+    "description": "No Description",
+    "retention": "4. Reproduksi\n    a. Administrasi pelaksanaan reproduksi.\n    b. Daftar rekapitulasi arsip yang direproduksi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01.f",
+    "description": "No Description",
+    "retention": "5. Alih Media.\n    a. Administrasi pelaksanaan alih media.\n    b. Daftar rekapitulasi arsip yang dialihmediakan.\n    c. Administrasi pelaksanaan alih media",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01.g",
+    "description": "No Description",
+    "retention": "6. Pengelolaan Laboratorium.\n    a. Data fasilitas teknis laboratorium.\n    b. Slip/formulir hasil pengujian.\n    c. Log book proses pengujian.\n    d. Laporan hasil pengujian laboratorium.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.12.01.h",
+    "description": "No Description",
+    "retention": "7. Auntentikasi Arsip.\n8. Penyelamatan Arsip Pasca Bencana.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.13.01",
+    "description": "Layanan Arsip",
+    "retention": "Naskah yang berkaitan dengan layanan arsip, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "AR.13.01.a",
+    "description": "No Description",
+    "retention": "1. Permintaan Data/Informasi.",
+    "security": "-"
+  },
+  {
+    "code": "AR.13.01.b",
+    "description": "No Description",
+    "retention": "2. Pameran.\n    a. Administrasi penyelenggaraan pameran\n    b. Katalog pameran.\n    c. Buku tamu pengunjung pameran.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "AR.13.01.c",
+    "description": "No Description",
+    "retention": "3. Evaluasi teknis pameran",
+    "security": "-"
+  },
+  {
+    "code": "AR.14.01",
+    "description": "Record Center",
+    "retention": "Naskah yang berkaitan dengan Record Center yaitu:\n1. Perencanaan Pengembangan Record Center Studio Alam.\n2 Pelaksanaan Pengembangan Record Center di Studio Alam",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.00.01",
+    "description": "Dokumen Perumusan pertimbangan Hukum",
+    "retention": "Naskah yang berkaitan dengan perumusan pertimbangan hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.01.01",
+    "description": "Dokumen Penanganan Hukum",
+    "retention": "Naskah yang berkaitan dengan pengangan hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.02.01",
+    "description": "Dokumen Advokasi Hukum",
+    "retention": "Naskah yang berkaitan dengan advokasi hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.03.01",
+    "description": "Berkas Pembuatan Sertifikat",
+    "retention": "Naskah yang berkaitan dengan pembuatan sertifikat, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "HK.03.01.a",
+    "description": "No Description",
+    "retention": "1. Surat bukti awal kepemilikan tanah\n2. Surat permohonan pembuatan sertifikat tanah",
+    "security": "-"
+  },
+  {
+    "code": "HK.03.01.b",
+    "description": "No Description",
+    "retention": "3. Surat ukur tanah\n4. Tanda terima berkas\n5. Sertifikat",
+    "security": "-"
+  },
+  {
+    "code": "HK.04.01",
+    "description": "Peraturan Dewan Direksi",
+    "retention": "Naskah yang berkaitan dengan peraturan Dewan Direksi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.05.01",
+    "description": "Keputusan Dewan Direksi dan Dewan Pengawas",
+    "retention": "Naskah yang berkaitan dengan keputusan Dewan Direksi dan Dewan Pengawas",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.06.01",
+    "description": "Dokumentasi Hukum",
+    "retention": "Naskah yang berkaitan dengan dokumen hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.07.01",
+    "description": "Pelayanan Informasi Hukum",
+    "retention": "Naskah yang berkaitan dengan pelayanan informasi hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.08",
+    "description": "Program Legislasi",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "HK.08.01.a",
+    "description": "Bahan / Materi Program Legislasi Dari Program Legislasi",
+    "retention": "Naskah yang berkaitan dengan proses legislasi berupa bahan / materi program legislasi dari Program legislasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.08.01.b",
+    "description": "Rancangan Peraturan Perundang-Undangan",
+    "retention": "Naskah yang berkaitan dengan proses Rancangan Peraturan Perundang-Undangan, yaitu:\n1. Rancangan Undang-Undang dan atau Peraturan Pemerintah Pengganti Undang-Undang, rancangan awal sampai dengan rancangan akhir dan telaah hukum sampai diundangkan.\n2. Rancangan Peraturan Dewan Direksi, rancangan awal sampai dengan rancangan akhir dan telaah hukum sampai diundangkan.\n3. Rancangan Peraturan / Keputusan / Instruksi Dewan Direksi, rancangan awal sampai dengan rancangan akhir dan telaah hukum sampai diundangkan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.09.01",
+    "description": "Instruksi / Surat Edaran",
+    "retention": "Naskah yang berkaitan dengan instruksi / surat edaran, mulai dari rancangan awal sampai dengan rancangan akhir dan teiaah hukum, yaitu:\n1. Instruksi/ Surat Edaran Dewan Direksi.\n2. Instruksi/ Surat Edaran Pejabat Eselon II",
+    "security": "-"
+  },
+  {
+    "code": "HK.10.01",
+    "description": "Surat Perintah",
+    "retention": "Naskah yang berkaitan dengan surat perintah, yaitu:\n1. Surat Perintah Direktur Utama.\n2. Surat Perintah Pejabat Setingkat Eselon II, IlI dan IV",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "HK.11.01",
+    "description": "Standar / Pedoman/ Prosedur Kerja/ Petunjuk Pelaksanaan/ Petunjuk Teknis yang Bersifat Nasional/ Regional / Instansional Termasuk Rancangan Awal Sampai Dengan Rancangan Akhir",
+    "retention": "Naskah yang berkaitan dengan proses penyusunan standar / pedoman / prosedur kerja / petunjuk pelaksanaan / petunjuk teknis",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "HK.12.01",
+    "description": "Dokumentasi Hukum",
+    "retention": "Naskah yang berkaitan dengan dokumentasi hukum, yaitu Eksternal, Undang-Undang, Peraturan Pemerintah, Keputusan Presiden, dan Peraturan-Peraturan yang dijadikan referensi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.13.01",
+    "description": "Sosialisasi / Penyuluhan / Pembinaan Hukum",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "HK.13.01.a",
+    "description": "Kegiatan Sosialisasi atau Penyuluhan Hukum",
+    "retention": "Naskah yang berkaitan dengan kegiatan sosialisasi / penyuluhan / pembinaan hukum, yaitu:\na. Surat permohonan dan persetujuan kegiatan (Kerangka Acuan Kegiatan dan Rincian Anggaran Biaya)\nb. Surat keputusan tim pelaksana\nc. Materi dan susunan kegiatan\nd. Undangan peserta dan narasumber\ne. Daftar peserta\nf. Sertifikat",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.13.01.b",
+    "description": "Laporan Hasil Pelaksanaan Sosialisasi Penyuluhan Hukum",
+    "retention": "Naskah yang berkaitan dengan laporan hasil pelaksanaan sosialisasi penyuluhan hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.14.01",
+    "description": "Bantuan / Konsultasi Hukum / Advokasi Berkas Tentang Pemberian Bantuan / Konsultasi Hukum (Pidana, Perdata, Tata Usaha Negara dan Agama)",
+    "retention": "Naskah yang berkaitan dengan pemberian bantuan hukum / konsultasi hukum, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "HK.14.01.a",
+    "description": "Pidana",
+    "retention": "Naskah yang berkaitan dengan pemberian bantuan / konsultasi hukum pidana, yaitu:\na. Surat pemanggilan\nb. Surat penugasan pendampingan / konsultasi\nc. Surat penunjukan kuasa hukum\nd. Pelaksanaan pendampingan\ne. Laporan pendampingan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.14.01.b",
+    "description": "Perdata",
+    "retention": "Naskah yang berkaitan dengan pemberian / konsultasi hukum perdata, yaitu:\na. Surat pemanggilan / rilas\nb. Surat penugasan pendampingan / konsultasi\nc. Surat penunjukan kuasa hukum / tugas\nd. Pelaksanaan pendampingan\ne. Laporan pendampingan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.14.01.c",
+    "description": "Tata Usaha Negara",
+    "retention": "Naskah yang berkaitan dengan pemberian / konsultasi hukum Tata Usaha Negara, yaitu:\na. Surat pemanggilan\nb. Surat penugasan pendampingan / onsultasi\nc. Surat penunjukan kuasa hukum / tugas\nd. Pelaksanaan pendampingan\ne. Laporan pendampingan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.14.01.d",
+    "description": "Agama",
+    "retention": "Naskah yang berkaitan dengan pemberian/konsultasi hukum agama berupa surat izin",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15",
+    "description": "Kasus / Sengketa Hukum",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "HK.15.01",
+    "description": "Pidana",
+    "retention": "Berkas tentang kasus / sengketa pidana, baik kejahatan maupun pelanggaran:\na. Proses verbal mulai dari penyelidikan, penyidikan, pengadilan sampai putusan\nb. Berkas pembelaan dan bantuan hukum\nc. Telaah hukum opini hukum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15.02",
+    "description": "Perdata",
+    "retention": "Berkas tentang kasus / sengketa perdata, yaitu:\na. Telaah hukum opini hukum\nb. Proses gugatan\nc. Berita acara mediasi\nd. Duplik\ne. Replik\nf. Berita acara pengesahan alat bukti\ng. Berita acara pemeriksaan saksi\nh. Kesimpulan\ni. Putusan hukum\nj. Memor banding/kontra memori banding\nk. Kasasi\nI. Peninjauan kembali",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15.03",
+    "description": "Tata Usaha Negara",
+    "retention": "Berkas tentang kasus / sengketa Tata usaha Negara, yaitu:\na. Telaah hukum opini hukum\nb. Proses gugatan\nc. Berita acara mediasi\nd. Duplik\ne. Replik\nf. Berita acara pengesahan alat bukti\ng. Berita acara pemeriksaan saksi\nh. Kesimpulan\ni. Putusan hukum\nj. Memori banding/kontra memori\nk. Kasasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15.04",
+    "description": "Arbitrase",
+    "retention": "Berkas tentang kasus / sengketa Arbitrase, yaitu:\na. Telaah hukum opini hukum\nb. Proses gugatan\nc. Berita acara mediasi\nd. Duplik\ne. Replik\nf. Berita acara pengesahan alat bukti\ng. Berita acara pemeriksaan saksi\nh. Kesimpulan\ni. Putusan Arbitrase",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15.05",
+    "description": "Pengaduan Pelayanan Publik / Ombudsman",
+    "retention": "Berkas Tentang pengaduan pelayanan publik/Ombudsman, yaitu:\na. Surat pengaduan\nb. Jawaban terhadap surat pengaduan\nc. Dokumen administrasi\nd. mediasi\ne. rekomendasi\nf. tindak lanjut rekomendasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HK.15.06",
+    "description": "Hak atas Kekayaan Intelektual",
+    "retention": "Berkas tentang Hak katas Kekayaan Intelektual berupa Hak Cipta dan Hak Paten",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "HM.00",
+    "description": "Hubungan Masyarakat",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "HM.00.01",
+    "description": "Pidato Pimpinan (Direktur Utama dan Dewan Pengawas)",
+    "retention": "Naskah yang berkaitan dengan pidato pimpinan (Direktur Utama dan Dewan Pengawas)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.02",
+    "description": "Hasil Publikasi",
+    "retention": "Naskah yang berkaitan dengan pidato pimpinan (Direktur Utama dan Dewan Pengawas)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.03",
+    "description": "Materi Konferensi Pers",
+    "retention": "Naskah yang berkaitan dengan konferensi pers",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.04",
+    "description": "Dokumen Keterbukaan Informasi Publik",
+    "retention": "Naskah yang berkaitan dengan keterbukaan informasi publik",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.05",
+    "description": "Dokumen pengembangan Informasi",
+    "retention": "Naskah yang berkaitan dengan pengembangan informasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.06",
+    "description": "Dokumentasi Kegiatan Pimpinan",
+    "retention": "Naskah yang berkaitan dengan kegiatan pimpinan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.07",
+    "description": "Surat Kerjasama dan Kemitraan antara Lembaga\n",
+    "retention": "Naskah yang berkaitan dengan kemitraan antara lembaga.\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.08",
+    "description": "Konsep Membangun Citra Positif Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan konsep membangun citra positif Lembaga Penyiaran Publik Televisi Republik Indonesia\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.09",
+    "description": "Materi update content website Lembaga Penyiaran Publik Televisi Republik Indonesia\n",
+    "retention": "Naskah yang berkaitan dengan materi website Lembaga Penyiaran Publik Televisi Republik Indonesia\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.10",
+    "description": "Dokumen Public Relation (PR)",
+    "retention": "Naskah yang berkaitan dengan dokumen public relation",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.11",
+    "description": "Komunikasi Pimpinan dengan Publik",
+    "retention": "Naskah yang berkaitan dengan kegiatan komunikasi pimpinan dengan publik dan lembaga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.12",
+    "description": "Komunikasi Pimpinan dengan Lembaga",
+    "retention": "Naskah yang berkaitan dengan kegiatan komunikasi pimpinan dengan Lembaga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.13",
+    "description": "Presentasi Direktur Utama",
+    "retention": "Naskah yang berkaitan dengan presentasi Direktur Utama",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.14",
+    "description": "Dokumentasi / Liputan Kegiatan Dinas Pimpinan, Acara Kedinasan, dan Peristiwa-Peristiwa Bidang Masing-Masing, dalam berbagai media: kertas / foto / video / rekaman suara / multimedia ",
+    "retention": "Naskah yang berkaitan dengan Dokumentasi / liputan kegiatan dinas pimpinan, acara kedinasan, dan peristiwa-peristiwa bidang masing-masing, dalam berbagai media: kertas / foto / video / rekaman suara / multimedia, yaitu:",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.14.a",
+    "description": "No Description",
+    "retention": "a. Ketua Dewan Pengawas dan Anggota Dewas.",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.14.b",
+    "description": "No Description",
+    "retention": "b. Direktur Utama dan Para Direksi.",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.14.c",
+    "description": "No Description",
+    "retention": "c. Eselon II.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.14.d",
+    "description": "No Description",
+    "retention": "d. Pejabat lain / pegawai.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.15",
+    "description": "Pengumpulan, Pengolahan dan Penyajian Informasi Kelembagaan\n",
+    "retention": "Naskah yang berkaitan dengan pengumpulan, pengolahan dan penyajian informasi kelembagaan, yaitu:\na. Kliping koran.\nb. Brosur / leaflet 1 poster / plakat.\nc. Pengumuman / pemberitaan",
+    "security": "-"
+  },
+  {
+    "code": "HM.00.16",
+    "description": "Hubungan antar Lembaga Negara dan Badan Pemerintahan / Instansi\n",
+    "retention": "Naskah yang berkaitan dengan Hubungan antar lembaga negara dan badan pemerintahan / instansi, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "HM.00.16.a",
+    "description": "No Description",
+    "retention": "a Hubungan antar badan pemerintah,",
+    "security": "-"
+  },
+  {
+    "code": "HM.00.16.b",
+    "description": "No Description",
+    "retention": "b. Hubungan dengan organisasi sosial / Lembaga Swadaya Masyarakat\nc Hubungan dengan perusahaan,\nd Hubungan dengan perguruan tinggi / sekolah,\ne Hubungan dengan perguruan tinggi / sekolah mengenai magang. Pendidikan Sistem Ganda (PSG) / Praktek Kerja Lapangan (PKL),\nf. Hubungan dengan Media,\ng Forum Kehumasan (Badan Koordinasi Kehumasan Pemerintah / Perhimpunan Hubungan Masyarakat Indonesia)",
+    "security": "-"
+  },
+  {
+    "code": "HM.00.17",
+    "description": "Hubungan dengan Media Massa",
+    "retention": "Naskah yang berkaitan dengan hubungan media massa, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "HM.00.17.a",
+    "description": "No Description",
+    "retention": "a. Siaran pers / konferensi pers / press release /wawancara.",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.17.b",
+    "description": "No Description",
+    "retention": "b. Kunjungan wartawan / peliputan",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.18",
+    "description": "Dokumen Persidangan dan Rapat",
+    "retention": "Naskah yang berkaitan dengan dokumen persidangan dan rapat, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "HM.00.18.a",
+    "description": "No Description",
+    "retention": "1. Rapat Dengar Pendapat",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.18.b",
+    "description": "No Description",
+    "retention": "2. Rapat Dengar Pendapat Dewan Perwakilan Rakyat / Dewan Perwakilan Daerah Republik Indonesia.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.18.c",
+    "description": "No Description",
+    "retention": "3. Rapat kordinasi tingkat Nasional transkrip.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.18.d",
+    "description": "No Description",
+    "retention": "4. Bahan rapat terbatas Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.18.e",
+    "description": "No Description",
+    "retention": "5. Pidato Direktur Utama Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.18.f",
+    "description": "No Description",
+    "retention": "6. Bahan Pidato Direktur Utama dan Ketua Dewan Pengawas",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.19",
+    "description": "Penerbitan Majalan, Buletin, Koran dan Jurnal",
+    "retention": "Naskah yang berkaitan dengan penerbitan majalah, buletin, koran dan jurnal.",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.20",
+    "description": "Publikasi melalui Media Cetak Maupun Elektronik",
+    "retention": "Naskah yang berkaitan dengan publikasi di media cetak dan elektronik.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.21",
+    "description": "Pameran / Sayembara / Lomba / Festival / Pembuatan Spanduk dan Iklan ",
+    "retention": "Naskah yang berkaitan dengan kegiatan pameran / sayembara / lomba / festival / pembuatan spanduk dan iklan",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "HM.00.22",
+    "description": "Penghargaan/ Tanda Kenang-kenangan Administrasi Pemberian Penghargaan / Tanda kenang-kenangan kepada masyarakat yang memiliki jasa prestasi besar",
+    "retention": "Naskah, berkas dan dokumen berkaitan dengan penghargaan dan tanda kenang-kenangan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.00.23",
+    "description": "Ucapan terima kasih, ucapan selamat, belasungkawa, permohonan maaf",
+    "retention": "Naskah yang berkaitan dengan dengan ucapan terima kasih, ucapan selamat, belasungkawa dan permohonan maaf.\n",
+    "security": "-"
+  },
+  {
+    "code": "HM.00.24",
+    "description": "Layanan Lainnya",
+    "retention": "Naskah, berkas dan dokumen berkaitan dengan layanan lainnya, yaitu:\n1. Layanan Kehumasan.\n2. Layanan Diorama.\n3. Layanan Mobil Sadar Arsip.\n4. Layanan Informasi Publik.\n5. Layanan Website",
+    "security": "-"
+  },
+  {
+    "code": "HM.01",
+    "description": "Keprotokolan",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "HM.01.01",
+    "description": "Tata Protokol Pimpinan Dewan Pengawas dan Dewan Direksi",
+    "retention": "Naskah yang berkaitan dengan tata protokol pimpinan Dewan Pengawas dan Dewan Direksi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.02",
+    "description": "Berkas Kegiatan Direktur Utama",
+    "retention": "Naskah yang berkailan dengan kegiatan Direktur Utama.\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.03",
+    "description": "Berkas Koordinasi Teknik Eksternal dan Internal terkait dengan kegiatan Direktur Utama",
+    "retention": "Naskah yang berkaitan dengan koordinasi teknik eksternal dan internal.\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.04",
+    "description": "Berkas kegiatan Direksi terkait dengan kegiatan kenegaraan, pemerintahan dan hubungan antara Lembaga",
+    "retention": "Naskah yang berkaitan dengan kegiatan Direksi terkait kegiatan kenegaraan, pemerintahan dan hubungan antar lembaga.\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05",
+    "description": "Keprotokolan",
+    "retention": "Naskah yang berkaitan dengan keprotokolan, yaitu:",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05.a",
+    "description": "No Description",
+    "retention": "1. Penyelenggaraan acara kedinasan (upacara, pelantikan, peresmian, dan jamuan",
+    "security": "-"
+  },
+  {
+    "code": "HM.01.05.b",
+    "description": "No Description",
+    "retention": "2. Buku Tamu",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05.c",
+    "description": "No Description",
+    "retention": "3. Agenda kegiatan Pimpinan Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05.d",
+    "description": "No Description",
+    "retention": "4. Kunjungan dinas dalam dan luar negeri\n    - Kunjungan Pimpinan Lembaga Penyiaran Publik Televisi Republik Indonesia\n    - Kunjungan dinas Eselon I",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05.e",
+    "description": "No Description",
+    "retention": "5. Kunjungan Dinas Pejabat Lain / Pegawai",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "HM.01.05.f",
+    "description": "No Description",
+    "retention": "5. Daftar nama / alamat kantor / pejabat.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00",
+    "description": "Rencana Anggaran Pendapatan Dan Belanja Negara (RAPBN) Dan Rancangan Undang-Undang Anggaran Pendapatan dan Belanja",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.00.01",
+    "description": "Penyusunan Rencana Anggaran Pendapatan Belanja Negara, Kebijakan Umum dan Prioritas\n",
+    "retention": "Naskah yang berkaitan dengan penyusunan Rencana Anggaran Pendapatan Belanja Negara, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KU.00.01.a",
+    "description": "No Description",
+    "retention": "1. Dokumen Rencana Strategis atas Rencana Jangka Panjang atau Rencana Kerja Lima Tahunan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.01.b",
+    "description": "No Description",
+    "retention": "2. Dokumen Rencana Kerja Tahunan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.01.c",
+    "description": "No Description",
+    "retention": "3. Dokumen Rencana Anggaran Kerja Instansi Pemerintah (RAKIP) dan Dokumen Rencana Kerja Anggaran Kementerian / Lembaga (RKA-K/L).",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.01.d",
+    "description": "No Description",
+    "retention": "4. Dokumen Rancangan Anggaran Satuan dan Standar Biaya.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02",
+    "description": "Penyampaian Rencana Anggaran Pendapatan Belanja Negara Kepada Dewan Perwakilan Rakyat Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan penyampaian Rencana Anggaran Pendapatan Belanja Negara kepada Dewan Perwakilan Rakyat Republik Indonesia, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KU.00.02.a",
+    "description": "No Description",
+    "retention": "1. Pengantar Nota Keuangan Pemerintah dan Rancangan Undang- Undang Anggaran Pendapatan dan Belanja Negara:\na. Pidato Presiden Pengantar Nota Keuangan.\nb. Nota Keuangan.\nc. Rancangan Undang-Undang Anggaran Pendapatan dan Belanja Negara.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02.b",
+    "description": "No Description",
+    "retention": "2. Risalah rapat pembahasan anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia Dengan Komisi I Dewan Perwakilan Rakyat Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02.c",
+    "description": "No Description",
+    "retention": "3. Risalah rapat pembahasan anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia dengan Kementerian Keuangan dan Bappenas",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02.d",
+    "description": "No Description",
+    "retention": "4. Notulen Pembahasan Rancangan Undang-Undang Anggaran Pendapatan dan Belanja Negara - Perubahan oleh Lembaga Penyiaran Publik Televisi Republik Indonesia dan Dewan Perwakilan Rakyat Republik Indonesia.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02.e",
+    "description": "No Description",
+    "retention": "5. Notula Rapat Paripurna persetujuan Rancangan Undang-Undang Anggaran Pendapatan dan Belanja Negara",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.02.f",
+    "description": "No Description",
+    "retention": "6. Nota Jawaban Dewan Perwakilan Rakyat Republik Indonesia terkait dengan pembahasan Rancangan Undang-Undang Anggaran Pendapatan dan Belanja Negara dengan Komisi I Dewan Perwakilan Rakyat Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.03",
+    "description": "Undang-Undang Anggaran Pendapatan dan Belanja Negara (APBN) dan Rencana Kerja Pemerintah (RKP).",
+    "retention": "Naskah yang berkaitan dengan Undang-Undang Anggaran Pendapatan Belanja Negara dan Rencana Kerja Pemerintah (RKP)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.04",
+    "description": "Keputusan Presiden tentang Rincian Anggaran Pendapatan Belanja Negara dan Daftar Isian Pelaksanaan Anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah yang berkaitan dengan Keputusan Presiden tentang rincian Anggaran Pendapatan Belanja Negara dan Daftar Isian Pelaksana Anggaran Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.05",
+    "description": "Daftar Isian Pelaksanaan Anggaran (DIPA) dan Revisinya",
+    "retention": "Naskah yang berkaitan dengan Daftar Isian Pelaksanaan Anggaran (DIPA), Petunjuk Operasional Kegiatan (POK) dan revisinya",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.06",
+    "description": "Ketentuan/Peraturan yang menyangkut Perencanaan, Pelaksanaan Penatausahaan dan Pertanggungjawaban Anggaran",
+    "retention": "Naskah berkaitan dengan ketentuan/peraturan tentang\nperencanaan, pelaksanaan, penatausahaan dan pertanggungjawaban",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.00.07",
+    "description": "Target Penerimaan Negara Bukan Pajak",
+    "retention": "Naskah yang berkaitan dengan target Penerimaan Negara Bukan Pajak\n",
+    "security": "9 Tahun"
+  },
+  {
+    "code": "KU.01",
+    "description": "Pelaksanaan Anggaran",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.01.01",
+    "description": "Ketentuan / Peraturan Menteri Keuangan Menyangkut Pelaksanaan, Penatausahaan dan Pertanggungjawaban Anggaran",
+    "retention": "Naskah yang berkaitan dengan Ketentuan / Peraturan Menteri Keuangan Menyangkut Pelaksanaan, Penatausahaan dan Pertanggungjawaban Anggaran",
+    "security": "4 Tahun"
+  },
+  {
+    "code": "KU.01.02",
+    "description": "Dokumen Realisasi Pendapatan",
+    "retention": "Naskah yang berkaitan dengan dokumen realisasi pendapatan, yaitu:\n1. Surat Setoran Pajak (SSP)",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.01.02.a",
+    "description": "No Description",
+    "retention": "a. Undang-Undang Anggaran Pendapatan dan Belanja Negara Perubahan (UU APBN P)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.01.02.b",
+    "description": "No Description",
+    "retention": "b. Keputusan Presiden tentang Rincian APBN-P",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.01.02.c",
+    "description": "No Description",
+    "retention": "c. Bukti setor sisa anggaran lebih atau bukti setor pengembalian belanja",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.01.02.d",
+    "description": "No Description",
+    "retention": "d. Bukti setor bunga dan atau jasa giro bank",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.01.02.e",
+    "description": "No Description",
+    "retention": "e. Laporan Realisasi pendapatan Negara dari masing-masing satuan kerja",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.01.02.f",
+    "description": "No Description",
+    "retention": "f. Berkas kelebihan pembayaran gaji atau tunjangan kinerja",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.02",
+    "description": "Belanja",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.02.01",
+    "description": "Dokumen Pelaksanaan Pengadaan Berang Termasuk  Dokumen-Dokumen  Pembayarannya",
+    "retention": "1. Barang pakai habis.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.02.01.a",
+    "description": "No Description",
+    "retention": "2. Barang Inventaris.\n    a. Barang Bergerak / Barang Inventaris,\n    b. Tanah dan Bangunan.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.02.01.b",
+    "description": "No Description",
+    "retention": "3. Jasa. Software Komputer yang meliputi dokumen pengadaan barang dan jasa antara lain:\na. Pengumuman lelang,\nb. Dokumen prakualifikasi.\nc. Dokumen peninjauan lapangan,\nd Berita acara penjelasan pekerjaan,\ne. Berita acara pelelangan,\nf. Usulan calon pemenang Penetapan pemenang,\nh Surat Perintah Kerja (SPK).\ni. Kontrak / addendum kontrak",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.02.02",
+    "description": "Dokumen Pelaksanaan Pengacaan Jasa Termasuk Dokumen-Dokumen Pembayarannya",
+    "retention": "Naskah yang berkaitan dengan pelaksanaan kegiatan pengadaan jasa, yaitu Software Komputer yang meliputi dokumen pengadaan barang dan jasa antara lain:\na. Pengumuman lelang\nh. Dokumen prakualifikasi\nc. Dokumen peninjauan lapangan\nd Berita acara penjelasan pekerjaan\ne Berita acara pelelangan\nf Usulan calon pemenang\ng. Penetapan pemenang\nh. Surat Perintah Kerja (SPK)\ni. Kontrak / addendum kontrak.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.02.03",
+    "description": "Dokumen Pembayaran Keuangan",
+    "retention": "Naskah yang berkaitan dengan pembayaran keuangan, yaitu:\n1. Pengajuan Kebutuhan Penarikan Kas.\n2. Bukti-Bukti Tagihan dan Pihak Ketiga\n3. Surat Permintaan Pembayaran (SPP).\n4. Surat Perintah Membayar (SPM).\n5. Surat Perintah Pencairan Dana (SP2D).\n6. Bukti setor pengembalian kas negara",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.03.01",
+    "description": "Dokumen Tata Usaha Anggaran",
+    "retention": "Naskah yang berkaitan dengan dokumen rata usaha anggaran, yaitu:\n1. Buku Kas Umum (BKU).\n2. Buku Kas Pembantu (BKP).\n3. Buku/ kartu pengawasan kredit anggaran.\n4. Rekening Koran Bank.\n5. Laporan Pertanggungjawaban (LPJ).\n6. Daftar Rekapitulasi Keuangan (DRK).\n7. Daftar rekapitulasi pihak ketiga.\n8. Daftar rekapitulasi Penerimaan Negara Bukan Pajak.\n9. Ijin Penggunaan Kas Besi",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.04.01",
+    "description": "Daftar Gaji / Tunjangan / Lembur / Honorarium",
+    "retention": "Naskah yang berkaitan dengan daftar gaji /tunjangan / lembur / honorarium",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.05.01",
+    "description": "Kartu Gaji",
+    "retention": "Naskah yang berkaitan dengan Kartu Gaji",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.06.01",
+    "description": "Bukti Setor Iuran / Kontribusi Pemerintah Republik Indonesia / kepada Badan / Organisasi Internasional",
+    "retention": "Naskah, dokumen yang berkailan dengan bukti setor iuran / kontribusi Pemeiintah Republik Indonesia kepada Badan  organisasi Internasional",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.07.01",
+    "description": "Dokumen Akuntansi Keuangan",
+    "retention": "Naskah, dokumen berkaitan dengan akuntansi keuangan, yaitu:\n1. Berita Acara Pemeriksaan Kas.\n2. Kas/Regisler Penutupan Kas.\n3. Arsip Data Komputer (ADK).\n4. Berita Acara Rekonsiliasi Antara Satuan Kerja dan Kantor Pelayanan Perbendaharaan Negara",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.08.01",
+    "description": "Verifikasi Anggaran",
+    "retention": "Naskah, dokumen yang berkaitan dengan verifikasi anggaran, yaitu:\n1. Nota Hasil Verifikasi (N HV).\n2. Jawaban Nota Hasil Verifikasi (JNHV).\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.09.01",
+    "description": "Laporan Keuangan Tahunan",
+    "retention": "Naskah, dokumen yang berkaitan dengan laporan keuangan tahunan, yaitu:\n1. Laporan Realisasi Anggaran (LRA).\n2. Neraca.\n3. Laporan Arus Kas (LAK).\n4. Catatan atas Laporan Keuangan (CaLK).\n5. Laporan Barang Milik Negara (BMN).\n6. Laporan realisasi pendapatan negara.\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10",
+    "description": "Bantuan / Pinjaman Luar Negeri",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.10.01",
+    "description": "Daftar Proyek-proyek yang akan dibiayai dari Pinjaman Luar Negen (Blue Book)\n",
+    "retention": "Naskah, dokumen yang berkaitan dengan daftar proyek yang akan dibiayai dari pinjaman luar negeri (Blue Book).",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.02",
+    "description": "Dokumen Kesanggupan Negara Donoi untuk Membiayai (Green Book)\n",
+    "retention": "Naskah, dokumen yang berkaitan dengan kesanggupan negara donor untuk membiayai (Green Book).\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.03",
+    "description": "Dokumen Memorandum of Understanding (MoU), dan Dokumen Sejenisnya\n",
+    "retention": "Naskah, dokumen yang berkaitan dengan Memorandum of Understanding dan dokumen sejenisnya",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.04",
+    "description": "Dokumen Loan Agreement Pinjaman/Hibah Luar Negeri (PHLN), Legal Opinion , Perjanjian Penerusan Pinjaman dan Surat Menyurat dengan Lender",
+    "retention": "Naskah, dokumen yang berkaitan dengan pinjaman / hibah luar negeri.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.05",
+    "description": "Alokasi dan Relokasi Penggunaan Dana Pinjaman/Hibah Luar Negeri\n",
+    "retention": "Naskah yang berkaitan dengan alokasi dan relokasi penggunaan dana pinjaman/hibah luar negeri.\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.06",
+    "description": "Otorisasi Penarikan Dana (Payment Advice)",
+    "retention": "Naskah yang berkaitan dengan otoritas penarikan dana",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.07",
+    "description": "Realisasi Pencairan Dana Pinjaman / Hibah Luar Negeri\n",
+    "retention": "Naskah yang berkaitan dengan proses realisasi pencairan dana pinjaman/hibah luar negeri, yaitu Surat Perintah Pencairan Dana (SP2D). Surat Perintah Membayar beserta lampirannya, antara lain: Surat Perintah Pembayaran, Kontrak, Berita Acara, dan Data Pendukung Lainnya.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.08",
+    "description": "Replenisment (Permintaan Penarikan Dana dari Negara Donor)\n",
+    "retention": "Naskah yang berkaitan dengan permintaan penarikan dana dari negara donor yaitu No Objection Letter (NOL), Project Implementation, Notification of Contract, Withdrawal Authorization (WA), Statement og Expenditure (SE)",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.09",
+    "description": "Staff Appraisal Report",
+    "retention": "Naskah yang berkaitan dengan laporan perkiraan biaya",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.10.10",
+    "description": "Report / Laporan",
+    "retention": "Naskah, dokumen yang berkaitan dengan laporan, yaitu:\n1. Progress Report.\n2 Monthly Report.\n3. Quarterly Report.\n4. Final Report/Completion Report",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.11",
+    "description": "Sistem Akuntansi Instansi (SAI)",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.11.01",
+    "description": "Manual Implementasi Sistem Akuntasi Instansi (SAI)\n",
+    "retention": "Naskah yang berkaitan dengan manual implementasi Sistem Akuntansi Instansi",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KU.11.02",
+    "description": "Kebijakan Akuntansi",
+    "retention": "Naskah yang berkaitan dengan kebijakan akuntansi.",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KU.11.03",
+    "description": "Arsip Data Komputer dan Beriia Acara Rekonsiliasi\n",
+    "retention": "Naskah yang berkaitan dengan data komputer dan berita acara rekonsiliasi.",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.11.04",
+    "description": "Laporan Realisasi Semesteran Anggaran Pendapatan Belanja Negara",
+    "retention": "Naskah yang berkaitan dengan laporan realisasi semesteran Anggaran Pendapatan Belanja\nNegara",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "KU.12",
+    "description": "Pertanggungjawaban Keuangan Negara",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "KU.12.01",
+    "description": "Laporan Hasil Pemeriksaan Badan Pemeriksa Keuangan Republik Indonesia atas Laporan Keuangan",
+    "retention": "Naskah yang berkaitan dengan laporan hasil pemeriksaan Badan Pemeriksa Keuangan",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.12.02",
+    "description": "Hasil Pengawasan dan Pemeriksaan Internal",
+    "retention": "Naskah yang berkaitan dengan hasil pengawasan dan pemeriksaan internal\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.12.03",
+    "description": "Pelaksanaan Pengawasan",
+    "retention": "Naskah yang berkaitan dengan kegiatan pengawasan, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "KU.12.03.a",
+    "description": "No Description",
+    "retention": "1. Laporan Hasil Audit (LHA), Laporan Hasil Evaluasi (LHE), Laporan Akuntan (LA), Laporan Auditor Independen (LAI) yang memerlukan tindak lanjut (TL).",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "KU.12.03.b",
+    "description": "No Description",
+    "retention": "2. Laporan Hasil Audit Investigasi (LHAI) yang mengandung unsur Tindak Pidana Korupsi (TPK) dan memerlukan tindak lanjut.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.03.c",
+    "description": "No Description",
+    "retention": "3. Laporan Hasil Audit (LHA), Laporan Hasil Evaluasi (LHE), Laporan Akuntan (LA), Laporan Auditor Independen (LAI) yang tidak memerlukan tindak lanjut\n(TL).",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.03.d",
+    "description": "No Description",
+    "retention": "4. Laporan Hasil Audit Investigasi (LHAI) yang mengandung unsur Tindak Pidana Korupsi (TPK) dan tidak memerlukan tindak lanjut.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.03.e",
+    "description": "No Description",
+    "retention": "5. Laporan pemutakhiran data tindak lanjut temuan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.03.f",
+    "description": "No Description",
+    "retention": "6. Laporan kegiatan pendampingan penyusunan laporan keuangan dan review Kementerian Luar Negeri",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.04",
+    "description": "Pelaksanaan Pemeriksaan",
+    "retention": "Naskah-naskah yang berkaitan dengan pelaksanaan pemeriksaan, yaitu:\n1. Laporan Hasil Pemeriksaan (LHP), Laporan Hasil Pemeriksaan Operasional (LHPO) yang memerlukan tindak lanjut.\n2. Laporan Hasil Pemeriksaan (LHP) Laporan Hasil Pemeriksaan Operasional (LHPO) yang tidak memerlukan tindak lanjut.\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "KU.12.05",
+    "description": "Dokumen Penyelesaian Kerugian Negara",
+    "retention": "Naskah yang berkaitan dengan penyelesaian kerugian negara, yaitu:\n1. Tuntutan Perbendaharaan\n2. Tuntutan Ganti Rugi\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00",
+    "description": "Teknologi Informatika Perkantoran",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "TI.00.01",
+    "description": "Rencana Strategis / Master Plan Pembangunan Sistem Informasi (SIM) Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah-naskah yang berkaitan dengan rencana strategis/master plan pembangunan sistem informasi (SIM) Lembaga Penyiaran Publik Televisi Republik Indonesia\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "TI.00.02",
+    "description": "Rencana Strategis / Master Plan Pengembangan Media Baru Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "retention": "Naskah-naskah yang berkaitan dengan rencana strategis/masfer plan pengembangan media baru Lembaga Penyiaran Publik Televisi Republik Indonesia\n",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "TI.00.03",
+    "description": "Dokumentasi Arsitektur",
+    "retention": "Naskah-naskah yang berkaitan dengan:\na. Sistem informasi\nb. Sistem aplikasi\nc. infrastruktur",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "TI.00.04",
+    "description": "Dokumentasi Implementasi",
+    "retention": "Naskah-naskah yang berkaitan dengan:\na. Sistem informasi\nb. Sistem aplikasi\nc. Infrastruktur",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.05",
+    "description": "Perekaman dan Pemutakiran Data",
+    "retention": "Naskah-naskah yang berkaitan dengan pemutakhiran data yaitu:\na. Formulir isian\nb. Daftar petugas perekaman\nc. Jadwal pelaksanaan\nd. Laporan hasil perekaman dan pemutakhiran data",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.06",
+    "description": "Migrasi Sistem Aplikasi dan Data",
+    "retention": "Naskah-naskah yang berkaitan dengan migrasi sistem aplikasi dan data yaitu:\na. Perencanaan migrasi\nb. Pelaksanaan migrasi\nc. Berita Acara kegiatan migrasi\nd. Daftar sistem aplikasi dan data yang dimigrasi\ne. Laporan hasil migrasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.07",
+    "description": "Dokumen Hosting",
+    "retention": "Naskah-naskah yang berkaitan dengan hosting yaitu:\na. Formulir permintaan hosting\nb. Laporan hasil uji kelayakan\nc. Laporan pelaksanaan hosting",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.08",
+    "description": "Layanan Back-Up Data Digital",
+    "retention": "Naskah-naskah yang berkaitan dengan  layanan back-up data digital",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.09",
+    "description": "Laporan Evaluasi dan Pelaporan Pelaksanaan Teknologi Informasi",
+    "retention": "Naskah-naskah yang berkaitan dengan  laporan evaluasi dan  pelaporan pelaksanaan teknologi informasi.\n",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "TI.00.10",
+    "description": "Database",
+    "retention": "Naskah-naskah yang berkaitan dengan database",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.11",
+    "description": "Design Informasi dan Komunikasi",
+    "retention": "Naskah-naskah yang berkaitan dengan design informasi dan komunikasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.12",
+    "description": "Teknologi Informasi Penyiaran",
+    "retention": "Naskah-naskah yang berkaitan dengan teknologi informatika penyiaran, yaitu:\na. Dokumen pengembangan informatika\nb. Laporan pelaksanaan pengembangan informatika penyiaran\nc. Evaluasi pelaksanaan pengembangan informatika penyiaran\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TI.00.13",
+    "description": "Teknologi Informasi Media Baru",
+    "retention": "Naskah-naskah yang berkaitan dengan teknologi informatika media baru, yaitu:\na. Dokumen pengembangan media baru\nb. Laporan pelaksanaan pengembangan media baru\nc. Evaluasi pelaksanaan pengembangan media baru\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.00.01",
+    "description": "Rencana Pengawasan",
+    "retention": "Naskah yang berkaitan dengan rencana pengawasan, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PW.00.01.a",
+    "description": "No Description",
+    "retention": "1. Rencana Strategis Pengawasan.",
+    "security": "10 Tahun"
+  },
+  {
+    "code": "PW.00.01.b",
+    "description": "No Description",
+    "retention": "2. Rencana Kerja Tahunan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.00.01.c",
+    "description": "No Description",
+    "retention": "3. Rencana dan Penetapan Kinerja Tahunan.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.00.01.d",
+    "description": "No Description",
+    "retention": "4. Rapat koordinasi/Konsinyering Pengawasan Tingkat Internal dan Nasional.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.01.01",
+    "description": "Pelaksanaan Pengawasan",
+    "retention": "Naskah yang berkaitan dengan pelaksanaan pengawasan, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PW.01.01.a",
+    "description": "No Description",
+    "retention": "1. Laporan Hasil Audit (LHA), Laporan Hasil Pemeriksaan (LHP). Laporan Hasil Pemeriksaan Operasional (LHPQ), Laporan Hasil Evaluasi (LHE), Laporan Hasil Review (LHR), Laporan Akuntan (LA), Laporan Auditor",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.01.01.b",
+    "description": "No Description",
+    "retention": "2. Tindak Lanjut (TL) Laporan Hasil Audit (LHA). Laporan Hasil Pemeriksaan Operasional (LHPO)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.01.01.c",
+    "description": "No Description",
+    "retention": "3. Laporan Hasil Audit Investigasi (LHAI) yang mengandung unsur Tindak Pidana Korupsi (TPK) dan memerlukan tindak lanjut.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.01.01.d",
+    "description": "No Description",
+    "retention": "4. Laporan Hasil Audit (LHA), Laporan Hasil Pemeriksaan (LHP), Laporan Hasil Pemeriksaan Operasional (LHPO), Laporan Hasil Evaluasi (LHE), Laporan Akuntan (LA), Laporan Auditor Independen (LAI) Laporan Hasil Review (LHR) yang tidak memerlukan tindak lanjut (TL).",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.01.01.e",
+    "description": "No Description",
+    "retention": "5. Laporan Hasil Audit Investigasi (LHAI) yang mengandung unsur Tindak Pidana Korupsi (TKP) dan tidak memelukan tindak lanjut.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.02.01",
+    "description": "Laporan Perkembangan Penanganan Surat Pengaduan Masyarakat",
+    "retention": "Naskah yang berkaitan dengan laporan perkembangan penanganan surat pengaduan masyarakat\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.03.01",
+    "description": "Laporan Pemutakhiran Data Tindak Lanjut Temuan",
+    "retention": "Naskah yang berkaitan dengan laporan pemutakhiran data tindak lanjut temuan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.04.01",
+    "description": "Laporan Perkembangan Barang Milik Negara",
+    "retention": "Naskah yang berkailan dengan laporan perkembangan barang milik negara\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.05.01",
+    "description": "Laporan Kegiatan Pendampingan Penyusunan Laporan Keuangan, Rencana Kerja Anggaran Kementerian / Lembaga dan Laporan Review",
+    "retention": "Naskah yang berkaitan dengan laporan kegiatan pendampingan penyusunan laporan keuangan dan laporan review",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.06.01",
+    "description": "Berkas Kebijakan Pengawasan Intern Terhadap Kinerja",
+    "retention": "Naskah berkaitan dengan kebijakan pengawasan intern terhadap kinerja.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.07.01",
+    "description": "Berkas Pengawasan Intern Keuangan",
+    "retention": "Naskah yang berkaitan dengan Pengawasan Intern Keuangan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.08.01",
+    "description": "Berkas Audit Kinerja",
+    "retention": "Naskah yang berkaitan dengan berkas Audit Kinerja",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.09.01",
+    "description": "Berkas Audit Keuangan",
+    "retention": "Naskah yang berkaitan dengan Audit Keuangan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.10.01",
+    "description": "Laporan Evaluasi, Monitoring dan Pelaporan",
+    "retention": "Naskah yang berkaitan dengan laporan evaluasi, monitoring dan pelaporan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.11.01",
+    "description": "Berkas Audit Tujuan Tertentu",
+    "retention": "Naskah yang berkaitan dengan Audit Tujuan Tertentu",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.12.01",
+    "description": "Laporan Hasil Temuan",
+    "retention": "Naskah yang berkaitan dengan laporan hasil temuan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PW.13.01",
+    "description": "Laporan Tindak Lanjut Temuan Badan Pemeriksa Keuangan",
+    "retention": "Naskah yang berkaitan dengan Laporan Tindak Lanjut Temuan Badan Pemeriksa Keuangan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.00.01",
+    "description": "Pedoman Penyelenggaraan Pendidikan dan Pelatihan Termasuk Kurikulum / Silabus",
+    "retention": "Naskah yang berkaitan dengan Pedoman Penyelenggaraan Pendidikan dan Pelatihan Termasuk Kurikulum / Silabus",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "DP.01.01",
+    "description": "Modul-Modul / Bahan Ajar Pendidikan dan Pelatihan",
+    "retention": "Naskah yang berkaitan dengan Modul / Bahan Ajar Pendidikan dan Pelatihan",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "DP.02.01",
+    "description": "Konsultasi Penyelenggaraan Pendidikan dan Pelatihan",
+    "retention": "Naskah yang berkaitan dengan Konsultasi Penyelenggaraan Pendidikan dan Pelatihan",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "DP.03.01",
+    "description": "Sistem Informasi Kediklatan",
+    "retention": "Naskah yang berkaitan dengan Sistem Informasi Kediklatan yaitu :\n1. Data lembaga Pendidikan dan Pelatihan\n2. Data prasarana Pendidikan dan Pelatihan\n3. Data sarana Pendidikan dan Pelatihan\n4. Data pengelola Pendidikan dan Pelatihan\n5. Data penyelenggaraan Pendidikan dan Pelatihan\n6. Data widyaiswara.\n7. Data program Pendidikan dan Pelatihan\n8. Data peserta Pendidikan dan Pelatihan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.04.01",
+    "description": "Registrasi Sertifikat / Sertifikat Tanda Tamat Pendidikan dan Pelatihan Peserta",
+    "retention": "Naskah yang berkaitan dengan registrasi sertifikasi / Sertifikat Tanda Tamat Pelatihan dan Pelatihan peserta, yaitu:\n1. Surat permohonan kode registrasi.\n2. Buku induk registrasi.\n3. Surat penyampaian kode registrasi",
+    "security": "-"
+  },
+  {
+    "code": "DP.05.01",
+    "description": "Rencana Penyelenggaraan Pendidikan dan Pelatihan Profesi",
+    "retention": "Naskah yang berkaitan dengan rencana penyelenggaraan pendidikan dan pelatihan profesi, yaitu:\na. Data perencanaan kegiatan Pusat Pendidikan dan Pelatihan yaitu Kerangka Acuan Kerja dan Rincian Anggaran Biaya\nb. Data silabus dan kurikulum",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.06.01",
+    "description": "Penyelenggaraan Pendidikan dan Pelatihan Profesi",
+    "retention": "Naskah yang berkaitan dengan penyelenggaraan pendidikan dan pelatihan profesi, yaitu:\na. Surat pemanggilan peserta\nb. Surat Keputusan Tim Penyelenggaraan Pendidikan dan Pelatihan\nc. Surat Keputusan Tim Pengajar Pendidikan dan Pelatihan\nd. Panduan Pendidikan dan Pelatihan\ne. Laporan panitia penyelenggaraan Pendidikan dan Pelatihan\nf. Sambutan pembukaan penyelenggaraan Pendidikan dan Pelatihan\ng. Daftar peserta Pendidikan dan Pelatihan\nh. Bahan ajar Pendidikan dan Pelatihan\ni. Daftar hadir peserta Pendidikan dan Pelatihan\nj. Daftar hadir widyaiswara\nk. Formulir evaluasi Pendidikan dan Pelatihan\nI. Formulir evaluasi widyaiswara\nm. Laporan magang peserta Pendidikan dan Pelatihan\nn. Hasil formulasi evaluasi peserta Pendidikan dan Pelatihan\no. Sambutan penutupan Pendidikan dan Pelatihan\np. Hasil evaluasi penyelenggaraan Pendidikan dan Pelatihan\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.07.01",
+    "description": "Penyelenggaraan Pendidikan dan Pelatihan Struktural",
+    "retention": "Naskah yang berkaitan dengan penyelenggaraan Pendidikan dan Pelatihan struktural, yaitu:\n1. Surat pemanggilan peserta.\n2. Surat Keputusan Tim Penyelenggara Pendidikan dan Pelatihan.\n3. Surat Keputusan Tim Pengajar Pendidikan dan Pelatihan.\n4. Panduan Pendidikan dan Pelatihan.\n5. Laporan panitia penyelenggara Pendidikan dan Pelatihan.\n6. Sambutan pembukaan penyelenggaraan Pendidikan dan Pelatihan.\n7. Daftar peserta Pendidikan dan Pelatihan.\n8. Bahan ajar Pendidikan dan Pelatihan,\n9. Daftar hadir peserta Pendidikan dan Pelatihan.\n10. Daftar hadir widyaiswara.\n11. Formulir evaluasi Pendidikan dan Pelatihan.\n12. Formulir evaluasi widyaiswara.\n13. Laporan magang peserta Pendidikan dan Pelatihan.\n14. Hasil formulasi evaluasi peserta Pendidikan dan Pelatihan.\n15. Sambutan penutupan Pendidikan dan Pelatihan.\n16. Hasil Evaluasi penyelenggaraan Pendidikan dan Pelatihan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.08.01",
+    "description": "Sarana dan Fasilitas Pendidikan dan Pelatihan",
+    "retention": "Naskah yang berkaitan dengan pemenuhan sarana dan fasilitas pendidikan dan pelatihan, yaitu:\n1. Desain Studio untuk Pendidikan dan Pelatihan Profesi.\n2. Peralatan studio untuk Pendidikan dan Pelatihan Profesi.\n3. Berkas Dukungan peralatan Pendidikan dan Pelatihan (Surat permohonan peminjaman peralatan)\n",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.09.01",
+    "description": "Evaluasi Alumni Pasca Pendidikan dan Pelatihan",
+    "retention": "Naskah yang berkaitan dengan Evaluasi Alumni Pasca Pendidikan dan Pelatihan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "DP.10.01",
+    "description": "Informasi / Brosur Kediklatan",
+    "retention": "Naskah, Dokumen yang berkaitan dengan Informasi / Brosur Kediklatan",
+    "security": "-"
+  },
+  {
+    "code": "PK.00.01",
+    "description": "Penyimpanan Deposit Bahan Pustaka",
+    "retention": "Naskah yang berkaitan dengan penyimpanan deposit bahan pustaka, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PK.00.01.a",
+    "description": "No Description",
+    "retention": "1. Bukti Penerimaan Koleksi Bahan Pustaka Deposit.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.00.01.b",
+    "description": "No Description",
+    "retention": "2. Administrasi pengolahan Deposit Bahan Pustaka.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.01.01",
+    "description": "Pengadaan dan Pengolahan Bahan Pustaka",
+    "retention": "Naskah yang berkaitan dengan pengadaan dan pengolahan oahan pustaka, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PK.01.01.a",
+    "description": "No Description",
+    "retention": "1. Buku induk koleksi.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.01.01.b",
+    "description": "No Description",
+    "retention": "2. Daftar buku terseleksi\n3. Daftar buku dalam pemesanan.\n4. Daftar buku dalam permintaan\n5. Daftar penerimaan bahan pustaka hasil pembelian\n6. hadiah deposit, hibah\n7. Daftar pengiriman Bahan Pustaka Surplus.\n8. Lembar kerja pengolahan BP (Buram. Pengkatalogan).",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.01.01.c",
+    "description": "No Description",
+    "retention": "9. Shelt List 1 Jajaran Kartu utama (master list).",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.01.01.d",
+    "description": "No Description",
+    "retention": "10. Daftar tambahan Buku (Assesion list).\n11. Daftar/jajaran kendali (Subyek dan Pengarang)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.02.01",
+    "description": "Layanan Jasa Perpustakaan dan Informasi",
+    "retention": "Naskah yang berkaitan dengan dengan layanan jasa perpustakaan dan informasi, yaitu",
+    "security": ""
+  },
+  {
+    "code": "PK.02.01.a",
+    "description": "No Description",
+    "retention": "1. Data dan statistik anggota pengunjung dan Peminjaman bahan Pustaka.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.02.01.b",
+    "description": "No Description",
+    "retention": "2. Pertanyaan Rujukan dan Jawaban",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PK.03.01",
+    "description": "Preservasi Bahan Pustaka",
+    "retention": "Naskah yang berkaitan dengan preservasi bahan pustaka, yaitu:\n1. Survei kondisi Bahan Pustaka.\n2. Reprografi Bahan Pustaka",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.00",
+    "description": "Pelaksanaan Pengkajian Program dan Berita",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "LB.00.01",
+    "description": "Data Nielsen",
+    "retention": "Naskah yang berkaitan dengan data Nielsen yaitu:",
+    "security": ""
+  },
+  {
+    "code": "LB.00.01.a",
+    "description": "No Description",
+    "retention": "a. Kontrak kerja sama dengan Nielsen",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "LB.00.01.b",
+    "description": "No Description",
+    "retention": "b. Hasil analisis data nielsen",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "LB.00.02",
+    "description": "Administrasi Pengkajian dan Pengembangan Program dan Berita",
+    "retention": "Naskah yang berkaitan dengan administrasi pengkajian dan pengembangan program berita, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "LB.00.02.a",
+    "description": "No Description",
+    "retention": "a. Surat Permohonan Kegiatan (Kerangka Acuan Kerja / Term of Reference / Proposal meliputi Tinjauan Pustaka / reviu literatur, dan Rincian Anggaran Biaya)\nb. Surat Tugas/Pembentukan Tim\nc. Laporan kegiatan pelaksanaan tugas pengkajian program dan berita (perjalanan dinas dan pertanggung jawaban)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.00.02.b",
+    "description": "No Description",
+    "retention": "d. Laporan Hasil Kegiatan / Laporan Survei / pengumpulan data/Laporan hasil analisis penelitian pengkajian program dan berita (meliputi kuesioner dan daftar wawancara, statistik atau tabel hasil penelitian)\ne. Materi dan laporan ekspose",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.01.01",
+    "description": "Pelaksanaan Pengkajian dan Pengembangan Pengembangan dan Usaha",
+    "retention": "Naskah yang berkaitan dengan pelaksanaan pengkajian dan pengembangan pengembangan dan usaha, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "LB.01.01.a",
+    "description": "No Description",
+    "retention": "a. Surat Permohonan Kegiatan (Kerangka Acuan Kerja / Term of Reference / Proposal meliputi Tinjauan Pustaka / reviu literatur,dan Rincian Anggaran Biaya)\nb. Surat Tugas / Pembentukan Tim\nc. Laporan Kegiatan Pelaksanaan Tugas Pengkajian Pengembangan Usaha (perjalanan dinas dan pertanggung jawaban)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.01.01.b",
+    "description": "No Description",
+    "retention": "d. Materi dan laporan ekspose",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.02.01",
+    "description": "Pengkajian dan Pengembangan Teknik",
+    "retention": "Naskah yang berkaitan dengan pelaksanaan pengkajian dan pengembangan teknik, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "LB.02.01.a",
+    "description": "No Description",
+    "retention": "a. Surat Permohonan Kegiatan (Kerangka Acuan Kerja / Term of Reference / Proposal meliputi Tinjauan Pustaka / reviu literatur, dan Rincian Anggaran Biaya)\nb. Surat tugas/pembentukan tim\nc. Laporan kegiatan pelaksanaan tugas pengkajian dan pengembangan teknik (perjalanan dinas dan pertanggung jawaban)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.02.01.b",
+    "description": "No Description",
+    "retention": "d. Laporan hasil kegiatan / laporan survei / pengumpulan data / laporan hasil analisis penelitian pengkajian pengembangan teknik (meliputi kuesioner dan daftar wawancara, statistik atau tabel hasil penelitian)\ne. Materi dan laporan ekspose",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "LB.03.01",
+    "description": "Pengkajian dan Pengembangan Kelembagaan",
+    "retention": "Naskah yang berkaitan dengan pelaksanaan pengkajian dan pengembangan  kelembagaan,  yaitu:",
+    "security": ""
+  },
+  {
+    "code": "LB.03.01.a",
+    "description": "No Description",
+    "retention": "a. Surat Permohonan Kegiatan (Kerangka Acuan Kerja / Term of Reference / Proposal meliputi Tinjauan Pustaka / reviu literatur,dan Rincian Anggaran Biaya)\nb. Surat tugas/pembentukan tim\nc. Laporan kegiatan pelaksanaan tugas pengkajian pengembangan kelembagaan (perjalanan dinas dan pertanggung jawaban)",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "LB.03.01.b",
+    "description": "No Description",
+    "retention": "d. Laporan hasil kegiatan / laporan survei / pengumpulan data / laporan hasil analisis penelitian pengkajian pengembangan kelembagaan (meliputi kuesioner dan daftar wawanara, statistik atau tabel hasil penelitian)\ne. Materi dan laporan ekspose",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PB.00",
+    "description": "Program",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PB.00.01",
+    "description": "Programming",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan programming seperti ",
+    "security": ""
+  },
+  {
+    "code": "PB.00.01.a",
+    "description": "No Description",
+    "retention": "a. Strategi Programming Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.01.b",
+    "description": "No Description",
+    "retention": "    1) Pola Dasar (Program Content Program Layout, program Muntage)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.01.c",
+    "description": "No Description",
+    "retention": "    2) Pola Siaran Per Bulan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.01.d",
+    "description": "No Description",
+    "retention": "d. Permintaan Slot Jam Siaran Program Kerja Sarna dari masing-masing satuan Kerja",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "PB.00.01.e",
+    "description": "No Description",
+    "retention": "e. Laporan rekonsiliasi realisasi siaran Program Perjanjian Kerja Sama dengan Pengembangan usaha",
+    "security": ""
+  },
+  {
+    "code": "PB.00.01.f",
+    "description": "No Description",
+    "retention": "f. Laporan Pelaksanaan kegiatan programming",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.01.g",
+    "description": "No Description",
+    "retention": "g. Evaluasi Programming",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.02",
+    "description": "Operasional Siaran",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.03",
+    "description": "Akuisisi",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan akuisisi seperti ",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.03.a",
+    "description": "No Description",
+    "retention": "a. Paket Program",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.03.b",
+    "description": "No Description",
+    "retention": "b. Laporan Pelaksanaan Kegiatan Akuisisi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.03.c",
+    "description": "No Description",
+    "retention": "c. Evaluasi Pelaksanaan Kegiatan Akuisisi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04",
+    "description": "Produksi Program",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan produksi program seperti ",
+    "security": ""
+  },
+  {
+    "code": "PB.00.04.a",
+    "description": "No Description",
+    "retention": "a. Produksi program Pendidikan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.b",
+    "description": "No Description",
+    "retention": "b. Produksi Program Agama",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.c",
+    "description": "No Description",
+    "retention": "c. Produksi Program Budaya",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.d",
+    "description": "No Description",
+    "retention": "d. Program Musik dan Konser musik",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.e",
+    "description": "No Description",
+    "retention": "e. Program Entertainment dan Kuis",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.f",
+    "description": "No Description",
+    "retention": "f. Program Drama dan Film Televisi (FTV)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.00.04.g",
+    "description": "No Description",
+    "retention": "g. Produksi Kanal Digital (TVRI-3) Pendidikan dan Budaya dan Pariwisata",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01",
+    "description": "Berita",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PB.01.01",
+    "description": "Siaran Berita",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan siaran berita ",
+    "security": ""
+  },
+  {
+    "code": "PB.01.01.a",
+    "description": "No Description",
+    "retention": "a. Klik Indonesia Pagi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.b",
+    "description": "No Description",
+    "retention": "b. Klik Indonesia Siang",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.c",
+    "description": "No Description",
+    "retention": "c. Klik Indonesia Petang",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.d",
+    "description": "No Description",
+    "retention": "d. Klik Indonesia Malam",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.e",
+    "description": "No Description",
+    "retention": "e. Dunia Dalam Berita",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.f",
+    "description": "No Description",
+    "retention": "f. Breaking News",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.g",
+    "description": "No Description",
+    "retention": "g. Info Terkini",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.h",
+    "description": "No Description",
+    "retention": "h. Berkas Dukungan Berita untuk Portal Berita",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.01.i",
+    "description": "No Description",
+    "retention": "i. Berkas Dukungan Berita Untuk Media Baru",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.02",
+    "description": "Current Affair",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan current affair seperti ",
+    "security": ""
+  },
+  {
+    "code": "PB.01.02.a",
+    "description": "No Description",
+    "retention": "a. Produksi Dialog",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.02.b",
+    "description": "No Description",
+    "retention": "b. Produksi features",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.02.c",
+    "description": "No Description",
+    "retention": "c. Produksi Siaran Langsung",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.03",
+    "description": "Olahraga",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan siaran olahraga, ",
+    "security": ""
+  },
+  {
+    "code": "PB.01.03.a",
+    "description": "No Description",
+    "retention": "a. Produksi Siaran Olahraga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.03.b",
+    "description": "No Description",
+    "retention": "b. Produksi Event Olahraga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.03.c",
+    "description": "No Description",
+    "retention": "c. Produksi Siaran Langsung Event Olahraga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.03.d",
+    "description": "No Description",
+    "retention": "d. Produksi dan Siaran Kanal Digital Olahraga (TVRI: 4)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.04",
+    "description": "Produksi Berita",
+    "retention": "Naskah, berkas dokumen yang berkaitan dengan kegiatan produksi berita yang meliputi rencana liputan berita inisiatif, rencana liputan berita undangan, tim liputan berita, rencana narasumber, hasil siaran, hasil editing siaran, dan hasil liputan audio visual.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.01.05",
+    "description": "Komunikasi Media Dalam Negeri",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan komunikasi media dalam negeri yang meliputi, rencana kegiatan, pelaksanaan kegiatan, laporan dan evaluasi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02",
+    "description": "Siaran Internasional",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PB.02.01",
+    "description": "Produksi Program dan Siaran Internasional",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan produksi program siaran internasional, produksi berita program siaran internasional",
+    "security": ""
+  },
+  {
+    "code": "PB.02.01.a",
+    "description": "No Description",
+    "retention": "a. Produksi Program Siaran Internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.01.b",
+    "description": "No Description",
+    "retention": "b. Produksi Berita Siaran Internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.02",
+    "description": "Programming dan Operasional Siaran Internasional",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan programming siaran internasional, strategi programming siaran internasional, pola acara dan operasional siaran internasional",
+    "security": ""
+  },
+  {
+    "code": "PB.02.02.a",
+    "description": "No Description",
+    "retention": "a. Programming Siaran Internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.02.b",
+    "description": "No Description",
+    "retention": "b. Strategi Programming Siaran Internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.02.c",
+    "description": "No Description",
+    "retention": "    1) Pola Dasar (Program Content. Program Layout, program Montage)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.02.d",
+    "description": "No Description",
+    "retention": "    2) Pola Siaran Per Bulan",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.02.e",
+    "description": "No Description",
+    "retention": "d. Operasional Siaran Internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.02.03",
+    "description": "Akuisisi Program Internasional",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan perjanjian kerjasama akuisisi program internasional dan program\nkerjasama siaran internasional",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.03",
+    "description": "Penunjang Siaran",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PB.03.01",
+    "description": "Dokumentasi dan Kepustakaan",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan dokumentasi dan kepustakaan, seperti dokumentasi visual hasil siaran pendidikan, dokumentasi audio visual hasil siaran agama, dokumentasi audi visual hasil siaran budaya, dokumentasi visual hasil siaran musik dan konser, dokumentasi audio visual hasil siaran kuis dan entertainment, dokumentasi audio visual hasil siaran Klik Berita Pagi, dokumentasi audio visual hasil siaran berita pagi, dokumentasi audio visual hasil siaran Klik Berita Siang, dokumentasi audio visual hasil siaran Klik Berita Malam, dokumentasi audio visual hasil siaran Dunia Dalam Berita, dokumentasi audio visual hasil siaran Breaking News, dokumentasi audio visual hasil siaran Berita Terkini, dokumentasi audio visual hasil siaran Current Affair (dialog), dokumentasi audio visual hasil siaran Kanal Digital TVRI 1 Nasional, dokumentasi audio visual hasil siaran Kanal Digital TVRI 3: Pendidikan, Budaya dan Pariwisata, dokumentasi audio visual hasil siaran Kanal Digital TVRI 4: Olahraga, dokumentasi audio visual hasil siaran yang mempunyai Nilai Sejarah, dokumentasi audio visual Film Televisi (FTV) dan Drama.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.03.02",
+    "description": "Kreativitas dan Pemandu Bakat",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan kreativitas dan pemandu bakat seperti dokumen pelaksanaan pemandu bakat, dokumen pemenang Gatra Kencana, dan Keputusan Dewan Direksi tentang pemenang Gatra Kencana",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.03.03",
+    "description": "Komunikasi Media Luar Negeri dan Kerjasama Internasional",
+    "retention": "Naskah, berkas, dokumen yang berkailan dengan kegiatan komunikasi media luar negeri dan kerjasama internasional seperti dokumen komunikasi media luar negeri, dokumen kerjasama internasional, hasil siaran hasil editing siaran, dan hasil liputan audio visual.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.03.04",
+    "description": "Promosi Acara",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan kegiatan promosi acara seperti dokumentasi tune program acara pendidikan agama, budaya, dan hiburan dokumentasi tune berita dan current affair, dokumentasi promosi media televisi dokumentasi promosi acara melalui media baru, dokumentasi komunikasi pemasaran, dokumentasi promosi dengan pihak ketiga",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PB.03.05",
+    "description": "Konten Media Baru",
+    "retention": "Naskah, berkas, dokumen yang berkaitan dengan Dokumentasi Siaran Portal Berita, Dokumentasi Program di Kanal Youtube, Dokumentasi Program Kanal Video on Demans, Dokumentasi Program Kanal Over The Top, Dokumentasi Program Kanal Digital Lain",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01",
+    "description": "Muitipleksing dan Kerjasama\nTeknik",
+    "retention": "Naskah-naskah yang berkaitan dengan multipleksing dan kerjasama teknik",
+    "security": ""
+  },
+  {
+    "code": "TK.00.01.a",
+    "description": "No Description",
+    "retention": "1. Master plan pengembangan Teknologi muitipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01.b",
+    "description": "No Description",
+    "retention": "2. Berkas program pemeliharaan multipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01.c",
+    "description": "No Description",
+    "retention": "3. Berkas Level Service Agreement (LSA) berkas program kerjasama multipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01.d",
+    "description": "No Description",
+    "retention": "4. Berkas Program Kerja Sama Muitipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01.e",
+    "description": "No Description",
+    "retention": "5. Pengadaan perangkat multipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.00.01.f",
+    "description": "No Description",
+    "retention": "6. Berkas program kerjasama teknik",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.01",
+    "description": "Transmisi",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "TK.01.01",
+    "description": "Teknologi Transmisi",
+    "retention": "Naskah-naskah yang berkaitan dengan teknologi transmisi seperti :",
+    "security": ""
+  },
+  {
+    "code": "TK.01.01.a",
+    "description": "No Description",
+    "retention": "a. Rencana strategis / master plan pembangunan tranmisi Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "TK.01.01.b",
+    "description": "No Description",
+    "retention": "b. Rencana strategis / masterplan pengembangan sistem digitalisasi penyiaran Lembaga Penyiaran Publik Televisi Republik Indonesia",
+    "security": "5 Tahun"
+  },
+  {
+    "code": "TK.01.01.c",
+    "description": "No Description",
+    "retention": "c. Infrastruktur tranmisi",
+    "security": "-"
+  },
+  {
+    "code": "TK.01.01.d",
+    "description": "No Description",
+    "retention": "d. Migrasi sistem transmisi analog ke sistem digital.",
+    "security": "-"
+  },
+  {
+    "code": "TK.01.02",
+    "description": "Jaringan Transmisi",
+    "retention": "Naskah-naskah yang berkaitan dengan infrastruktur jaringan penyiaran seperti",
+    "security": "-"
+  },
+  {
+    "code": "TK.01.03",
+    "description": "Kendali Mutu dan Standarisasi Transmisi",
+    "retention": "Naskah-naskah yang berkaitan dengan kendali mutu dan standarisasi transmisi yang meliputi",
+    "security": "-"
+  },
+  {
+    "code": "TK.02",
+    "description": "Teknik Produksi dan Penyiaran",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "TK.02.01",
+    "description": "Teknologi Peralatan Studio dan Penyiaran",
+    "retention": "Naskah-naskah yang berkaitan dengan teknologi peralatan studio dan penyiaran seperti ",
+    "security": ""
+  },
+  {
+    "code": "TK.02.01.a",
+    "description": "No Description",
+    "retention": "a. Peralatan studio",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.02.01.b",
+    "description": "No Description",
+    "retention": "b. Peralatan multimedia",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.02.01.c",
+    "description": "No Description",
+    "retention": "c. Pengembangan sistem produksi",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "TK.02.02",
+    "description": "Peralatan Produksi Luar Studio",
+    "retention": "Naskah-naskah yang berkaitan dengan peralatan produksi luar studio yang meliputi dokumen peralatan Outside Broadcast Van (OB Van) dan dokumen peralatan luar studio lainnya",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "TK.02.03",
+    "description": "Kendali Mutu dan Standarisasi Peralatan Produksi dan Penyiaran",
+    "retention": "Naskah-naskah yang berkaitan dengan kegiatan kendali mutu dan standarisasi peralatan produksi dan penyiaran yang meliputi :",
+    "security": ""
+  },
+  {
+    "code": "TK.03.01",
+    "description": "Teknologi Informasi dan Media Baru",
+    "retention": "Naskah-naskah yang berkaitan dengan teknologi informasi dan media baru seperti dokumen fiberoptic dan dokumen Virtual Private Network internet Protocol (VPN IP)",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.00",
+    "description": "Strategi Pengembangan dan Usaha",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PU.00.01",
+    "description": "Strategi Pengembangan Siaran dan Non Siaran",
+    "retention": "Naskah yang berkaitan dengan Strategi pengembangan siaran dan strategi pengembangan non-siaran",
+    "security": ""
+  },
+  {
+    "code": "PU.00.01.a",
+    "description": "No Description",
+    "retention": "1. Strategi Pengembangan Siaran",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.00.01.b",
+    "description": "No Description",
+    "retention": "2. Strategi pengembangan Non-Siaran",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.00.02",
+    "description": "Rencana pertemuan, insentif, konvensi dan pameran",
+    "retention": "Naskah yang berkaitan dengan rencana pertemuan, insentif, konvensi dan pameran seperti ",
+    "security": ""
+  },
+  {
+    "code": "PU.00.03",
+    "description": "Laporan Tahunan Pengembangan dan Usaha",
+    "retention": "Naskah yang berkaitan dengan laporan tahunan pengembangan dan usaha, yaitu:\na. Dokumen laporan bulanan kegiatan Strategi Pengembangan dan Usaha\nb. Dokumen Evaluasi Kegiatan Bulanan Pengembangan dan Usaha\nc Dokumen Evaluasi Kegiatan Semesteran Pengembangan dan Usaha\nd. Dokumen Evaluasi Kegiatan Tahunan Pengembangan dan Usaha\ne. Laporan Khusus",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.00.04",
+    "description": "Evaluasi Pengembangan dan Usaha",
+    "retention": "Naskah yang berkaitan dengan evaluasi Pengembangan dan Usaha, yaitu:\na. Dokumen Evaluasi dan Monitoring Strategi Pengembangan dan Usaha\nb. Dokumen Evaluasi Kegiatan Bulanan Pengembangan dan Usaha\nc. Dokumen Evaluasi Kegiatan Semesteran Pengembangan dan Usaha\nd. Dokumen Evaluasi Kegiatan Tahunan Pengembangan dan Usaha",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.01",
+    "description": "Penjualan Pemasaran Siaran dan Non Siaran",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PU.01.01",
+    "description": "Berkas Penjualan dan Pemasaran Siaran",
+    "retention": "Naskah yang berkaitan dengan berkas penjualan dan pemasaran siaran, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PU.01.01.a",
+    "description": "No Description",
+    "retention": "a. Perjanjian kerjasama produksi dan siaran",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.01.01.b",
+    "description": "No Description",
+    "retention": "b. Media order",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.01.01.c",
+    "description": "No Description",
+    "retention": "c. Rate cardltariff",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.01.01.d",
+    "description": "No Description",
+    "retention": "d. Billing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.01.02",
+    "description": "Pengembangan Produk",
+    "retention": "Naskah yang berkaitan dengan pengembangan produk yaitu desain produk dan berkas pengembangan produk.",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.01.03",
+    "description": "Lalu Lintas Usaha",
+    "retention": "Naskah yang berkaitan dengan lalu lintas usaha, yaitu:\na. Daftar jenis iklan (komersial / non komersial)\nb. Daftar iklan yang disiarkan\nc. Bukti siar",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02",
+    "description": "Pemanfaatan Teknik dan Non Teknik",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PU.02.01",
+    "description": "Pemanfaatan Teknik dan Jasa Multipleksing",
+    "retention": "Naskah yang berkaitan dengan pemanfaatan teknik dan jasa multipleksing seperti ",
+    "security": ""
+  },
+  {
+    "code": "PU.02.01.a",
+    "description": "No Description",
+    "retention": "a. Kerjasama pemanfaatan teknik",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.01.b",
+    "description": "No Description",
+    "retention": "b. Kerjasama jasa multipleksing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.02",
+    "description": "Pemanfaatan Non Teknik dan Pemanfaatan Aset",
+    "retention": "Naskah yang berkaitan dengan pemanfaatan non teknik dan pemanfaatan aset, yaitu:",
+    "security": ""
+  },
+  {
+    "code": "PU.02.02.a",
+    "description": "No Description",
+    "retention": "a. Berkas bangun serah guna",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.02.b",
+    "description": "No Description",
+    "retention": "b. Berkas bangun guna serah",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.02.c",
+    "description": "No Description",
+    "retention": "c. Kerjasama pemanfaatan aset",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.02.d",
+    "description": "No Description",
+    "retention": "d. BerKas pemanfaatan non teknik",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.02.02.e",
+    "description": "No Description",
+    "retention": "   1) Kerjasama Pemanfaatan Non-Teknik (Sewa Penerimaan Negara Bukan Pajak Umum)",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.02.02.f",
+    "description": "No Description",
+    "retention": "2) Kerjasama Pemanfaatan Non-Teknik (Sewa Penerimaan Negara Bukan Pajak Fungsional)",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.02.02.g",
+    "description": "No Description",
+    "retention": "3) Kerjasama Pemanfaatan Non-Teknik (Studio Alam)",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.02.03",
+    "description": "Laporan dan Pemantauan",
+    "retention": "Naskah yang berkaitan dengan laporan dan pemantauan, yaitu:\na. Surat izin prinsip ke Kuasa Pengguna Anggaran\nb. Nota dinas/Surat Keputusan\nc. Rencana Anggaran Biaya\nd. Kerangka Acuan Kegiatan\ne. Laporan pelaksanaan kegiatan\nf. Laporan pertanggungjawaban pengunaan anggaran",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03",
+    "description": "Bisnis Baru",
+    "retention": "",
+    "security": ""
+  },
+  {
+    "code": "PU.03.01",
+    "description": "Perjanjian Kerjasama Jasa Media Digital",
+    "retention": "Naskah yang berkaitan derigan perjanjian kerjasama Jasa Media Digital, yaitu",
+    "security": ""
+  },
+  {
+    "code": "PU.03.01.a",
+    "description": "No Description",
+    "retention": "a. Perjanjian kerjasama jasa penggunaan Hak atas Kekayaan Intelektual Produksi Program dan Perjanjian Kerjasama Jasa Videotron",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.01.b",
+    "description": "No Description",
+    "retention": "b.  Perjanjian Kerjasama Jasa Videotron",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.02",
+    "description": "Perjanjian Kerjasama Jasa Portal Berita",
+    "retention": "Naskah yang berkaitan dengan perjanjian kerjasama Jasa Portal Berita, yaitu surat:\na. Surat penawaran\nb. Lembar negosiasi Jasa Portal Berita\nc. Berita Acara Kesepakatan Kerjasama Jasa Portal Berita\nd. Kontrak Kerjasama",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.03",
+    "description": "Perjanjian Kerjasama Jasa Kanal Youlube",
+    "retention": "Naskah yang berkaitan dengan Jasa Kanal Youtube, yaitu:\na. Surat Penawaran\nb. Lembar Negosiasi Jasa Kanal Youtube\nc. Berita Acara Kesepakatan Kerjasama Jasa Kanal Youtube\nd. Kontrak Kerjasama",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.04",
+    "description": "Perjanjian Kerjasama Jasa Kanal Video On Demand",
+    "retention": "Naskah yang berkaitan dengan Perjanjian Kerjasama Jasa Kanal Video On Demand, yaitu:\na. Surat Penawaran\nb. Lembar Negosiasi Jasa Kanal Video On Demand\nc. Berita Acara Kesepakatan Kerjasama Jasa Kanal Video On Demand\nd. Kontrak Kerjasama",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.05",
+    "description": "Perjanjian Kerjasama Jasa Kanal Over The Top",
+    "retention": "Naskah yang berkaitan dengan Perjanjian Kerjasama Jasa Kanal Over The Top, yaitu:\na. Surat Penawaran\nb. Lembar Negosiasi Jasa Kanal Over The Top\nc. Berita Acara Kesepakatan Kerjasama Jasa Kanal Over The Top\nd. Kontrak Kerjasama",
+    "security": "2 Tahun"
+  },
+  {
+    "code": "PU.03.06",
+    "description": "Laporan Penerimaan Bisnis Baru",
+    "retention": "Naskah yang berkaitan dengan Laporan Penerimaan Bisnis baru, yaitu:\na. Laporan proyeksi penerimaan\nb. Laporan Billing",
+    "security": "3 Tahun"
+  },
+  {
+    "code": "PU.03.07",
+    "description": "Evaluasi Pelaksanaan Bisnis Baru",
+    "retention": "Naskah yang berkaitan dengan evaluasi pelaksanaan bisnis baru seperti evaluasi pelaksanaan kerjasama bisnis baru",
+    "security": "3 Tahun"
+  }
+]

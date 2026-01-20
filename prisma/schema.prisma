@@ -1,0 +1,389 @@
+// Prisma Schema for E-Surat Digital
+// RBAC-based document management system
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== USER & AUTHENTICATION ====================
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String
+  avatar        String?
+  isActive      Boolean   @default(true)
+  phoneNumber   String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  roles           UserRole[]
+  lettersCreated  Letter[]      @relation("CreatedBy")
+  lettersApproved Letter[]      @relation("ApprovedBy")
+  lettersSigned   Letter[]      @relation("SignedBy")
+  activityLogs    ActivityLog[]
+  sessions        Session[]
+  teamMemberships TeamMember[]
+  dispositionsCreated  Disposition[]          @relation("DispositionFrom")
+
+  dispositionsReceived DispositionRecipient[] @relation("DispositionTo")
+  magicLinks           MagicLink[]
+  templates            Template[]
+  letterApprovals      LetterApprover[]
+
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model MagicLink {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  letterId  String
+  action    String   // APPROVE, SIGN
+  otpCode   String   // Hashed? Or plain for simplicity in prototype, let's keep it simple for now or hashed ideally.
+  expiresAt DateTime
+  isUsed    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  letter Letter @relation(fields: [letterId], references: [id], onDelete: Cascade)
+
+  @@map("magic_links")
+}
+
+// ==================== RBAC SYSTEM ====================
+
+model Role {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  isSystem    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users       UserRole[]
+  permissions RolePermission[]
+
+  @@map("roles")
+}
+
+model Permission {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  module      String
+  createdAt   DateTime @default(now())
+
+  roles RolePermission[]
+
+  @@map("permissions")
+}
+
+model UserRole {
+  userId     String
+  roleId     String
+  assignedAt DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role Role @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roleId])
+  @@map("user_roles")
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+  @@map("role_permissions")
+}
+
+// ==================== TEAM MANAGEMENT ====================
+
+model Team {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  members TeamMember[]
+
+  @@map("teams")
+}
+
+model TeamMember {
+  teamId     String
+  userId     String
+  role       String   @default("MEMBER") // LEADER, MEMBER
+  joinedAt   DateTime @default(now())
+
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([teamId, userId])
+  @@map("team_members")
+}
+
+// ==================== LETTER MANAGEMENT ====================
+
+model LetterApprover {
+  id            String    @id @default(cuid())
+  letterId      String
+  userId        String    // User who approves
+  order         Int       // Sequence number (1-8)
+  status        String    @default("PENDING") // PENDING, APPROVED, REJECTED
+  
+  // Paraf Position (Each approver has a paraf)
+  parafPage     Int       @default(1)
+  parafXPercent Float
+  parafYPercent Float
+  parafSize     Int       @default(50)
+  
+  notes         String?   @db.Text // Reasons for rejection or approval notes
+  approvedAt    DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  letter        Letter    @relation(fields: [letterId], references: [id], onDelete: Cascade)
+  user          User      @relation(fields: [userId], references: [id])
+
+  @@unique([letterId, order])
+  @@map("letter_approvers")
+}
+
+model LetterCategory {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  code        String   @unique
+  description String?
+  color       String   @default("#3B82F6")
+  createdAt   DateTime @default(now())
+  
+  letters Letter[]
+
+  @@map("letter_categories")
+}
+
+model Letter {
+  id              String   @id @default(cuid())
+  letterNumber    String?  @unique
+  title           String
+  description     String?  @db.Text
+  priority        String   @default("NORMAL")
+  securityLevel   String   @default("BIASA") // SANGAT_RAHASIA, RAHASIA, TERBATAS, BIASA
+  status          String   @default("DRAFT")
+  rejectionReason String?  @db.Text
+  
+  fileDraft       String
+  fileStamped     String?
+  fileFinal       String?
+  
+  qrPage          Int      @default(1)
+  qrXPercent      Float    @default(0.75)
+  qrYPercent      Float    @default(0.80)
+  qrSize          Int      @default(100)
+  qrHash          String   @unique @default(cuid())
+
+  // Approver Paraf Position (Moved to LetterApprover, kept here for legacy/single approver backward compatibility if needed, but intended to be deprecated)
+  parafPage       Int?      @default(1)
+  parafXPercent   Float?    @default(0.75)
+  parafYPercent   Float?    @default(0.70)
+  parafSize       Int?      @default(50)
+  
+  categoryId      String?
+  creatorId       String
+  // Current active approver or final approver
+  approverId      String?
+  signerId        String?
+  
+  // Pre-assigned approver (Deprecated in favor of LetterApprover)
+  assignedApproverId String?
+  assignedSignerId   String?
+  
+  category        LetterCategory? @relation(fields: [categoryId], references: [id])
+  creator         User     @relation("CreatedBy", fields: [creatorId], references: [id])
+  approver        User?    @relation("ApprovedBy", fields: [approverId], references: [id])
+  letterApprovers LetterApprover[]
+  signer          User?    @relation("SignedBy", fields: [signerId], references: [id])
+  
+  logs            ActivityLog[]
+  dispositions    Disposition[]
+  magicLinks      MagicLink[]
+  
+  submittedAt     DateTime?
+  
+
+  approvedAt      DateTime?
+  signedAt        DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status])
+  @@index([creatorId])
+  @@index([categoryId])
+  @@map("letters")
+}
+
+// ==================== ACTIVITY LOGGING ====================
+
+model ActivityLog {
+  id          String   @id @default(cuid())
+  action      String
+  description String   @db.Text
+  metadata    String?  @db.Text
+  ipAddress   String?
+  userAgent   String?  @db.Text
+  
+  userId      String
+  letterId    String?
+  
+  user        User     @relation(fields: [userId], references: [id])
+  letter      Letter?  @relation(fields: [letterId], references: [id], onDelete: SetNull)
+  
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([letterId])
+  @@index([action])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
+
+// ==================== SYSTEM SETTINGS ====================
+
+model Setting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @db.Text
+  type      String   @default("string")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+// ==================== DISPOSITION SYSTEM ====================
+
+model DispositionInstruction {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  
+  items DispositionInstructionItem[]
+
+  @@map("disposition_instructions")
+}
+
+model Disposition {
+  id          String   @id @default(cuid())
+  number      String?  @unique // Optional initially, assigned by TU
+  letterId    String
+  fromUserId  String   // Creator of disposition
+  urgency     String   @default("BIASA") // BIASA, SEGERA, PENTING, RAHASIA
+  notes       String?  @db.Text
+  
+  status      String   @default("PENDING_NUMBER") // PENDING_NUMBER -> PENDING_SIGN -> SUBMITTED
+  fileDraft   String?
+  fileSigned  String?
+  signedAt    DateTime?
+  qrHash      String   @default(cuid())
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  letter       Letter   @relation(fields: [letterId], references: [id], onDelete: Cascade)
+  fromUser     User     @relation("DispositionFrom", fields: [fromUserId], references: [id])
+  recipients   DispositionRecipient[]
+  instructions DispositionInstructionItem[]
+
+  @@index([letterId])
+  @@index([fromUserId])
+  @@map("dispositions")
+}
+
+model DispositionRecipient {
+  id            String   @id @default(cuid())
+  dispositionId String
+  userId        String
+  status        String   @default("PENDING") // PENDING, READ, COMPLETED
+  readAt        DateTime?
+  completedAt   DateTime?
+  response      String?  @db.Text
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  disposition Disposition @relation(fields: [dispositionId], references: [id], onDelete: Cascade)
+  user        User        @relation("DispositionTo", fields: [userId], references: [id])
+
+  @@unique([dispositionId, userId])
+  @@index([userId])
+  @@index([status])
+  @@map("disposition_recipients")
+}
+
+model DispositionInstructionItem {
+  dispositionId  String
+  instructionId  String
+  
+  disposition  Disposition            @relation(fields: [dispositionId], references: [id], onDelete: Cascade)
+  instruction  DispositionInstruction @relation(fields: [instructionId], references: [id])
+
+  @@id([dispositionId, instructionId])
+  @@map("disposition_instruction_items")
+}
+
+// ==================== TEMPLATE MANAGEMENT ====================
+
+model Template {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  fileUrl     String
+  fileType    String   // PDF, DOCX, etc.
+  
+  uploaderId  String
+  uploader    User     @relation(fields: [uploaderId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([uploaderId])
+  @@map("templates")
+}
+
+model ArchiveCode {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  name        String?
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("archive_codes")
+}
