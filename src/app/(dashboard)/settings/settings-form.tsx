@@ -1,7 +1,6 @@
 'use client'
 
 import { useTransition } from 'react'
-import { Setting } from '@prisma/client'
 import { updateSettings } from './actions'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -16,6 +15,13 @@ import {
 import { Save, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
+
+interface Setting {
+    id: string
+    key: string
+    value: string
+    type: string
+}
 
 export function SettingsForm({ settings }: { settings: Setting[] }) {
     const [isPending, startTransition] = useTransition()
