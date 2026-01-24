@@ -63,15 +63,61 @@ else
     cd "$APP_DIR"
 fi
 
-# 6. Environment Check
+# 6. Database & Environment Setup
 if [ ! -f ".env" ]; then
-    echo -e "${RED}[!] .env file is missing!${NC}"
-    if [ -f ".env.example" ]; then
-        echo -e "${YELLOW}[-] Creating .env from .env.example...${NC}"
-        cp .env.example .env
-        echo -e "${RED}[IMPORTANT] Please edit .env file with your specific configuration (Database, Auth Secret, etc) and run this script again or run 'npm run build' manually.${NC}"
-        # We don't exit, but build might fail if DB connection needed for generation
+    echo -e "${YELLOW}[-] .env file not found. Starting Automatic Configuration...${NC}"
+    
+    # 6a. Install MySQL if not present
+    if ! command -v mysql &> /dev/null; then
+        echo -e "${YELLOW}[-] MySQL not found. Installing MySQL Server...${NC}"
+        sudo apt-get install -y mysql-server
+        sudo systemctl start mysql
+        sudo systemctl enable mysql
     fi
+
+    # 6b. Generate Credentials
+    DB_NAME="esurat_db"
+    DB_USER="esurat_user"
+    DB_PASS=$(openssl rand -base64 12)
+    AUTH_SECRET=$(openssl rand -base64 32)
+    
+    echo -e "${YELLOW}[-] Creating Database and User...${NC}"
+    # Create DB and User (Idempotent)
+    sudo mysql -e "CREATE DATABASE IF NOT EXISTS ${DB_NAME};"
+    sudo mysql -e "CREATE USER IF NOT EXISTS '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASS}';"
+    sudo mysql -e "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'localhost';"
+    sudo mysql -e "FLUSH PRIVILEGES;"
+    
+    echo -e "${GREEN}[+] Database created: ${DB_NAME}${NC}"
+    echo -e "${GREEN}[+] User created: ${DB_USER}${NC}"
+
+    # 6c. Create .env file
+    echo -e "${YELLOW}[-] Generating .env file...${NC}"
+    
+    cat > .env <<EOF
+# Database
+DATABASE_URL="mysql://${DB_USER}:${DB_PASS}@localhost:3306/${DB_NAME}"
+
+# Authentication
+NEXTAUTH_URL="https://esurat.tvrikalbar.id"
+NEXTAUTH_SECRET="${AUTH_SECRET}"
+
+# App Config
+UPLOAD_DIR="./public/uploads"
+MAX_FILE_SIZE="10485760"
+
+# WhatsApp Gateway (Default)
+WA_API_URL="http://localhost:5001"
+WA_SESSION="esurat"
+
+# Server
+PORT=3000
+NODE_ENV="production"
+EOF
+
+    echo -e "${GREEN}[+] .env file generated successfully!${NC}"
+else
+    echo -e "${GREEN}[+] .env file exists. Skipping configuration.${NC}"
 fi
 
 # 7. Install Dependencies & Build
