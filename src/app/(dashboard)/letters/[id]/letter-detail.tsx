@@ -200,12 +200,12 @@ export function LetterDetail({ letter }: { letter: LetterData }) {
     const isAssignedSigner = letter.assignedSignerId === session?.user?.id
 
     // Multi-stage approval logic
-    const currentApprover = letter.letterApprovers?.find(la => la.user.id === session?.user?.id)
+    const currentApprover = letter.letterApprovers?.find((la: any) => la.user.id === session?.user?.id)
     const isNextApprover = !!currentApprover &&
         currentApprover.status === 'PENDING' &&
         letter.letterApprovers
-            .filter(la => la.order < currentApprover.order)
-            .every(la => la.status === 'APPROVED')
+            .filter((la: any) => la.order < currentApprover.order)
+            .every((la: any) => la.status === 'APPROVED')
 
     const canApprove = letter.status === 'PENDING_APPROVAL' && (isNextApprover || (isAssignedApprover && (!letter.letterApprovers || letter.letterApprovers.length === 0)))
     const canSign = letter.status === 'PENDING_SIGN' && isAssignedSigner

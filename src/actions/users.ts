@@ -83,7 +83,7 @@ export async function createUser(data: {
 
         const hashedPassword = await bcrypt.hash(data.password, 10)
 
-        await prisma.$transaction(async (tx) => {
+        await prisma.$transaction(async (tx: any) => {
             const user = await tx.user.create({
                 data: {
                     name: data.name,
@@ -138,7 +138,7 @@ export async function updateUser(userId: string, data: {
             }
         }
 
-        await prisma.$transaction(async (tx) => {
+        await prisma.$transaction(async (tx: any) => {
             // Update basic info
             const updateData: any = {}
             if (data.name) updateData.name = data.name
