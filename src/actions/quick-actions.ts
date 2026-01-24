@@ -177,7 +177,7 @@ export async function approveWithToken(token: string, signatureImage: string) {
         // Multi-stage Logic Check
         let currentApproverRecord: any = null
         if (letter.letterApprovers && letter.letterApprovers.length > 0) {
-            currentApproverRecord = letter.letterApprovers.find(la => la.userId === user.id)
+            currentApproverRecord = letter.letterApprovers.find((la: any) => la.userId === user.id)
             if (!currentApproverRecord) {
                 return { success: false, error: 'Anda tidak terdaftar sebagai penyetuju' }
             }
@@ -186,7 +186,7 @@ export async function approveWithToken(token: string, signatureImage: string) {
             }
 
             // Check Sequential Order
-            const pendingPrev = letter.letterApprovers.find(la => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
+            const pendingPrev = letter.letterApprovers.find((la: any) => la.order < currentApproverRecord.order && la.status !== 'APPROVED')
             if (pendingPrev) {
                 return { success: false, error: 'Menunggu persetujuan dari pejabat sebelumnya' }
             }
@@ -287,7 +287,7 @@ export async function approveWithToken(token: string, signatureImage: string) {
                     data: { fileStamped }
                 })
                 // Notify Next Approver
-                const nextApprover = letter.letterApprovers.find(la => la.order === currentApproverRecord.order + 1)
+                const nextApprover = letter.letterApprovers.find((la: any) => la.order === currentApproverRecord.order + 1)
                 if (nextApprover) {
                     await generateAndSendMagicLink(nextApprover.userId, letter.id, 'APPROVE')
                 }

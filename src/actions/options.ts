@@ -39,7 +39,7 @@ export async function getApprovers() {
             orderBy: { name: 'asc' }
         })
 
-        return approvers.map(u => ({
+        return approvers.map((u: any) => ({
             id: u.id,
             name: u.name,
             email: u.email,
@@ -88,7 +88,7 @@ export async function getSigners() {
             orderBy: { name: 'asc' }
         })
 
-        return signers.map(u => ({
+        return signers.map((u: any) => ({
             id: u.id,
             name: u.name,
             email: u.email,

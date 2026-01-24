@@ -53,7 +53,7 @@ export async function getUserById(userId: string) {
             success: true,
             data: {
                 ...user,
-                roleIds: user.roles.map(r => r.roleId)
+                roleIds: user.roles.map((r: any) => r.roleId)
             }
         }
     } catch (error) {
