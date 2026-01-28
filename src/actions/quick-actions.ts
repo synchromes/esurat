@@ -396,21 +396,44 @@ export async function uploadSignedWithToken(token: string, formData: FormData) {
             await sendWhatsAppMessage(creator.phoneNumber, `*E-SURAT TVRI*\n\nSurat *${letter.title}* telah selesai ditanda tangani oleh ${user.name}.\n\nSilakan cek dashboard untuk diproses lebih lanjut.`)
         }
 
-        // Notify Kepsta
+        // Notify Kepsta with Quick Action Link
         try {
             const kepstaUsers = await prisma.user.findMany({
                 where: {
                     isActive: true,
                     roles: {
                         some: {
-                            role: { name: { in: ['kepala_stasiun', 'Kepala Stasiun'] } }
+                            role: { name: { in: ['kepala_stasiun', 'Kepala Stasiun', 'admin', 'Admin'] } }
                         }
                     }
                 }
             })
-            const kepstaMsg = `*E-SURAT TVRI*\n\nTerdapat surat baru yang telah selesai ditandatangani dan perlu didisposisi:\n\nJudul: *${letter.title}*\nNomor: ${letter.letterNumber || '-'}\n\nSilakan login untuk membuat disposisi.`
+
+            const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
             for (const kepsta of kepstaUsers) {
-                if (kepsta.phoneNumber) sendWhatsAppMessage(kepsta.phoneNumber, kepstaMsg).catch(console.error)
+                if (kepsta.phoneNumber) {
+                    // Generate magic link for quick disposition
+                    const dispositionToken = uuidv4()
+                    const otpCode = Math.floor(100000 + Math.random() * 900000).toString()
+
+                    await prisma.magicLink.create({
+                        data: {
+                            token: dispositionToken,
+                            userId: kepsta.id,
+                            letterId: letter.id,
+                            action: 'DISPOSITION',
+                            otpCode,
+                            expiresAt: addMinutes(new Date(), 60) // 1 hour for disposition
+                        }
+                    })
+
+                    const quickLink = `${baseUrl}/quick/disposition/${dispositionToken}`
+
+                    const kepstaMsg = `*E-SURAT TVRI*\n\n📋 *Surat Baru Siap Disposisi*\n\nSurat telah selesai ditandatangani:\n\n📄 *${letter.title}*\nNomor: ${letter.letterNumber || '-'}\n\n🚀 *Quick Disposisi:*\n${quickLink}\n\nKode OTP: *${otpCode}*\n\n(Link berlaku 1 jam)`
+
+                    sendWhatsAppMessage(kepsta.phoneNumber, kepstaMsg).catch(console.error)
+                }
             }
         } catch (e) {
             console.error('Failed to notify Kepsta:', e)
@@ -489,5 +512,190 @@ export async function rejectWithToken(token: string, reason: string) {
     } catch (error) {
         console.error('Quick Reject Error:', error)
         return { success: false, error: 'Gagal menolak surat' }
+    }
+}
+
+// ==================== QUICK DISPOSITION ====================
+
+export async function verifyDispositionMagicLink(token: string, otp: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: {
+                user: true,
+                letter: {
+                    include: {
+                        category: true
+                    }
+                }
+            }
+        })
+
+        if (!magicLink) {
+            return { success: false, error: 'Link tidak valid' }
+        }
+
+        if (magicLink.isUsed) {
+            return { success: false, error: 'Link sudah digunakan' }
+        }
+
+        if (new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Link sudah kadaluarsa. Hubungi Admin untuk link baru.' }
+        }
+
+        if (magicLink.action !== 'DISPOSITION') {
+            return { success: false, error: 'Link tidak valid untuk disposisi' }
+        }
+
+        if (magicLink.otpCode !== otp) {
+            return { success: false, error: 'Kode OTP salah' }
+        }
+
+        return { success: true, data: magicLink }
+    } catch (error) {
+        return { success: false, error: 'Terjadi kesalahan validasi' }
+    }
+}
+
+export async function getQuickDispositionData(token: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: {
+                letter: {
+                    select: { id: true, title: true, letterNumber: true, category: true }
+                }
+            }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Link tidak valid' }
+        }
+
+        // Get recipients
+        const recipients = await prisma.user.findMany({
+            where: { isActive: true },
+            select: { id: true, name: true, email: true },
+            orderBy: { name: 'asc' }
+        })
+
+        // Get instructions
+        const instructions = await prisma.dispositionInstruction.findMany({
+            where: { isActive: true },
+            orderBy: { sortOrder: 'asc' }
+        })
+
+        return {
+            success: true,
+            data: {
+                letter: magicLink.letter,
+                recipients,
+                instructions
+            }
+        }
+    } catch (error) {
+        console.error('Get quick disposition data error:', error)
+        return { success: false, error: 'Gagal mengambil data' }
+    }
+}
+
+export async function createDispositionWithToken(
+    token: string,
+    input: {
+        recipientIds: string[]
+        instructionIds: string[]
+        urgency: 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA'
+        notes?: string
+    }
+) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: {
+                user: true,
+                letter: true
+            }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Token tidak valid atau kadaluarsa' }
+        }
+
+        if (magicLink.action !== 'DISPOSITION') {
+            return { success: false, error: 'Token tidak sesuai dengan aksi' }
+        }
+
+        const { letter, user } = magicLink
+
+        if (letter.status !== 'SIGNED') {
+            return { success: false, error: 'Surat belum ditandatangani' }
+        }
+
+        // Validate recipients
+        if (input.recipientIds.length === 0) {
+            return { success: false, error: 'Pilih minimal satu penerima' }
+        }
+
+        // Create disposition
+        const disposition = await prisma.disposition.create({
+            data: {
+                letterId: letter.id,
+                fromUserId: user.id,
+                urgency: input.urgency,
+                notes: input.notes || null,
+                recipients: {
+                    create: input.recipientIds.map(userId => ({
+                        userId,
+                        status: 'PENDING'
+                    }))
+                },
+                instructions: {
+                    create: input.instructionIds.map(instructionId => ({
+                        instructionId
+                    }))
+                }
+            },
+            include: {
+                recipients: {
+                    include: { user: { select: { id: true, name: true } } }
+                },
+                instructions: {
+                    include: { instruction: true }
+                }
+            }
+        })
+
+        // Log activity
+        await prisma.activityLog.create({
+            data: {
+                action: 'DISPOSITION_CREATED',
+                description: `Membuat disposisi via Quick Link untuk surat "${letter.title}"`,
+                userId: user.id,
+                letterId: letter.id,
+                metadata: JSON.stringify({
+                    dispositionId: disposition.id,
+                    recipientIds: input.recipientIds,
+                    urgency: input.urgency
+                })
+            }
+        })
+
+        // Mark magic link as used
+        await consumeMagicLink(token)
+
+        // Send notification to user that disposition is created
+        if (user.phoneNumber) {
+            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+            const dispLink = `${appUrl}/dispositions/${disposition.id}`
+            await sendWhatsAppMessage(
+                user.phoneNumber,
+                `*E-SURAT TVRI*\n\n✅ Disposisi berhasil dibuat!\n\nSurat: "${letter.title}"\nPenerima: ${input.recipientIds.length} orang\n\n📥 *Lihat & TTE:*\n${dispLink}\n\nSilakan isi nomor disposisi dan TTE untuk mengirim ke penerima.`
+            ).catch(console.error)
+        }
+
+        return { success: true, data: disposition }
+    } catch (error) {
+        console.error('Quick Disposition Error:', error)
+        return { success: false, error: 'Gagal membuat disposisi' }
     }
 }
