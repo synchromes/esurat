@@ -1,5 +1,9 @@
 import prisma from '@/lib/prisma'
 
+// Use dynamic access to avoid TypeScript errors for optional models
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const prismaAny = prisma as any
+
 export interface WhatsAppResponse {
     success: boolean
     data?: any
@@ -42,7 +46,7 @@ async function getWhatsAppConfig(): Promise<WhatsAppConfig> {
  */
 async function getAvailableSessions(): Promise<SessionInfo[]> {
     try {
-        const sessions = await prisma.whatsAppSession.findMany({
+        const sessions = await prismaAny.whatsAppSession.findMany({
             where: {
                 isActive: true,
                 status: 'CONNECTED'
@@ -52,7 +56,8 @@ async function getAvailableSessions(): Promise<SessionInfo[]> {
                 { priority: 'asc' }
             ]
         })
-        return sessions.map(s => ({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return sessions.map((s: any) => ({
             id: s.id,
             name: s.name,
             status: s.status,
@@ -129,7 +134,7 @@ async function selectSession(mode: 'failover' | 'round-robin' | 'hybrid' = 'fail
  */
 async function updateSessionStats(sessionName: string, success: boolean): Promise<void> {
     try {
-        await prisma.whatsAppSession.updateMany({
+        await prismaAny.whatsAppSession.updateMany({
             where: { name: sessionName },
             data: {
                 currentDailyCount: { increment: 1 },
@@ -150,7 +155,7 @@ async function resetDailyCountsIfNeeded(): Promise<void> {
         const now = new Date()
         const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-        await prisma.whatsAppSession.updateMany({
+        await prismaAny.whatsAppSession.updateMany({
             where: {
                 lastResetAt: { lt: startOfDay }
             },
@@ -183,7 +188,7 @@ export async function syncSessionStatuses(): Promise<void> {
         const sessions = data.sessions || []
 
         for (const session of sessions) {
-            await prisma.whatsAppSession.updateMany({
+            await prismaAny.whatsAppSession.updateMany({
                 where: { name: session.id },
                 data: {
                     status: session.status,
@@ -297,12 +302,12 @@ async function logMessage(
     errorReason?: string
 ): Promise<void> {
     try {
-        const session = await prisma.whatsAppSession.findUnique({
+        const session = await prismaAny.whatsAppSession.findUnique({
             where: { name: sessionName }
         })
 
         if (session) {
-            await prisma.whatsAppMessageLog.create({
+            await prismaAny.whatsAppMessageLog.create({
                 data: {
                     sessionId: session.id,
                     phoneNumber: phone,
@@ -324,7 +329,7 @@ async function logMessage(
  */
 export async function getAllSessions(): Promise<any[]> {
     try {
-        return await prisma.whatsAppSession.findMany({
+        return await prismaAny.whatsAppSession.findMany({
             orderBy: [
                 { isPrimary: 'desc' },
                 { priority: 'asc' }
@@ -347,12 +352,12 @@ export async function createSession(data: {
 }): Promise<any> {
     // If setting as primary, unset other primaries
     if (data.isPrimary) {
-        await prisma.whatsAppSession.updateMany({
+        await prismaAny.whatsAppSession.updateMany({
             data: { isPrimary: false }
         })
     }
 
-    return await prisma.whatsAppSession.create({
+    return await prismaAny.whatsAppSession.create({
         data: {
             name: data.name,
             phoneNumber: data.phoneNumber,
@@ -374,13 +379,13 @@ export async function updateSession(id: string, data: {
 }): Promise<any> {
     // If setting as primary, unset other primaries
     if (data.isPrimary) {
-        await prisma.whatsAppSession.updateMany({
+        await prismaAny.whatsAppSession.updateMany({
             where: { id: { not: id } },
             data: { isPrimary: false }
         })
     }
 
-    return await prisma.whatsAppSession.update({
+    return await prismaAny.whatsAppSession.update({
         where: { id },
         data
     })
@@ -390,7 +395,7 @@ export async function updateSession(id: string, data: {
  * Delete a session
  */
 export async function deleteSession(id: string): Promise<void> {
-    await prisma.whatsAppSession.delete({
+    await prismaAny.whatsAppSession.delete({
         where: { id }
     })
 }
