@@ -80,6 +80,14 @@ export async function getSessions() {
         if (config.apiKey) headers['Key'] = config.apiKey
 
         const response = await fetch(`${config.url}/session`, { cache: 'no-store', headers })
+
+        // Check if response is JSON (not HTML error page)
+        const contentType = response.headers.get('content-type')
+        if (!contentType || !contentType.includes('application/json')) {
+            console.warn('Gateway returned non-JSON response')
+            return { success: true, data: [], message: 'Gateway tidak merespons dengan benar. Pastikan URL dan API Key sudah dikonfigurasi.' }
+        }
+
         const data = await response.json()
 
         if (Array.isArray(data)) {

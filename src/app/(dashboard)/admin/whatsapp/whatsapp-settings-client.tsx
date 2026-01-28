@@ -297,6 +297,36 @@ export default function WhatsAppSettingsClient() {
                             Save Configuration
                         </Button>
                     </div>
+
+                    {/* Quick Test Notification */}
+                    <div className="border-t pt-4 mt-4">
+                        <h4 className="text-sm font-medium mb-3">Test Kirim Notifikasi</h4>
+                        <div className="flex gap-2">
+                            <Input
+                                placeholder="Nomor WhatsApp (08123...)"
+                                value={testPhone}
+                                onChange={e => setTestPhone(e.target.value)}
+                                className="max-w-xs"
+                            />
+                            <Button
+                                variant="outline"
+                                onClick={() => {
+                                    if (!testPhone) {
+                                        toast.error('Masukkan nomor tujuan')
+                                        return
+                                    }
+                                    setTestSession(defaultSession)
+                                    setTestMessage('🔔 Test notifikasi dari E-Surat TVRI.\n\nJika Anda menerima pesan ini, berarti sistem notifikasi sudah berfungsi dengan baik.')
+                                    setIsTestDialogOpen(true)
+                                }}
+                                disabled={!defaultSession}
+                            >
+                                <MessageSquare className="h-4 w-4 mr-2" />
+                                Kirim Test
+                            </Button>
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-2">Kirim pesan test untuk memverifikasi notifikasi berfungsi.</p>
+                    </div>
                 </CardContent>
             </Card>
 
