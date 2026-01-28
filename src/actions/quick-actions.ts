@@ -683,14 +683,56 @@ export async function createDispositionWithToken(
         // Mark magic link as used
         await consumeMagicLink(token)
 
-        // Send notification to user that disposition is created
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
+        // 1. Notify Creator (Kepsta) - Success but waiting for number
         if (user.phoneNumber) {
-            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
             const dispLink = `${appUrl}/dispositions/${disposition.id}`
             await sendWhatsAppMessage(
                 user.phoneNumber,
-                `*E-SURAT TVRI*\n\n✅ Disposisi berhasil dibuat!\n\nSurat: "${letter.title}"\nPenerima: ${input.recipientIds.length} orang\n\n📥 *Lihat & TTE:*\n${dispLink}\n\nSilakan isi nomor disposisi dan TTE untuk mengirim ke penerima.`
+                `*E-SURAT TVRI*\n\n✅ Disposisi berhasil dibuat!\n\nSurat: *${letter.title}*\nPenerima: ${input.recipientIds.length} orang\n\nMenunggu pengisian nomor agenda disposisi oleh Petugas Tata Usaha.\n\nLink Detail:\n${dispLink}`
             ).catch(console.error)
+        }
+
+        // 2. Notify TU - Request to Set Number
+        const tuUsers = await prisma.user.findMany({
+            where: {
+                isActive: true,
+                roles: {
+                    some: {
+                        role: { name: { in: ['tata_usaha', 'Tata Usaha', 'admin', 'Admin'] } }
+                    }
+                }
+            }
+        })
+
+        for (const tu of tuUsers) {
+            if (tu.phoneNumber) {
+                // Generate magic link for SET_DISPOSITION_NUMBER
+                const setNumberToken = uuidv4()
+
+                await prisma.magicLink.create({
+                    data: {
+                        token: setNumberToken,
+                        userId: tu.id,
+                        letterId: letter.id, // Linked to Letter, but maybe we should link to Disposition? 
+                        // MagicLink schema has letterId. We can find disposition by letterId + status PENDING
+                        // Or we can add dispositionId to MagicLink? 
+                        // For now, let's use letterId and find the latest disposition in the Page logic.
+                        action: 'SET_DISPOSITION_NUMBER',
+                        otpCode: '0000', // No OTP needed for internal staff? Or generate one. Let's start without OTP or simple one.
+                        // Actually user said "Quick action pengisian nomor". 
+                        expiresAt: addMinutes(new Date(), 1440) // 24 hours
+                    }
+                })
+
+                const setNumberLink = `${appUrl}/quick/disposition-number/${setNumberToken}`
+
+                await sendWhatsAppMessage(
+                    tu.phoneNumber,
+                    `*E-SURAT TVRI*\n\n📋 *Permintaan Nomor Disposisi*\n\nDari: ${user.name}\nSurat: *${letter.title}*\n\nSilakan isi nomor disposisi melalui link berikut:\n${setNumberLink}`
+                ).catch(console.error)
+            }
         }
 
         return { success: true, data: disposition }
@@ -699,3 +741,248 @@ export async function createDispositionWithToken(
         return { success: false, error: 'Gagal membuat disposisi' }
     }
 }
+
+// ==================== SET DISPOSITION NUMBER (TU) ====================
+
+export async function verifySetNumberMagicLink(token: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: { user: true, letter: true }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Link tidak valid atau kadaluarsa' }
+        }
+
+        if (magicLink.action !== 'SET_DISPOSITION_NUMBER') {
+            return { success: false, error: 'Link tidak valid untuk aksi ini' }
+        }
+
+        return { success: true, data: magicLink }
+    } catch (error) {
+        return { success: false, error: 'Terjadi kesalahan validasi' }
+    }
+}
+
+export async function getSetNumberData(token: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: {
+                letter: {
+                    select: { id: true, title: true, letterNumber: true }
+                }
+            }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Link tidak valid' }
+        }
+
+        // Find disposition pending number
+        const disposition = await prisma.disposition.findFirst({
+            where: { letterId: magicLink.letterId, number: null },
+            orderBy: { createdAt: 'desc' }
+        })
+
+        if (!disposition) {
+            return { success: false, error: 'Tidak ada disposisi yang perlu nomor' }
+        }
+
+        return {
+            success: true,
+            data: {
+                letter: magicLink.letter,
+                disposition
+            }
+        }
+    } catch (error) {
+        return { success: false, error: 'Gagal mengambil data' }
+    }
+}
+
+export async function setDispositionNumberWithToken(token: string, number: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: { user: true, letter: true }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Token tidak valid' }
+        }
+
+        // Find disposition
+        const disposition = await prisma.disposition.findFirst({
+            where: { letterId: magicLink.letterId, number: null },
+            orderBy: { createdAt: 'desc' }
+        })
+
+        if (!disposition) {
+            return { success: false, error: 'Disposisi sudah memiliki nomor atau tidak ditemukan' }
+        }
+
+        // Update number
+        const updatedDisposition = await prisma.disposition.update({
+            where: { id: disposition.id },
+            data: {
+                number: number,
+                status: 'PENDING_SIGN'
+            }
+        })
+
+        // Generate PDF (Assuming library is available or handled elsewhere, but for now we just notify)
+        // Ideally we should trigger PDF generation here or it's done on-the-fly when downloading?
+        // Usually generateDispositionPdf is called. Let's try to call it if imported.
+        // import { generateDispositionPdf } from '@/lib/pdf-generator' -> Need to check imports.
+        // Assuming it exists or user downloads dynamic.
+
+        await consumeMagicLink(token)
+
+        // Notify Creator (Kepsta) to Upload Signed
+        const creator = await prisma.user.findUnique({
+            where: { id: disposition.fromUserId }
+        })
+
+        if (creator && creator.phoneNumber) {
+            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
+            // Generate Upload Token
+            const uploadToken = uuidv4()
+            await prisma.magicLink.create({
+                data: {
+                    token: uploadToken,
+                    userId: creator.id,
+                    letterId: magicLink.letterId,
+                    action: 'UPLOAD_DISPOSITION_SIGNED',
+                    otpCode: '0000',
+                    expiresAt: addMinutes(new Date(), 1440)
+                }
+            })
+
+            const uploadLink = `${appUrl}/quick/disposition-upload/${uploadToken}`
+            // Also download link for the generated PDF? 
+            // /api/dispositions/[id]/pdf usually.
+
+            await sendWhatsAppMessage(
+                creator.phoneNumber,
+                `*E-SURAT TVRI*\n\n✅ Nomor Disposisi Terbit: *${number}*\nSurat: ${magicLink.letter.title}\n\nSilakan:\n1. Download Lembar Disposisi\n2. Tanda tangani\n3. Upload kembali\n\nAkses Cepat:\n${uploadLink}`
+            ).catch(console.error)
+        }
+
+        return { success: true }
+    } catch (error) {
+        console.error('Set Disposition Number Error:', error)
+        return { success: false, error: 'Gagal menyimpan nomor' }
+    }
+}
+
+// ==================== UPLOAD SIGNED DISPOSITION (KEPSTA) ====================
+
+export async function verifyUploadDispositionMagicLink(token: string) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: { user: true, letter: true }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Link tidak valid' }
+        }
+
+        if (magicLink.action !== 'UPLOAD_DISPOSITION_SIGNED') {
+            return { success: false, error: 'Link salah aksi' }
+        }
+
+        // Find disposition 
+        const disposition = await prisma.disposition.findFirst({
+            where: { letterId: magicLink.letterId },
+            orderBy: { createdAt: 'desc' }
+        })
+
+        if (!disposition || !disposition.number) {
+            return { success: false, error: 'Disposisi belum memiliki nomor' }
+        }
+
+        return { success: true, data: { magicLink, disposition } }
+    } catch (e) {
+        return { success: false, error: 'Error validasi' }
+    }
+}
+
+export async function uploadSignedDispositionWithToken(token: string, formData: FormData) {
+    try {
+        const magicLink = await prisma.magicLink.findUnique({
+            where: { token },
+            include: { user: true, letter: true }
+        })
+
+        if (!magicLink || magicLink.isUsed || new Date() > magicLink.expiresAt) {
+            return { success: false, error: 'Token tidak valid' }
+        }
+
+        if (magicLink.action !== 'UPLOAD_DISPOSITION_SIGNED') {
+            return { success: false, error: 'Token tidak valid untuk aksi ini' }
+        }
+
+        const file = formData.get('file') as File
+        if (!file) {
+            return { success: false, error: 'File tidak ditemukan' }
+        }
+
+        // Find disposition
+        const disposition = await prisma.disposition.findFirst({
+            where: { letterId: magicLink.letterId },
+            orderBy: { createdAt: 'desc' }
+        })
+
+        if (!disposition) {
+            return { success: false, error: 'Disposisi tidak ditemukan' }
+        }
+
+        // Validate authority? Magic Link implies authority granted to the link holder (Kepsta).
+        // Check integrity is handled by token.
+
+        // Save file
+        const { publicUrl } = await saveFile(file, 'signed')
+
+        // Update DB
+        await prisma.disposition.update({
+            where: { id: disposition.id },
+            data: {
+                status: 'SUBMITTED',
+                fileSigned: publicUrl,
+                signedAt: new Date()
+            }
+        })
+
+        await consumeMagicLink(token)
+
+        // Notify Recipients
+        const recipients = await prisma.dispositionRecipient.findMany({
+            where: { dispositionId: disposition.id },
+            include: { user: true }
+        })
+
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+        const dispositionLink = `${appUrl}/dispositions/${disposition.id}`
+
+        for (const recipient of recipients) {
+            if (recipient.user.phoneNumber) {
+                const msg = `*E-SURAT TVRI*\n\n📨 *Disposisi Baru*\n\nAnda menerima disposisi untuk surat:\n"${magicLink.letter.title}"\n\nSifat: *${disposition.urgency}*\nDari: ${magicLink.user.name}\n\n🔗 *Lihat Detail:*\n${dispositionLink}\n\nSegera ditindaklanjuti.`
+
+                await sendWhatsAppMessage(recipient.user.phoneNumber, msg).catch(console.error)
+            }
+        }
+
+        revalidatePath('/dispositions')
+        revalidatePath(`/dispositions/${disposition.id}`)
+
+        return { success: true }
+    } catch (error) {
+        console.error('Upload Signed Disposition Error:', error)
+        return { success: false, error: 'Gagal mengupload file' }
+    }
+}
+

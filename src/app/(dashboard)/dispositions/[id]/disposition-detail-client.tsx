@@ -104,10 +104,10 @@ export function DispositionDetailClient({ disposition, canSetNumber }: Dispositi
                         </Button>
                     )}
 
-                    <Button variant="outline" onClick={handlePrint}>
+                    {/* <Button variant="outline" onClick={handlePrint}>
                         <Printer className="mr-2 h-4 w-4" />
                         Cetak Lembar Disposisi
-                    </Button>
+                    </Button> */}
                     <Button asChild>
                         <Link href={`/letters/${disposition.letter.id}`}>
                             Lihat Surat

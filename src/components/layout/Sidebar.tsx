@@ -104,8 +104,8 @@ const adminNavItems: NavItem[] = [
         permission: 'settings.view'
     },
     {
-        title: 'Whatsapp Setting',
-        href: '/admin/whatsapp',
+        title: 'Notifikasi',
+        href: '/admin/notifications',
         icon: MessageCircle,
         permission: 'settings.view'
     }

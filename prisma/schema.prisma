@@ -387,3 +387,99 @@ model ArchiveCode {
 
   @@map("archive_codes")
 }
+
+// ==================== WHATSAPP MULTI-SESSION ====================
+
+model WhatsAppSession {
+  id              String    @id @default(cuid())
+  name            String    @unique  // Session name in WA Gateway (e.g., "esurat", "esurat-backup1")
+  phoneNumber     String?   // Display phone number
+  status          String    @default("DISCONNECTED") // CONNECTED, DISCONNECTED, BANNED, INITIALIZING
+  isPrimary       Boolean   @default(false)
+  priority        Int       @default(0)  // Lower = higher priority for failover (0 = highest)
+  isActive        Boolean   @default(true)
+  
+  // Rate limiting
+  dailyLimit        Int      @default(1000)
+  currentDailyCount Int      @default(0)
+  lastResetAt       DateTime @default(now())
+  
+  // Tracking
+  totalMessagesSent   Int      @default(0)
+  lastMessageAt       DateTime?
+  lastConnectedAt     DateTime?
+  lastDisconnectedAt  DateTime?
+  
+  // Health monitoring
+  lastHealthCheckAt   DateTime?
+  healthCheckFailed   Int      @default(0) // Consecutive failures
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  // Message logs
+  messageLogs       WhatsAppMessageLog[]
+
+  @@index([status])
+  @@index([isPrimary])
+  @@map("whatsapp_sessions")
+}
+
+model WhatsAppMessageLog {
+  id          String   @id @default(cuid())
+  sessionId   String
+  phoneNumber String
+  message     String   @db.Text
+  status      String   @default("PENDING") // PENDING, SENT, FAILED
+  errorReason String?  @db.Text
+  
+  session     WhatsAppSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([status])
+  @@index([createdAt])
+  @@map("whatsapp_message_logs")
+}
+
+// ==================== TELEGRAM BOT MONITORING ====================
+
+model TelegramConfig {
+  id          String   @id @default(cuid())
+  botToken    String   @db.Text  // Store securely
+  chatId      String   // Target chat/group for notifications
+  botUsername String?  // @bot_username for display
+  isEnabled   Boolean  @default(true)
+  
+  // Notification settings
+  notifyOnSessionDisconnect  Boolean @default(true)
+  notifyOnSessionReconnect   Boolean @default(true)
+  notifyOnHighTraffic        Boolean @default(true)
+  notifyOnSystemError        Boolean @default(true)
+  notifyDailyReport          Boolean @default(true)
+  dailyReportTime            String  @default("08:00") // HH:mm format
+  
+  // Thresholds
+  highTrafficThreshold       Int     @default(100) // Messages per hour
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("telegram_config")
+}
+
+model SystemHealthLog {
+  id          String   @id @default(cuid())
+  type        String   // CPU, MEMORY, DISK, DATABASE, WHATSAPP
+  value       String   // JSON or simple value
+  status      String   @default("OK") // OK, WARNING, CRITICAL
+  message     String?  @db.Text
+  
+  createdAt   DateTime @default(now())
+
+  @@index([type])
+  @@index([status])
+  @@index([createdAt])
+  @@map("system_health_logs")
+}

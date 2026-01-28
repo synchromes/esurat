@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-    const permName = 'disposition:set-number'
+    const permName = 'disposition.set_number'
 
     // Create Permission
     const permission = await prisma.permission.upsert({
