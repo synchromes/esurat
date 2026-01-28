@@ -80,8 +80,8 @@ export async function saveFile(
     const buffer = Buffer.from(arrayBuffer)
     await writeFile(filepath, buffer)
 
-    // Generate public URL
-    const publicUrl = `/uploads/${directory}/${filename}`
+    // Generate public URL (use API route for dynamic serving)
+    const publicUrl = `/api/uploads/${directory}/${filename}`
 
     return { filename, filepath, publicUrl }
 }
@@ -99,7 +99,7 @@ export async function saveBuffer(
     const filepath = path.join(UPLOAD_PATHS[directory], filename)
     await writeFile(filepath, buffer)
 
-    const publicUrl = `/uploads/${directory}/${filename}`
+    const publicUrl = `/api/uploads/${directory}/${filename}`
 
     return { filepath, publicUrl }
 }
