@@ -404,9 +404,11 @@ export async function setDispositionNumber(dispositionId: string, number: string
             // Don't fail the request, but log it
         }
 
-        // Notify Creator
+        // Notify Creator with quick action link
         if (disposition.fromUser.phoneNumber) {
-            const msg = `*E-SURAT TVRI*\n\nNomor disposisi untuk surat "${disposition.letter.title}" telah diisi (${number}).\n\nSilakan download dan TTE.`
+            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+            const dispositionLink = `${appUrl}/dispositions/${dispositionId}`
+            const msg = `*E-SURAT TVRI*\n\nNomor disposisi untuk surat "${disposition.letter.title}" telah diisi *(${number})*.\n\n📥 *Download & TTE:*\n${dispositionLink}\n\nSilakan download lembar disposisi dan lakukan Tanda Tangan Elektronik.`
             sendWhatsAppMessage(disposition.fromUser.phoneNumber, msg).catch(console.error)
         }
 
@@ -661,7 +663,8 @@ export async function uploadSignedDisposition(dispositionId: string, formData: F
                 recipients: {
                     include: { user: true }
                 },
-                letter: true
+                letter: true,
+                fromUser: true
             }
         })
 
@@ -688,10 +691,13 @@ export async function uploadSignedDisposition(dispositionId: string, formData: F
             }
         })
 
-        // Notify Recipients
+        // Notify Recipients with quick action link
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+        const dispositionLink = `${appUrl}/dispositions/${dispositionId}`
+
         for (const recipient of disposition.recipients) {
             if (recipient.user.phoneNumber) {
-                const msg = `*E-SURAT TVRI*\n\nAnda menerima disposisi baru.\n\nSurat: ${disposition.letter.title}\nSifat: ${disposition.urgency}\n\nSilakan cek aplikasi.`
+                const msg = `*E-SURAT TVRI*\n\n📨 *Disposisi Baru*\n\nAnda menerima disposisi untuk surat:\n"${disposition.letter.title}"\n\nSifat: *${disposition.urgency}*\nDari: ${disposition.fromUser?.name || 'Pimpinan'}\n\n🔗 *Lihat Detail:*\n${dispositionLink}\n\nSegera ditindaklanjuti.`
                 // Fire and forget
                 sendWhatsAppMessage(recipient.user.phoneNumber, msg).catch(console.error)
             }
