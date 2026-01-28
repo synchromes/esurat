@@ -14,6 +14,20 @@ import path from 'path'
 import { generateAndSendMagicLink } from '@/actions/quick-actions'
 import { sendWhatsAppMessage } from '@/lib/whatsapp'
 
+const UPLOAD_BASE = process.env.UPLOAD_DIR || './public/uploads'
+
+// Helper: Convert public URL to filesystem path
+function getFilesystemPath(publicUrl: string): string {
+    // Handle both /api/uploads/... and /uploads/... formats
+    let relativePath = publicUrl
+    if (relativePath.startsWith('/api/uploads/')) {
+        relativePath = relativePath.replace('/api/uploads/', '')
+    } else if (relativePath.startsWith('/uploads/')) {
+        relativePath = relativePath.replace('/uploads/', '')
+    }
+    return path.join(UPLOAD_BASE, relativePath)
+}
+
 // ==================== SCHEMAS ====================
 
 const createLetterSchema = z.object({
@@ -298,7 +312,7 @@ export async function approveLetter(letterId: string, signatureImage?: string) {
         // Wait, `fileStamped` might store the "Intermediate" version.
 
         const sourceFile = letter.fileStamped || letter.fileDraft
-        const sourcePath = path.join(process.cwd(), 'public', sourceFile)
+        const sourcePath = getFilesystemPath(sourceFile)
 
         // If fileStamped doesn't exist yet (first approver), assume draft.
         // But wait, `status` is PENDING_APPROVAL. `fileStamped` is mostly null or "Initial"?
@@ -409,10 +423,9 @@ export async function approveLetter(letterId: string, signatureImage?: string) {
         // Delete old stamped file if exists (and different)
         if (letter.fileStamped && letter.fileStamped !== letter.fileDraft) {
             try {
-                // await deleteFile(path.join(process.cwd(), 'public', letter.fileStamped))
                 // Careful not to delete if we need history?
                 // For now, let's keep it or delete it to save space. Best to clean up intermediate.
-                await deleteFile(path.join(process.cwd(), 'public', letter.fileStamped))
+                await deleteFile(getFilesystemPath(letter.fileStamped))
             } catch (e) { console.error('Failed to cleanup old stamped file', e) }
         }
 
@@ -731,13 +744,13 @@ export async function deleteLetter(letterId: string) {
 
         // Delete files
         if (letter.fileDraft) {
-            await deleteFile(path.join(process.cwd(), 'public', letter.fileDraft))
+            await deleteFile(getFilesystemPath(letter.fileDraft))
         }
         if (letter.fileStamped) {
-            await deleteFile(path.join(process.cwd(), 'public', letter.fileStamped))
+            await deleteFile(getFilesystemPath(letter.fileStamped))
         }
         if (letter.fileFinal) {
-            await deleteFile(path.join(process.cwd(), 'public', letter.fileFinal))
+            await deleteFile(getFilesystemPath(letter.fileFinal))
         }
 
         // Delete letter and related logs

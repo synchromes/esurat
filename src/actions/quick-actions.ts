@@ -17,6 +17,20 @@ import { readFile } from 'fs/promises'
 import path from 'path'
 import { revalidatePath } from 'next/cache'
 
+const UPLOAD_BASE = process.env.UPLOAD_DIR || './public/uploads'
+
+// Helper: Convert public URL to filesystem path
+function getFilesystemPath(publicUrl: string): string {
+    // Handle both /api/uploads/... and /uploads/... formats
+    let relativePath = publicUrl
+    if (relativePath.startsWith('/api/uploads/')) {
+        relativePath = relativePath.replace('/api/uploads/', '')
+    } else if (relativePath.startsWith('/uploads/')) {
+        relativePath = relativePath.replace('/uploads/', '')
+    }
+    return path.join(UPLOAD_BASE, relativePath)
+}
+
 export async function generateAndSendMagicLink(
     userId: string,
     letterId: string,
@@ -193,7 +207,7 @@ export async function approveWithToken(token: string, signatureImage: string) {
         }
 
         // 2. Perform Approval Logic (Stamping)
-        const draftPath = path.join(process.cwd(), 'public', letter.fileStamped || letter.fileDraft)
+        const draftPath = getFilesystemPath(letter.fileStamped || letter.fileDraft)
         const pdfBuffer = await readFile(draftPath)
 
         const verifyUrl = `${process.env.NEXT_PUBLIC_APP_URL}/verify`
@@ -251,7 +265,8 @@ export async function approveWithToken(token: string, signatureImage: string) {
         // Clean up old stamped file
         if (letter.fileStamped && letter.fileStamped !== letter.fileDraft) {
             try {
-                await import('fs/promises').then(fs => fs.unlink(path.join(process.cwd(), 'public', letter.fileStamped!)))
+                const oldPath = getFilesystemPath(letter.fileStamped)
+                await import('fs/promises').then(fs => fs.unlink(oldPath))
             } catch (e) { console.error('Cleanup error', e) }
         }
 
