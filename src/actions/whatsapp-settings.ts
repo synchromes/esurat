@@ -8,12 +8,13 @@ import { revalidatePath } from 'next/cache'
 
 async function getConfig() {
     const settings = await prisma.setting.findMany({
-        where: { key: { in: ['wa.api_url', 'wa.session'] } }
+        where: { key: { in: ['wa.api_url', 'wa.session', 'wa.api_key'] } }
     })
     const map = settings.reduce((acc, curr) => ({ ...acc, [curr.key]: curr.value }), {} as Record<string, string>)
     return {
         url: map['wa.api_url'] || process.env.WA_API_URL || 'http://localhost:5001',
-        session: map['wa.session'] || process.env.WA_SESSION || 'esurat'
+        session: map['wa.session'] || process.env.WA_SESSION || 'esurat',
+        apiKey: map['wa.api_key'] || process.env.WA_API_KEY || ''
     }
 }
 
@@ -23,7 +24,7 @@ export async function getGlobalSettings() {
     return { success: true, data: config }
 }
 
-export async function saveGlobalSettings(url: string, session: string) {
+export async function saveGlobalSettings(url: string, session: string, apiKey?: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_EDIT)
         // Upsert settings
@@ -37,7 +38,15 @@ export async function saveGlobalSettings(url: string, session: string) {
             create: { key: 'wa.session', value: session, type: 'string' },
             update: { value: session }
         })
+        if (apiKey !== undefined) {
+            await prisma.setting.upsert({
+                where: { key: 'wa.api_key' },
+                create: { key: 'wa.api_key', value: apiKey, type: 'string' },
+                update: { value: apiKey }
+            })
+        }
         revalidatePath('/admin/whatsapp')
+        revalidatePath('/admin/notifications')
         return { success: true }
     } catch (e) {
         return { success: false, error: 'Gagal menyimpan pengaturan' }
@@ -50,7 +59,10 @@ export async function testConnectionGlobal() {
         const config = await getConfig()
         // Try to fetch version or something simple 
         // usually GET / or /api-docs or /session
-        const response = await fetch(`${config.url}/session`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session`, { cache: 'no-store', headers })
         if (response.ok) {
             return { success: true, message: `Terhubung ke Gateway (${config.url})` }
         }
@@ -64,7 +76,10 @@ export async function getSessions() {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
-        const response = await fetch(`${config.url}/session`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session`, { cache: 'no-store', headers })
         const data = await response.json()
 
         if (Array.isArray(data)) {
@@ -84,7 +99,10 @@ export async function getSessionStatus(sessionName: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
-        const response = await fetch(`${config.url}/session/status?session=${sessionName}`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session/status?session=${sessionName}`, { cache: 'no-store', headers })
         const data = await response.json()
         return { success: true, status: data.status || 'UNKNOWN' }
     } catch (error) {
@@ -96,7 +114,10 @@ export async function startSession(sessionName: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
-        const response = await fetch(`${config.url}/session/start?session=${sessionName}`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session/start?session=${sessionName}`, { cache: 'no-store', headers })
         const data = await response.json()
 
         if (data.status === 'success' || data.message === 'Session created' || response.ok) {
@@ -112,9 +133,12 @@ export async function stopSession(sessionName: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+        if (config.apiKey) headers['Key'] = config.apiKey
+
         const response = await fetch(`${config.url}/session/stop`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers,
             body: JSON.stringify({ session: sessionName })
         })
         const data = await response.json()
@@ -128,7 +152,10 @@ export async function deleteSession(sessionName: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
-        const response = await fetch(`${config.url}/session/logout?session=${sessionName}`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session/logout?session=${sessionName}`, { cache: 'no-store', headers })
         const data = await response.json()
         return { success: true, message: data.message }
     } catch (error) {
@@ -140,7 +167,10 @@ export async function getQRImage(sessionName: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
         const config = await getConfig()
-        const response = await fetch(`${config.url}/session/qr?session=${sessionName}`, { cache: 'no-store' })
+        const headers: Record<string, string> = {}
+        if (config.apiKey) headers['Key'] = config.apiKey
+
+        const response = await fetch(`${config.url}/session/qr?session=${sessionName}`, { cache: 'no-store', headers })
 
         if (!response.ok) return { success: false }
 
@@ -158,7 +188,7 @@ export async function getQRImage(sessionName: string) {
 export async function sendTargetedTestMessage(sessionName: string, to: string, message: string) {
     try {
         await requirePermission(PERMISSIONS.SETTINGS_VIEW)
-        return await sendWhatsAppMessage(to, message, sessionName)
+        return await sendWhatsAppMessage(to, message, { sessionName })
     } catch (error) {
         return { success: false, error: 'Gagal kirim pesan' }
     }

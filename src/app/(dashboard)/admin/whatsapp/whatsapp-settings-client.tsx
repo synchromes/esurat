@@ -26,6 +26,7 @@ interface SessionData {
 export default function WhatsAppSettingsClient() {
     // Global Config State
     const [apiUrl, setApiUrl] = useState('')
+    const [apiKey, setApiKey] = useState('')
     const [defaultSession, setDefaultSession] = useState('')
     const [isConfigLoading, setIsConfigLoading] = useState(true)
     const [isSavingConfig, setIsSavingConfig] = useState(false)
@@ -63,6 +64,7 @@ export default function WhatsAppSettingsClient() {
             if (res.success && res.data) {
                 setApiUrl(res.data.url)
                 setDefaultSession(res.data.session)
+                setApiKey(res.data.apiKey || '')
             }
         } catch (e) {
             toast.error('Gagal memuat konfigurasi')
@@ -110,7 +112,7 @@ export default function WhatsAppSettingsClient() {
     const handleSaveConfig = async () => {
         setIsSavingConfig(true)
         try {
-            const res = await saveGlobalSettings(apiUrl, defaultSession)
+            const res = await saveGlobalSettings(apiUrl, defaultSession, apiKey)
             if (res.success) {
                 toast.success('Pengaturan disimpan')
                 fetchSessions() // Retry fetching sessions with new URL
@@ -249,20 +251,31 @@ export default function WhatsAppSettingsClient() {
                         <div className="space-y-2">
                             <Label>Gateway API URL</Label>
                             <Input
-                                placeholder="http://localhost:5001"
+                                placeholder="https://wa.tvrikalbar.id"
                                 value={apiUrl}
                                 onChange={e => setApiUrl(e.target.value)}
                             />
                             <p className="text-xs text-muted-foreground">URL endpoint server WA Gateway.</p>
                         </div>
                         <div className="space-y-2">
-                            <Label>Default Session Name</Label>
+                            <Label>API Key (Header: Key)</Label>
                             <Input
-                                placeholder="esurat"
+                                placeholder="wa-tvri-kalbar"
+                                value={apiKey}
+                                onChange={e => setApiKey(e.target.value)}
+                            />
+                            <p className="text-xs text-muted-foreground">Key untuk autentikasi ke gateway.</p>
+                        </div>
+                    </div>
+                    <div className="grid gap-4 md:grid-cols-2">
+                        <div className="space-y-2">
+                            <Label>Default Session ID</Label>
+                            <Input
+                                placeholder="664c55d8-2426-49d5-8e87-f7b1fc3d91f6"
                                 value={defaultSession}
                                 onChange={e => setDefaultSession(e.target.value)}
                             />
-                            <p className="text-xs text-muted-foreground">Nama session yang digunakan sistem untuk mengirim notifikasi.</p>
+                            <p className="text-xs text-muted-foreground">Session ID yang digunakan sistem untuk mengirim notifikasi.</p>
                         </div>
                     </div>
 
