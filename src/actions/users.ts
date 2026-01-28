@@ -2,9 +2,23 @@
 
 import { revalidatePath } from 'next/cache'
 import prisma from '@/lib/prisma'
-import { requirePermission } from '@/lib/auth'
+import { requirePermission, getSession } from '@/lib/auth'
 import { PERMISSIONS } from '@/lib/permissions'
 import bcrypt from 'bcryptjs'
+
+// Helper: Check if current user is admin
+async function isCurrentUserAdmin(): Promise<boolean> {
+    const session = await getSession()
+    return session?.user?.roles?.includes('admin') || false
+}
+
+// Helper: Check if trying to assign admin role
+async function containsAdminRole(roleIds: string[]): Promise<boolean> {
+    if (!roleIds || roleIds.length === 0) return false
+    const adminRole = await prisma.role.findUnique({ where: { name: 'admin' } })
+    if (!adminRole) return false
+    return roleIds.includes(adminRole.id)
+}
 
 // ==================== GET USERS ====================
 
@@ -83,6 +97,14 @@ export async function createUser(data: {
 
         const hashedPassword = await bcrypt.hash(data.password, 10)
 
+        // Prevent non-admin from assigning admin role
+        if (data.roleIds && data.roleIds.length > 0) {
+            const tryingToAssignAdmin = await containsAdminRole(data.roleIds)
+            if (tryingToAssignAdmin && !(await isCurrentUserAdmin())) {
+                return { success: false, error: 'Hanya admin yang dapat menetapkan role admin' }
+            }
+        }
+
         await prisma.$transaction(async (tx: any) => {
             const user = await tx.user.create({
                 data: {
@@ -158,6 +180,11 @@ export async function updateUser(userId: string, data: {
 
             // Update roles if provided
             if (data.roleIds) {
+                // Prevent non-admin from assigning admin role
+                const tryingToAssignAdmin = await containsAdminRole(data.roleIds)
+                if (tryingToAssignAdmin && !(await isCurrentUserAdmin())) {
+                    throw new Error('Hanya admin yang dapat menetapkan role admin')
+                }
                 await tx.userRole.deleteMany({ where: { userId } })
                 if (data.roleIds.length > 0) {
                     await tx.userRole.createMany({

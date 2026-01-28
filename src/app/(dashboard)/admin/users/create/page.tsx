@@ -13,6 +13,7 @@ import { toast } from 'sonner'
 import Link from 'next/link'
 import { createUser } from '@/actions/users'
 import { getRoles } from '@/actions/roles'
+import { useSession } from 'next-auth/react'
 
 interface Role {
     id: string
@@ -21,8 +22,17 @@ interface Role {
 
 export default function CreateUserPage() {
     const router = useRouter()
+    const { data: session } = useSession()
     const [isPending, startTransition] = useTransition()
     const [roles, setRoles] = useState<Role[]>([])
+
+    // Check if current user is admin
+    const isCurrentUserAdmin = session?.user?.roles?.includes('admin') || false
+
+    // Filter roles - hide admin role for non-admin users
+    const availableRoles = isCurrentUserAdmin
+        ? roles
+        : roles.filter(r => r.name !== 'admin')
 
     // Form state
     const [name, setName] = useState('')
@@ -165,7 +175,7 @@ export default function CreateUserPage() {
                         <div className="space-y-3">
                             <Label>Role Akses</Label>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 border p-4 rounded-lg bg-muted/20">
-                                {roles.map((role) => (
+                                {availableRoles.map((role) => (
                                     <div key={role.id} className="flex items-center space-x-2">
                                         <Checkbox
                                             id={`role-${role.id}`}
