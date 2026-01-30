@@ -107,6 +107,14 @@ type LetterData = {
         approvedAt: Date | null
         user: { id: string; name: string; email: string }
     }[]
+    dispositions: {
+        id: string
+        status: string
+        createdAt: Date
+        urgency: string
+        number: string | null
+        fromUser: { name: string }
+    }[]
     logs: {
         id: string
         action: string
@@ -573,6 +581,59 @@ export function LetterDetail({ letter }: { letter: LetterData }) {
                             <p className="font-medium text-destructive">Surat Ditolak</p>
                             <p className="text-sm text-muted-foreground mt-1">{letter.rejectionReason}</p>
                         </div>
+                    </CardContent>
+                </Card>
+            )}
+
+            {/* Disposition Status Card */}
+            {letter.status === 'SIGNED' && (
+                <Card>
+                    <CardHeader className="pb-3">
+                        <CardTitle className="text-lg flex items-center gap-2">
+                            <Send className="h-4 w-4" />
+                            Status Disposisi
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        {letter.dispositions && letter.dispositions.length > 0 ? (
+                            <div className="space-y-4">
+                                {letter.dispositions.map((disp) => (
+                                    <div key={disp.id} className="flex items-center justify-between p-3 border rounded-lg bg-muted/50">
+                                        <div className="space-y-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="font-medium">No: {disp.number || 'Menunggu Penomoran'}</span>
+                                                <Badge
+                                                    variant={
+                                                        disp.status === 'COMPLETED' ? 'default' :
+                                                            disp.status === 'READ' ? 'secondary' : 'outline'
+                                                    }
+                                                    className="text-[10px]"
+                                                >
+                                                    {disp.status}
+                                                </Badge>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground">
+                                                Oleh: {disp.fromUser.name} • {new Date(disp.createdAt).toLocaleDateString('id-ID')}
+                                            </p>
+                                        </div>
+                                        <Button size="sm" variant="ghost" asChild>
+                                            <Link href={`/dispositions/${disp.id}`}>
+                                                Lihat
+                                            </Link>
+                                        </Button>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="text-center py-6 text-muted-foreground">
+                                <p>Belum ada disposisi untuk surat ini</p>
+                                {canDispose && (
+                                    <div className="mt-2">
+                                        <p className="text-sm mb-2">Silakan buat disposisi jika diperlukan</p>
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </CardContent>
                 </Card>
             )}

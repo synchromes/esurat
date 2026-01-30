@@ -34,7 +34,7 @@ import { setDispositionNumber } from '@/actions/dispositions'
 const urgencyConfig: Record<string, { label: string; variant: 'default' | 'secondary' | 'destructive' | 'outline' }> = {
     BIASA: { label: 'Biasa', variant: 'secondary' },
     SEGERA: { label: 'Segera', variant: 'default' },
-    PENTING: { label: 'Penting', variant: 'destructive' },
+    SANGAT_SEGERA: { label: 'Sangat Segera', variant: 'destructive' },
     RAHASIA: { label: 'Rahasia', variant: 'outline' }
 }
 
@@ -95,6 +95,14 @@ export function DispositionDetailClient({ disposition, canSetNumber }: Dispositi
                 </div>
                 <div className="ml-auto flex gap-2">
                     {/* Actions based on status */}
+                    {isPendingSign && (
+                        <Button variant="outline" asChild>
+                            <a href={`/api/dispositions/${disposition.id}/pdf`} target="_blank" rel="noopener noreferrer">
+                                <Download className="mr-2 h-4 w-4" />
+                                Download Draft
+                            </a>
+                        </Button>
+                    )}
                     {isSubmitted && disposition.fileSigned && (
                         <Button variant="outline" asChild>
                             <a href={disposition.fileSigned} target="_blank" rel="noopener noreferrer">

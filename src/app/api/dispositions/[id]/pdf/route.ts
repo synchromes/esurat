@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { generateDispositionPdf } from '@/lib/pdf-generator'
-import { redirect } from 'next/navigation'
 
 export async function GET(
     request: NextRequest,
     context: { params: Promise<{ id: string }> }
 ) {
     const { id } = await context.params
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
     try {
         const disposition = await prisma.disposition.findUnique({
@@ -20,15 +20,14 @@ export async function GET(
         }
 
         if (disposition.fileDraft) {
-            // Check if file exists in filesystem? Or just redirect.
-            // If we regenerate every time number changes, fine.
-            return redirect(disposition.fileDraft)
+            // Redirect to the file
+            return NextResponse.redirect(`${baseUrl}${disposition.fileDraft}`)
         }
 
         // If no file, generate it
         const result = await generateDispositionPdf(id)
         if (result.success && result.filePath) {
-            return redirect(result.filePath)
+            return NextResponse.redirect(`${baseUrl}${result.filePath}`)
         } else {
             return NextResponse.json({ error: 'Failed to generate PDF' }, { status: 500 })
         }

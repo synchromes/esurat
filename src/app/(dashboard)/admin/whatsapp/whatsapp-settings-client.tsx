@@ -392,8 +392,8 @@ export default function WhatsAppSettingsClient() {
                                     </TableCell>
                                 </TableRow>
                             )}
-                            {sessions.map((session) => (
-                                <TableRow key={session.name}>
+                            {sessions.map((session, index) => (
+                                <TableRow key={`${session.name}-${index}`}>
                                     <TableCell className="font-medium">
                                         <div className="flex items-center gap-2">
                                             {session.name}

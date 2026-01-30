@@ -89,7 +89,7 @@ export function DispositionSheet({ disposition, className, qrDataUrl, logoUrl }:
                     {[
                         { label: 'Biasa', value: 'BIASA' },
                         { label: 'Segera', value: 'SEGERA' },
-                        { label: 'Penting', value: 'PENTING' },
+                        { label: 'Sangat Segera', value: 'SANGAT_SEGERA' },
                         { label: 'Rahasia', value: 'RAHASIA' }
                     ].map((sifat) => (
                         <div key={sifat.value} className="flex items-center gap-1">

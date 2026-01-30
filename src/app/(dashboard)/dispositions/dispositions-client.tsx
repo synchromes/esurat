@@ -12,7 +12,8 @@ import {
     Eye,
     AlertCircle,
     FileText,
-    Loader2
+    Loader2,
+    AlertTriangle
 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -71,6 +72,7 @@ interface DispositionsClientProps {
     receivedDispositions: Disposition[]
     sentDispositions: Disposition[]
     pendingNumberDispositions: Disposition[]
+    pendingSignDispositions: Disposition[]
     stats: {
         pending: number
         read: number
@@ -86,7 +88,7 @@ interface DispositionsClientProps {
 const urgencyConfig: Record<string, { label: string; variant: 'default' | 'secondary' | 'destructive' | 'outline' }> = {
     BIASA: { label: 'Biasa', variant: 'secondary' },
     SEGERA: { label: 'Segera', variant: 'default' },
-    PENTING: { label: 'Penting', variant: 'destructive' },
+    SANGAT_SEGERA: { label: 'Sangat Segera', variant: 'destructive' },
     RAHASIA: { label: 'Rahasia', variant: 'outline' }
 }
 
@@ -100,6 +102,7 @@ export function DispositionsClient({
     receivedDispositions,
     sentDispositions,
     pendingNumberDispositions,
+    pendingSignDispositions,
     stats,
     canCreate,
     canSetNumber,
@@ -216,6 +219,17 @@ export function DispositionsClient({
                             <TabsTrigger value="sent" className="gap-2 flex-shrink-0">
                                 <Send className="h-4 w-4" />
                                 Dikirim
+                            </TabsTrigger>
+                        )}
+                        {canCreate && (
+                            <TabsTrigger value="pendingSign" className="gap-2 flex-shrink-0">
+                                <AlertTriangle className="h-4 w-4" />
+                                Menunggu TTE
+                                {pendingSignDispositions.length > 0 && (
+                                    <Badge variant="destructive" className="ml-1 h-5 w-5 rounded-full p-0 text-xs flex items-center justify-center">
+                                        {pendingSignDispositions.length}
+                                    </Badge>
+                                )}
                             </TabsTrigger>
                         )}
                         {canSetNumber && (
@@ -389,12 +403,25 @@ export function DispositionsClient({
                                                                 className="hover:underline flex items-center gap-1"
                                                             >
                                                                 <FileText className="h-3 w-3" />
-                                                                {disposition.letter.title}
+                                                                <span className="truncate max-w-[200px]">{disposition.letter.title}</span>
                                                             </Link>
                                                         </TableCell>
                                                         <TableCell>
-                                                            <div className="text-sm">
-                                                                {disposition.recipients.map(r => r.user?.name).join(', ')}
+                                                            <div className="flex -space-x-2 overflow-hidden">
+                                                                {disposition.recipients.slice(0, 3).map((r) => (
+                                                                    <div
+                                                                        key={r.user?.id}
+                                                                        className="inline-block h-6 w-6 rounded-full ring-2 ring-background bg-slate-200 flex items-center justify-center text-[10px]"
+                                                                        title={r.user?.name}
+                                                                    >
+                                                                        {r.user?.name?.charAt(0)}
+                                                                    </div>
+                                                                ))}
+                                                                {disposition.recipients.length > 3 && (
+                                                                    <div className="inline-block h-6 w-6 rounded-full ring-2 ring-background bg-slate-100 flex items-center justify-center text-[10px]">
+                                                                        +{disposition.recipients.length - 3}
+                                                                    </div>
+                                                                )}
                                                             </div>
                                                         </TableCell>
                                                         <TableCell>
@@ -403,9 +430,15 @@ export function DispositionsClient({
                                                             </Badge>
                                                         </TableCell>
                                                         <TableCell>
-                                                            <span className="text-sm">
-                                                                {completedCount}/{totalRecipients} selesai
-                                                            </span>
+                                                            <div className="text-xs">
+                                                                {completedCount}/{totalRecipients} Selesai
+                                                            </div>
+                                                            <div className="w-full bg-secondary h-1.5 mt-1 rounded-full overflow-hidden">
+                                                                <div
+                                                                    className="bg-green-500 h-full transition-all"
+                                                                    style={{ width: `${(completedCount / totalRecipients) * 100}%` }}
+                                                                />
+                                                            </div>
                                                         </TableCell>
                                                         <TableCell className="text-sm text-muted-foreground">
                                                             {format(new Date(disposition.createdAt), 'dd MMM yyyy', { locale: id })}
@@ -420,6 +453,92 @@ export function DispositionsClient({
                                                     </TableRow>
                                                 )
                                             })}
+                                        </TableBody>
+                                    </Table>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
+                )}
+
+                {canCreate && (
+                    <TabsContent value="pendingSign">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Disposisi Menunggu tanda Tangan</CardTitle>
+                                <CardDescription>
+                                    Daftar disposisi yang perlu Anda tanda tangani elektronik (TTE) via BSrE
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                {pendingSignDispositions.length === 0 ? (
+                                    <div className="flex flex-col items-center justify-center py-12 text-center">
+                                        <AlertTriangle className="h-12 w-12 text-muted-foreground" />
+                                        <p className="mt-2 text-muted-foreground">Tidak ada disposisi menunggu TTE</p>
+                                    </div>
+                                ) : (
+                                    <Table>
+                                        <TableHeader>
+                                            <TableRow>
+                                                <TableHead>No. Disposisi</TableHead>
+                                                <TableHead>Surat</TableHead>
+                                                <TableHead>Penerima</TableHead>
+                                                <TableHead>Sifat</TableHead>
+                                                <TableHead>Status</TableHead>
+                                                <TableHead>Tanggal</TableHead>
+                                                <TableHead className="text-right">Aksi</TableHead>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            {pendingSignDispositions.map((disposition) => (
+                                                <TableRow key={disposition.id}>
+                                                    <TableCell className="font-medium">
+                                                        {disposition.number || '-'}
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <Link
+                                                            href={`/letters/${disposition.letter.id}`}
+                                                            className="hover:underline flex items-center gap-1"
+                                                        >
+                                                            <FileText className="h-3 w-3" />
+                                                            <span className="truncate max-w-[200px]">{disposition.letter.title}</span>
+                                                        </Link>
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <div className="flex -space-x-2 overflow-hidden">
+                                                            {disposition.recipients.slice(0, 3).map((r) => (
+                                                                <div
+                                                                    key={r.user?.id}
+                                                                    className="inline-block h-6 w-6 rounded-full ring-2 ring-background bg-slate-200 flex items-center justify-center text-[10px]"
+                                                                    title={r.user?.name}
+                                                                >
+                                                                    {r.user?.name?.charAt(0)}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <Badge variant={urgencyConfig[disposition.urgency]?.variant}>
+                                                            {urgencyConfig[disposition.urgency]?.label}
+                                                        </Badge>
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <Badge variant="outline" className="text-yellow-600 border-yellow-200 bg-yellow-50">
+                                                            Menunggu TTE
+                                                        </Badge>
+                                                    </TableCell>
+                                                    <TableCell className="text-sm text-muted-foreground">
+                                                        {format(new Date(disposition.createdAt), 'dd MMM yyyy', { locale: id })}
+                                                    </TableCell>
+                                                    <TableCell className="text-right">
+                                                        <Button size="sm" asChild>
+                                                            <Link href={`/dispositions/${disposition.id}`}>
+                                                                Proses
+                                                            </Link>
+                                                        </Button>
+                                                    </TableCell>
+                                                </TableRow>
+                                            ))}
                                         </TableBody>
                                     </Table>
                                 )}

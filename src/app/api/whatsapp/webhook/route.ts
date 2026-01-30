@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     try {
         const payload: WebhookPayload = await request.json()
 
-        console.log(`📥 WA Webhook received: ${payload.event} for session '${payload.sessionId}'`)
+        // console.log(`📥 WA Webhook received: ${payload.event} for session '${payload.sessionId}'`)
 
         // Update session status in database
         const updateData: any = {

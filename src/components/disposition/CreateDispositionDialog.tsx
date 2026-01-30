@@ -58,7 +58,7 @@ type Recipient = {
 const urgencyOptions = [
     { value: 'BIASA', label: 'Biasa' },
     { value: 'SEGERA', label: 'Segera' },
-    { value: 'PENTING', label: 'Penting' },
+    { value: 'SANGAT_SEGERA', label: 'Sangat Segera' },
     { value: 'RAHASIA', label: 'Rahasia' },
 ]
 

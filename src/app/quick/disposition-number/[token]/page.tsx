@@ -130,9 +130,28 @@ export default function SetDispositionNumberPage() {
                                 <p className="font-medium">{data?.letter.letterNumber || '-'}</p>
                             </div>
                             <div>
-                                <span className="text-muted-foreground">ID Disposisi:</span>
-                                <p className="font-mono text-xs">{data?.disposition.id}</p>
+                                <span className="text-muted-foreground">Sifat Disposisi:</span>
+                                <p className="font-medium">{data?.disposition.urgency}</p>
                             </div>
+                            <div>
+                                <span className="text-muted-foreground">Penerima:</span>
+                                <p className="font-medium">
+                                    {data?.disposition.recipients?.map((r: any) => r.user.name).join(', ') || '-'}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Download Button */}
+                        <div className="pt-2 pb-4 border-b">
+                            <p className="text-sm text-muted-foreground mb-2">Preview Lembar Disposisi:</p>
+                            <Button variant="outline" className="w-full" asChild>
+                                <a href={`/print/dispositions/${data?.disposition.id}`} target="_blank" rel="noopener noreferrer">
+                                    <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    Lihat Lembar Disposisi
+                                </a>
+                            </Button>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-4">

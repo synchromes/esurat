@@ -7,10 +7,12 @@ import { revalidatePath } from 'next/cache'
 import { generateDispositionPdf } from '@/lib/pdf-generator'
 import { saveFile } from '@/lib/upload'
 import { sendWhatsAppMessage } from '@/lib/whatsapp'
+import { v4 as uuidv4 } from 'uuid'
+import { addMinutes } from 'date-fns'
 
 // ==================== TYPES ====================
 
-export type DispositionUrgency = 'BIASA' | 'SEGERA' | 'PENTING' | 'RAHASIA'
+export type DispositionUrgency = 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA' | 'RAHASIA'
 
 interface CreateDispositionInput {
     letterId: string
@@ -21,6 +23,14 @@ interface CreateDispositionInput {
 }
 
 // ==================== HELPER FUNCTIONS ====================
+
+function getGreeting(): string {
+    const hour = new Date().getHours()
+    if (hour >= 5 && hour < 11) return 'Selamat Pagi'
+    if (hour >= 11 && hour < 15) return 'Selamat Siang'
+    if (hour >= 15 && hour < 18) return 'Selamat Sore'
+    return 'Selamat Malam'
+}
 
 async function generateDispositionNumber(): Promise<string> {
     const year = new Date().getFullYear()
@@ -149,8 +159,94 @@ export async function createDisposition(input: CreateDispositionInput) {
             }
         })
 
-        revalidatePath(`/letters/${input.letterId}`)
-        revalidatePath('/dispositions')
+        // Get current user details
+        const currentUser = await prisma.user.findUnique({
+            where: { id: session.user.id }
+        })
+
+        // Get recipient names for notification
+        const recipientNames = recipients.map(r => r.name).join(', ')
+
+        // 1. Notify Creator that disposition is waiting for number
+        if (currentUser?.phoneNumber) {
+            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+            const dispLink = `${appUrl}/dispositions/${disposition.id}`
+
+            await sendWhatsAppMessage(
+                currentUser.phoneNumber,
+                `${getGreeting()} *${currentUser.name}*,
+
+Disposisi berhasil dibuat:
+
+Judul Surat: *${letter.title}*
+Penerima: ${recipientNames}
+Sifat: ${input.urgency}
+
+Disposisi ini menunggu pengisian nomor disposisi oleh Petugas Tata Usaha.
+
+Anda akan menerima notifikasi setelah nomor disposisi terbit.
+
+Link Detail:
+${dispLink}
+
+Aplikasi e-Surat TVRI Kalimantan Barat`
+            ).catch(console.error)
+        }
+
+        // 2. Notify TU to set disposition number
+        const tuUsers = await prisma.user.findMany({
+            where: {
+                isActive: true,
+                roles: {
+                    some: {
+                        role: { name: { in: ['staff_tu', 'Staff TU', 'tata_usaha', 'Tata Usaha', 'admin', 'Admin', 'tu', 'TU'] } }
+                    }
+                }
+            }
+        })
+
+        console.log(`[createDisposition] Found ${tuUsers.length} TU users for notification:`, tuUsers.map(u => ({ name: u.name, phone: u.phoneNumber })))
+
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
+        for (const tu of tuUsers) {
+            if (tu.phoneNumber) {
+                // Generate magic link for SET_DISPOSITION_NUMBER
+                const setNumberToken = uuidv4()
+
+                await prisma.magicLink.create({
+                    data: {
+                        token: setNumberToken,
+                        userId: tu.id,
+                        letterId: input.letterId,
+                        action: 'SET_DISPOSITION_NUMBER',
+                        otpCode: '0000', // No OTP for internal TU staff
+                        expiresAt: addMinutes(new Date(), 1440) // 24 hours
+                    }
+                })
+
+                const quickLink = `${appUrl}/quick/disposition-number/${setNumberToken}`
+
+                await sendWhatsAppMessage(
+                    tu.phoneNumber,
+                    `${getGreeting()} *${tu.name}*,
+
+Terdapat disposisi baru yang memerlukan nomor disposisi:
+
+Judul Surat: *${letter.title}*
+Dari: ${currentUser?.name || session.user.name}
+Kepada: ${recipientNames}
+Sifat: ${input.urgency}
+
+Link Quick Action:
+${quickLink}
+
+(Link berlaku 24 jam)
+
+Aplikasi e-Surat TVRI Kalimantan Barat`
+                ).catch(console.error)
+            }
+        }
 
         revalidatePath(`/letters/${input.letterId}`)
         revalidatePath('/dispositions')
@@ -360,6 +456,47 @@ export async function getPendingNumberDispositions() {
     }
 }
 
+export async function getPendingSignDispositions() {
+    try {
+        const session = await requirePermission(PERMISSIONS.DISPOSITION_CREATE)
+
+        // Get dispositions created by this user that are waiting for TTE
+        const dispositions = await prisma.disposition.findMany({
+            where: {
+                fromUserId: session.user.id,
+                status: 'PENDING_SIGN'
+            },
+            include: {
+                letter: {
+                    select: {
+                        id: true,
+                        title: true,
+                        letterNumber: true,
+                        status: true
+                    }
+                },
+                fromUser: { select: { id: true, name: true } },
+                recipients: {
+                    include: {
+                        user: { select: { id: true, name: true } }
+                    }
+                },
+                instructions: {
+                    include: {
+                        instruction: { select: { id: true, name: true } }
+                    }
+                }
+            },
+            orderBy: { createdAt: 'desc' }
+        })
+
+        return { success: true, data: dispositions }
+    } catch (error) {
+        console.error('Get pending sign dispositions error:', error)
+        return { success: false, error: 'Gagal mengambil data disposisi menunggu TTE' }
+    }
+}
+
 // ==================== SET DISPOSITION NUMBER ====================
 
 export async function setDispositionNumber(dispositionId: string, number: string) {
@@ -404,12 +541,50 @@ export async function setDispositionNumber(dispositionId: string, number: string
             // Don't fail the request, but log it
         }
 
-        // Notify Creator with quick action link
+        // Notify Creator with quick action link for uploading TTE
         if (disposition.fromUser.phoneNumber) {
             const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
-            const dispositionLink = `${appUrl}/dispositions/${dispositionId}`
-            const msg = `*E-SURAT TVRI*\n\nNomor disposisi untuk surat "${disposition.letter.title}" telah diisi *(${number})*.\n\n📥 *Download & TTE:*\n${dispositionLink}\n\nSilakan download lembar disposisi dan lakukan Tanda Tangan Elektronik.`
-            sendWhatsAppMessage(disposition.fromUser.phoneNumber, msg).catch(console.error)
+
+            // Generate Upload Token with proper OTP
+            const uploadToken = uuidv4()
+            const uploadOtp = Math.floor(100000 + Math.random() * 900000).toString()
+
+            await prisma.magicLink.create({
+                data: {
+                    token: uploadToken,
+                    userId: disposition.fromUserId,
+                    letterId: disposition.letterId,
+                    action: 'UPLOAD_DISPOSITION_SIGNED',
+                    otpCode: uploadOtp,
+                    expiresAt: addMinutes(new Date(), 1440)
+                }
+            })
+
+            const uploadLink = `${appUrl}/quick/disposition-upload/${uploadToken}`
+
+            await sendWhatsAppMessage(
+                disposition.fromUser.phoneNumber,
+                `${getGreeting()} *${disposition.fromUser.name}*,
+
+Nomor disposisi telah terbit:
+
+Nomor: *${number}*
+Judul Surat: ${disposition.letter.title}
+
+Silakan:
+1. Download Lembar Disposisi
+2. Bubuhkan Tanda Tangan Elektronik
+3. Upload kembali disposisi
+
+Link Disposisi:
+${uploadLink}
+
+Kode OTP: *${uploadOtp}*
+
+(Link berlaku 24 jam)
+
+Aplikasi e-Surat TVRI Kalimantan Barat`
+            ).catch(console.error)
         }
 
         revalidatePath(`/dispositions/${dispositionId}`)
@@ -697,9 +872,24 @@ export async function uploadSignedDisposition(dispositionId: string, formData: F
 
         for (const recipient of disposition.recipients) {
             if (recipient.user.phoneNumber) {
-                const msg = `*E-SURAT TVRI*\n\n📨 *Disposisi Baru*\n\nAnda menerima disposisi untuk surat:\n"${disposition.letter.title}"\n\nSifat: *${disposition.urgency}*\nDari: ${disposition.fromUser?.name || 'Pimpinan'}\n\n🔗 *Lihat Detail:*\n${dispositionLink}\n\nSegera ditindaklanjuti.`
-                // Fire and forget
-                sendWhatsAppMessage(recipient.user.phoneNumber, msg).catch(console.error)
+                await sendWhatsAppMessage(
+                    recipient.user.phoneNumber,
+                    `${getGreeting()} *${recipient.user.name}*,
+
+Anda menerima disposisi baru:
+
+Judul Surat: *${disposition.letter.title}*
+Nomor Disposisi: ${disposition.number || '-'}
+Sifat: *${disposition.urgency}*
+Dari: ${disposition.fromUser?.name || 'Pimpinan'}
+
+Link Detail:
+${dispositionLink}
+
+Segera ditindaklanjuti.
+
+Aplikasi e-Surat TVRI Kalimantan Barat`
+                ).catch(console.error)
             }
         }
 

@@ -690,7 +690,7 @@ export async function uploadSignedLetter(letterId: string, formData: FormData) {
             sendWhatsAppMessage(creator.phoneNumber, `*E-SURAT TVRI*\n\nSurat *${letter.title}* telah selesai ditanda tangani oleh ${session.user.name}.\n\nSilakan cek dashboard untuk diproses lebih lanjut.`).catch(console.error)
         }
 
-        // Notify Kepsta (Kepala Stasiun) for Disposition
+        // Notify Kepsta (Kepala Stasiun) for Disposition with Magic Link
         try {
             const kepstaUsers = await prisma.user.findMany({
                 where: {
@@ -698,18 +698,60 @@ export async function uploadSignedLetter(letterId: string, formData: FormData) {
                     roles: {
                         some: {
                             role: {
-                                name: { in: ['kepala_stasiun', 'Kepala Stasiun'] } // Check both cases
+                                name: { in: ['kepala_stasiun', 'Kepala Stasiun', 'kepsta', 'Kepsta', 'admin', 'Admin'] }
                             }
                         }
                     }
                 }
             })
 
-            const kepstaMsg = `*E-SURAT TVRI*\n\nTerdapat surat baru yang telah selesai ditandatangani dan perlu didisposisi:\n\nJudul: *${letter.title}*\nNomor: ${letter.letterNumber || '-'}\n\nSilakan login untuk membuat disposisi.`
+            const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+            const hour = new Date().getHours()
+            const greeting = hour >= 5 && hour < 11 ? 'Selamat Pagi' : hour >= 11 && hour < 15 ? 'Selamat Siang' : hour >= 15 && hour < 18 ? 'Selamat Sore' : 'Selamat Malam'
 
-            for (const kepsta of kepstaUsers) {
+            // Filter out admin from kepsta list to avoid sending duplicate or incorrect notifications
+            const actualKepsta = kepstaUsers.filter(u =>
+                u.id !== session.user.id // Don't notify the signer themselves if they happen to be in the list
+            )
+
+            for (const kepsta of actualKepsta) {
                 if (kepsta.phoneNumber) {
-                    sendWhatsAppMessage(kepsta.phoneNumber, kepstaMsg).catch(console.error)
+                    // Generate DISPOSITION magic link
+                    const { addMinutes } = await import('date-fns')
+                    const token = uuidv4()
+                    const otpCode = Math.floor(100000 + Math.random() * 900000).toString()
+
+                    await prisma.magicLink.create({
+                        data: {
+                            token,
+                            userId: kepsta.id,
+                            letterId,
+                            action: 'DISPOSITION',
+                            otpCode,
+                            expiresAt: addMinutes(new Date(), 30)
+                        }
+                    })
+
+                    const quickLink = `${appUrl}/quick/disposition/${token}`
+
+                    await sendWhatsAppMessage(
+                        kepsta.phoneNumber,
+                        `${greeting} *${kepsta.name}*,
+
+Terdapat surat yang telah selesai ditandatangani dan perlu didisposisi:
+
+Judul: *${letter.title}*
+Nomor: ${letter.letterNumber || '-'}
+
+Link Quick Action:
+${quickLink}
+
+Kode OTP: *${otpCode}*
+
+(Link berlaku 30 menit)
+
+Aplikasi e-Surat TVRI Kalimantan Barat`
+                    ).catch(console.error)
                 }
             }
         } catch (e) {
@@ -930,6 +972,17 @@ export async function getLetterById(letterId: string) {
                 logs: {
                     include: {
                         user: { select: { id: true, name: true } }
+                    },
+                    orderBy: { createdAt: 'desc' }
+                },
+                dispositions: {
+                    select: {
+                        id: true,
+                        number: true,
+                        status: true,
+                        createdAt: true,
+                        urgency: true,
+                        fromUser: { select: { name: true } }
                     },
                     orderBy: { createdAt: 'desc' }
                 }

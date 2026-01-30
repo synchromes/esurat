@@ -91,7 +91,8 @@ export function PreviewPDF({ url, letter }: PreviewPDFProps) {
                                     left: `${letter.qrXPercent * 100}%`,
                                     top: `${letter.qrYPercent * 100}%`,
                                     width: `${(letter.qrSize / 595.28) * 100}%`,
-                                    aspectRatio: '1/1'
+                                    aspectRatio: '1/1',
+                                    transform: 'translate(-50%, -50%)'
                                 }}
                             >
                                 <QrCode className="w-1/2 h-1/2 text-primary" />
@@ -102,7 +103,8 @@ export function PreviewPDF({ url, letter }: PreviewPDFProps) {
                                     left: `${letter.parafXPercent * 100}%`,
                                     top: `${letter.parafYPercent * 100}%`,
                                     width: `${(letter.parafSize / 595.28) * 100}%`,
-                                    aspectRatio: '1/1'
+                                    aspectRatio: '1/1',
+                                    transform: 'translate(-50%, -50%)'
                                 }}
                             >
                                 <PenTool className="w-1/2 h-1/2 text-blue-500" />
