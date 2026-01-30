@@ -20,7 +20,7 @@ export default async function DispositionsPage() {
         getMyDispositions(),
         canCreate ? getSentDispositions() : Promise.resolve({ success: true, data: [] }),
         canSetNumber ? getPendingNumberDispositions() : Promise.resolve({ success: true, data: [] }),
-        canCreate ? getPendingSignDispositions() : Promise.resolve({ success: true, data: [] }),
+        (canCreate || canViewAll) ? getPendingSignDispositions() : Promise.resolve({ success: true, data: [] }),
         canViewAll ? getAllDispositions() : Promise.resolve({ success: true, data: [] }),
         getDispositionStats()
     ])

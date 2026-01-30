@@ -628,7 +628,7 @@ export async function createDispositionWithToken(
     input: {
         recipientIds: string[]
         instructionIds: string[]
-        urgency: 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA'
+        urgency: 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA' | 'RAHASIA'
         notes?: string
     }
 ) {
@@ -718,15 +718,15 @@ export async function createDispositionWithToken(
                 user.phoneNumber,
                 `${getGreeting()} *${user.name}*,
 
-Disposisi Anda berhasil dibuat:
+Disposisi Anda berhasil dibuat dan diteruskan ke Tata Usaha untuk penomoran.
 
-Judul Surat: *${letter.title}*
-Penerima: ${recipientNames}
-Sifat: ${input.urgency}
+🧾 *Detail Disposisi:*
+• Surat: *${letter.title}*
+• Sifat: ${input.urgency}
+• Penerima: ${recipientNames}
 
-Disposisi ini menunggu pengisian nomor disposisi oleh Petugas Tata Usaha.
-
-Anda akan menerima notifikasi setelah nomor disposisi terbit.
+Status saat ini: *Menunggu Penomoran (TU)*
+Anda akan menerima notifikasi lanjutan setelah nomor disposisi diterbitkan.
 
 Link Detail:
 ${dispLink}

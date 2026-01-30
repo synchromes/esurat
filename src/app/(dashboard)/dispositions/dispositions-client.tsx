@@ -221,7 +221,7 @@ export function DispositionsClient({
                                 Dikirim
                             </TabsTrigger>
                         )}
-                        {canCreate && (
+                        {(canCreate || canViewAll) && (
                             <TabsTrigger value="pendingSign" className="gap-2 flex-shrink-0">
                                 <AlertTriangle className="h-4 w-4" />
                                 Menunggu TTE
@@ -461,7 +461,7 @@ export function DispositionsClient({
                     </TabsContent>
                 )}
 
-                {canCreate && (
+                {(canCreate || canViewAll) && (
                     <TabsContent value="pendingSign">
                         <Card>
                             <CardHeader>

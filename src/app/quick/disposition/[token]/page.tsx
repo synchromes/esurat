@@ -16,7 +16,7 @@ import { Loader2, CheckCircle, AlertCircle, FileText, Users, ClipboardList, Send
 import { toast } from 'sonner'
 
 type Step = 'otp' | 'form' | 'success' | 'error'
-type UrgencyType = 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA'
+type UrgencyType = 'BIASA' | 'SEGERA' | 'SANGAT_SEGERA' | 'RAHASIA'
 
 interface Recipient {
     id: string
@@ -133,10 +133,13 @@ export default function QuickDispositionPage() {
         )
     }
 
+    // ... (omitted)
+
     const urgencyOptions: Array<{ value: UrgencyType; label: string; color: string }> = [
-        { value: 'BIASA', label: 'Biasa', color: 'bg-gray-100' },
-        { value: 'SEGERA', label: 'Segera', color: 'bg-yellow-100' },
-        { value: 'SANGAT_SEGERA', label: 'Sangat Segera', color: 'bg-red-100' }
+        { value: 'BIASA', label: 'Biasa', color: 'bg-secondary/50 border-secondary' },
+        { value: 'SEGERA', label: 'Segera', color: 'bg-yellow-50 border-yellow-200' },
+        { value: 'SANGAT_SEGERA', label: 'Sangat Segera', color: 'bg-red-50 border-red-200' },
+        { value: 'RAHASIA', label: 'Rahasia', color: 'bg-purple-50 border-purple-200' }
     ]
 
     // OTP Step
@@ -206,8 +209,8 @@ export default function QuickDispositionPage() {
                                 type="button"
                                 onClick={() => setUrgency(opt.value)}
                                 className={`px-3 py-2 rounded-lg border-2 transition-all text-sm font-medium ${urgency === opt.value
-                                        ? 'border-blue-500 ' + opt.color
-                                        : 'border-transparent bg-gray-50 hover:bg-gray-100'
+                                    ? 'border-blue-500 ' + opt.color
+                                    : 'border-transparent bg-gray-50 hover:bg-gray-100'
                                     }`}
                             >
                                 {opt.label}
@@ -227,8 +230,8 @@ export default function QuickDispositionPage() {
                             <label
                                 key={inst.id}
                                 className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer border transition-all text-sm ${selectedInstructions.includes(inst.id)
-                                        ? 'border-blue-500 bg-blue-50'
-                                        : 'border-gray-200 bg-white'
+                                    ? 'border-blue-500 bg-blue-50'
+                                    : 'border-gray-200 bg-white'
                                     }`}
                             >
                                 <Checkbox
@@ -252,8 +255,8 @@ export default function QuickDispositionPage() {
                             <label
                                 key={user.id}
                                 className={`flex items-center gap-2 p-2 rounded cursor-pointer transition-all ${selectedRecipients.includes(user.id)
-                                        ? 'bg-blue-50'
-                                        : 'hover:bg-gray-50'
+                                    ? 'bg-blue-50'
+                                    : 'hover:bg-gray-50'
                                     }`}
                             >
                                 <Checkbox

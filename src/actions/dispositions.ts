@@ -1,7 +1,7 @@
 'use server'
 
 import prisma from '@/lib/prisma'
-import { requireAuth, requirePermission } from '@/lib/auth'
+import { requireAuth, requirePermission, auth } from '@/lib/auth'
 import { PERMISSIONS, hasPermission } from '@/lib/permissions'
 import { revalidatePath } from 'next/cache'
 import { generateDispositionPdf } from '@/lib/pdf-generator'
@@ -458,14 +458,28 @@ export async function getPendingNumberDispositions() {
 
 export async function getPendingSignDispositions() {
     try {
-        const session = await requirePermission(PERMISSIONS.DISPOSITION_CREATE)
+        const session = await auth()
+        if (!session?.user?.id) return { success: false, error: 'Unauthorized' }
 
-        // Get dispositions created by this user that are waiting for TTE
+        const canViewAll = await hasPermission(session.user.id, PERMISSIONS.DISPOSITION_VIEW_ALL)
+        const canCreate = await hasPermission(session.user.id, PERMISSIONS.DISPOSITION_CREATE)
+
+        if (!canViewAll && !canCreate) {
+            return { success: false, error: 'Unauthorized' }
+        }
+
+        const whereClause: any = {
+            status: 'PENDING_SIGN'
+        }
+
+        // If cannot view all, only show own dispositions
+        if (!canViewAll) {
+            whereClause.fromUserId = session.user.id
+        }
+
+        // Get dispositions waiting for TTE
         const dispositions = await prisma.disposition.findMany({
-            where: {
-                fromUserId: session.user.id,
-                status: 'PENDING_SIGN'
-            },
+            where: whereClause,
             include: {
                 letter: {
                     select: {
