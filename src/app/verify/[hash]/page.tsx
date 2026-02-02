@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
-import { CheckCircle2, XCircle, FileText, Calendar, User, ShieldCheck } from 'lucide-react'
+import { CheckCircle2, XCircle, FileText, Calendar, User, ShieldCheck, Eye, Download } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
@@ -17,8 +17,19 @@ export default async function VerifyPage({
             creator: { select: { name: true } },
             approver: { select: { name: true } },
             signer: { select: { name: true } },
-            category: { select: { name: true, code: true } }
+            category: { select: { name: true, code: true } },
+            dispositions: {
+                orderBy: { createdAt: 'desc' },
+                take: 1,
+                select: { status: true }
+            }
         }
+    })
+
+    console.log('Verify Letter:', {
+        id: letter?.id,
+        status: letter?.status,
+        dispositions: letter?.dispositions
     })
 
     if (!letter) {
@@ -43,8 +54,8 @@ export default async function VerifyPage({
 
     return (
         <div className={`min-h-screen flex items-center justify-center p-4 ${isValid
-                ? 'bg-gradient-to-br from-green-50 via-white to-green-50'
-                : 'bg-gradient-to-br from-yellow-50 via-white to-yellow-50'
+            ? 'bg-gradient-to-br from-green-50 via-white to-green-50'
+            : 'bg-gradient-to-br from-yellow-50 via-white to-yellow-50'
             }`}>
             <Card className="max-w-lg w-full">
                 <CardHeader className="text-center pb-2">
@@ -163,6 +174,36 @@ export default async function VerifyPage({
                             }
                         </Badge>
                     </div>
+
+                    {/* Download Button */}
+                    {letter.fileFinal && (
+                        <div className="flex justify-center pt-2">
+                            <a
+                                href={letter.fileFinal}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 w-full"
+                            >
+                                <Eye className="h-4 w-4" />
+                                Lihat / Download Dokumen
+                            </a>
+                        </div>
+                    )}
+
+                    {/* Bundle Download Button */}
+                    {letter.status === 'SIGNED' && letter.dispositions?.[0]?.status === 'SUBMITTED' && (
+                        <div className="flex justify-center pt-2">
+                            <a
+                                href={`/api/letters/${letter.id}/bundle`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2 w-full"
+                            >
+                                <Download className="h-4 w-4" />
+                                Download Surat + Disposisi
+                            </a>
+                        </div>
+                    )}
 
                     {/* Footer */}
                     <div className="text-center text-xs text-muted-foreground pt-4 border-t">

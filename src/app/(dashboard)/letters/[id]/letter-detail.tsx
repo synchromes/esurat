@@ -562,12 +562,27 @@ export function LetterDetail({ letter }: { letter: LetterData }) {
                         </AlertDialog>
                     )}
 
+                    {/* Download Bundle */}
+                    {letter.status === 'SIGNED' && (
+                        <Button variant="outline" onClick={() => window.open(`/api/letters/${letter.id}/bundle`, '_blank')}>
+                            <Download className="mr-2 h-4 w-4" />
+                            Download Surat + Disposisi
+                        </Button>
+                    )}
+
                     {/* Disposition button for signed letters */}
                     {canDispose && (
-                        <CreateDispositionDialog
-                            letterId={letter.id}
-                            letterTitle={letter.title}
-                        />
+                        letter.dispositions && letter.dispositions.length > 0 ? (
+                            <Button disabled variant="secondary">
+                                <CheckCircle2 className="mr-2 h-4 w-4" />
+                                Disposisi Sudah Dibuat
+                            </Button>
+                        ) : (
+                            <CreateDispositionDialog
+                                letterId={letter.id}
+                                letterTitle={letter.title}
+                            />
+                        )
                     )}
                 </div>
             </div>

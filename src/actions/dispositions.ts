@@ -810,7 +810,18 @@ export async function getDispositionById(dispositionId: string) {
                 fromUser: { select: { id: true, name: true, email: true } },
                 recipients: {
                     include: {
-                        user: { select: { id: true, name: true, email: true } }
+                        user: {
+                            select: {
+                                id: true,
+                                name: true,
+                                email: true,
+                                teamMemberships: {
+                                    include: {
+                                        team: true
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 instructions: {

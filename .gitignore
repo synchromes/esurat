@@ -44,3 +44,7 @@ next-env.d.ts
 
 # prisma migration lock
 prisma/migrations/migration_lock.toml
+
+# Uploads
+public/uploads/*
+!public/uploads/.gitkeep

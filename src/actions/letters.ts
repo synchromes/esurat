@@ -709,10 +709,9 @@ export async function uploadSignedLetter(letterId: string, formData: FormData) {
             const hour = new Date().getHours()
             const greeting = hour >= 5 && hour < 11 ? 'Selamat Pagi' : hour >= 11 && hour < 15 ? 'Selamat Siang' : hour >= 15 && hour < 18 ? 'Selamat Sore' : 'Selamat Malam'
 
-            // Filter out admin from kepsta list to avoid sending duplicate or incorrect notifications
-            const actualKepsta = kepstaUsers.filter(u =>
-                u.id !== session.user.id // Don't notify the signer themselves if they happen to be in the list
-            )
+            // Filter out admin or irrelevant users if needed, but allow the signer (Kepsta) to receive the link.
+            // Previously we filtered out session.user.id, but the requirement is to NOTIFY the signer (Kepsta) so they can proceed with disposition.
+            const actualKepsta = kepstaUsers; // Allow self-notification for the workflow flow continuity
 
             for (const kepsta of actualKepsta) {
                 if (kepsta.phoneNumber) {

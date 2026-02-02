@@ -1,7 +1,7 @@
 
 import prisma from '@/lib/prisma'
 import { notFound } from 'next/navigation'
-import { CheckCircle2, XCircle } from 'lucide-react'
+import { CheckCircle2, XCircle, Eye, Download } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -22,6 +22,7 @@ export default async function VerifyDispositionPage({ params }: { params: Promis
         include: {
             letter: {
                 select: {
+                    id: true,
                     title: true,
                     letterNumber: true,
                     creator: { select: { name: true } }
@@ -29,6 +30,12 @@ export default async function VerifyDispositionPage({ params }: { params: Promis
             },
             fromUser: { select: { name: true, id: true } }
         }
+    })
+
+    console.log('Verify Disposition:', {
+        id: disposition?.id,
+        status: disposition?.status,
+        letterId: disposition?.letter?.id
     })
 
     if (!disposition) {
@@ -98,6 +105,36 @@ export default async function VerifyDispositionPage({ params }: { params: Promis
                             <span className="text-muted-foreground">Perihal Surat</span>
                             <span className="col-span-2 font-medium">{disposition.letter.title}</span>
                         </div>
+
+                        {/* Download Button */}
+                        {(disposition as any).fileDraft && (
+                            <div className="pt-2">
+                                <a
+                                    href={(disposition as any).fileDraft}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors gap-2"
+                                >
+                                    <Eye className="h-4 w-4" />
+                                    Lihat Lembar Disposisi
+                                </a>
+                            </div>
+                        )}
+
+                        {/* Bundle Download Button */}
+                        {disposition.status === 'SUBMITTED' && (
+                            <div className="pt-2">
+                                <a
+                                    href={`/api/letters/${disposition.letter.id}/bundle`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center w-full border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors gap-2"
+                                >
+                                    <Download className="h-4 w-4" />
+                                    Download Surat + Disposisi
+                                </a>
+                            </div>
+                        )}
 
                         <Separator />
 

@@ -11,6 +11,18 @@ interface DispositionSheetProps {
 }
 
 export function DispositionSheet({ disposition, className, qrDataUrl, logoUrl }: DispositionSheetProps) {
+    // Mapping Position Name to Team Name (Database)
+    const POSITION_TO_TEAM_MAPPING: Record<string, string> = {
+        'Ketua Tim Program': 'Tim Program',
+        'Ketua Tim Berita': 'Tim Berita',
+        'Ketua Tim Teknik': 'Tim Teknik',
+        'Ketua Tim Keuangan': 'Tim Keuangan',
+        'Ketua Tim Umum': 'Tim Umum',
+        'Ketua Tim Kerja Sama Jasa Siaran dan Non Siaran': 'Tim Kerja Sama Jasa Siaran dan Non Siaran',
+        'Ketua Tim Promo Teresterial dan Media Baru': 'Tim Promo Teresterial dan Media Baru',
+        'Ketua Tim Pengelolaan, Distribusi dan Promosi Konten Media Baru': 'Tim Pengelolaan, Distribusi dan Promosi Konten Media Baru'
+    }
+
     // Hardcoded positions from the official format
     const positions = [
         'Kepala Sub Bagian Tata Usaha',
@@ -106,9 +118,22 @@ export function DispositionSheet({ disposition, className, qrDataUrl, logoUrl }:
                 <div className="border border-black">
                     <div className="divide-y divide-black border-b border-black">
                         {positions.map((pos, idx) => {
-                            const isChecked = disposition.recipients.some((r: any) =>
-                                r.user.name.includes(pos) || false
-                            )
+                            const isChecked = disposition.recipients.some((r: any) => {
+                                // 1. Check by Name (Legacy/Fallback)
+                                const nameMatch = r.user.name.includes(pos)
+
+                                // 2. Check by Team Leadership
+                                const teamName = POSITION_TO_TEAM_MAPPING[pos]
+                                let teamMatch = false
+
+                                if (teamName && r.user.teamMemberships) {
+                                    teamMatch = r.user.teamMemberships.some((tm: any) =>
+                                        tm.team.name === teamName && tm.role === 'LEADER'
+                                    )
+                                }
+
+                                return nameMatch || teamMatch
+                            })
                             return (
                                 <div key={idx} className="flex items-center h-7 px-2">
                                     <div className="w-5 h-5 border border-black flex items-center justify-center mr-2 shrink-0">

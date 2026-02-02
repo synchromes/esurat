@@ -1,5 +1,6 @@
 
 import puppeteer from 'puppeteer'
+import { PDFDocument } from 'pdf-lib'
 import path from 'path'
 import fs from 'fs'
 import { prisma } from './prisma'
@@ -80,5 +81,56 @@ export async function generateDispositionPdf(dispositionId: string) {
         return { success: false, error: 'Failed to generate PDF' }
     } finally {
         if (browser) await browser.close()
+    }
+}
+
+export async function mergeDispositionAndLetter(dispositionPath: string, letterPath: string): Promise<Uint8Array | null> {
+    try {
+        // Resolve absolute paths
+        // Convert API URL path (/api/uploads/...) to Permission file system path
+        const resolvePath = (inputPath: string) => {
+            if (inputPath.startsWith('/api/uploads/')) {
+                // Remove /api/uploads/ prefix
+                const relativePath = inputPath.replace('/api/uploads/', '')
+                return path.join(process.cwd(), 'public', 'uploads', relativePath)
+            } else if (inputPath.startsWith('/uploads/')) {
+                // Standard public folder
+                return path.join(process.cwd(), 'public', inputPath)
+            } else if (inputPath.startsWith('/')) {
+                // Other public folder path
+                return path.join(process.cwd(), 'public', inputPath)
+            }
+            return inputPath
+        }
+
+        const fullDispPath = resolvePath(dispositionPath)
+        const fullLetterPath = resolvePath(letterPath)
+
+        if (!fs.existsSync(fullDispPath) || !fs.existsSync(fullLetterPath)) {
+            console.error('File not found for merge:', { fullDispPath, fullLetterPath })
+            return null
+        }
+
+        const dispBytes = fs.readFileSync(fullDispPath)
+        const letterBytes = fs.readFileSync(fullLetterPath)
+
+        const mergedPdf = await PDFDocument.create()
+        const dispPdf = await PDFDocument.load(dispBytes)
+        const letterPdf = await PDFDocument.load(letterBytes)
+
+        // Copy all pages from Disposition
+        const dispPages = await mergedPdf.copyPages(dispPdf, dispPdf.getPageIndices())
+        dispPages.forEach((page) => mergedPdf.addPage(page))
+
+        // Copy all pages from Letter
+        const letterPages = await mergedPdf.copyPages(letterPdf, letterPdf.getPageIndices())
+        letterPages.forEach((page) => mergedPdf.addPage(page))
+
+        const mergedBytes = await mergedPdf.save()
+        return mergedBytes
+
+    } catch (error) {
+        console.error('Merge PDF Error:', error)
+        return null
     }
 }
