@@ -57,7 +57,7 @@ export async function GET(
         // Return PDF
         const filename = `Bundle-${letter.letterNumber ? letter.letterNumber.replace(/\//g, '-') : 'surat'}.pdf`
 
-        return new NextResponse(mergedPdf, {
+        return new NextResponse(Buffer.from(mergedPdf), {
             headers: {
                 'Content-Type': 'application/pdf',
                 'Content-Disposition': `attachment; filename="${filename}"`
